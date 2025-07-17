@@ -5,16 +5,24 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex justify-between items-center h-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <h1 className="text-xl font-light text-gray-900">neos</h1>
+              <Image
+                src="/neos-logo-text-crob.png"
+                alt="neos"
+                width={148}
+                height={27}
+                className="h-8 w-auto"
+                priority
+                quality={100}
+              />
             </div>
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                <a href="#about" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">About</a>
-                <a href="#companies" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Companies</a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Contact</a>
+                <a href="#about" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">About</a>
+                <a href="#companies" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Companies</a>
+                <a href="#contact" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Contact</a>
               </div>
             </div>
           </div>
@@ -23,31 +31,31 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-light text-gray-900 mb-8">
-            neos
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-light text-gray-900 mb-8">
+            Creative Management<br />& Production
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Creative management & production for exceptional entertainment experiences
+            Empowering exceptional entertainment experiences through innovation and collaboration
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#about"
-              className="bg-gray-900 text-white px-8 py-3 text-sm font-medium hover:bg-gray-800 transition-colors"
+              href="#companies"
+              className="bg-gray-900 text-white px-8 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
             >
-              Learn more
+              Discover our companies
             </a>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
+      <section id="about" className="py-24 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-light text-gray-900 mb-6">About</h2>
+            <h2 className="text-3xl font-light text-gray-900 mb-6">About Us</h2>
             <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              neos is an entertainment group that empowers creative companies to innovate and excel in their respective fields.
+              We are an entertainment group that empowers creative companies to innovate and excel in their respective fields.
             </p>
           </div>
 
@@ -71,61 +79,104 @@ export default function Home() {
       </section>
 
       {/* Companies Section */}
-      <section id="companies" className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
+      <section id="companies" className="py-24 px-6">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-light text-gray-900 mb-6">Companies</h2>
+            <h2 className="text-3xl font-light text-gray-900 mb-6">Our Companies</h2>
             <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Our specialized companies bring unique value to the entertainment industry
+              Specialized companies bringing unique value to the entertainment industry
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">            {/* Neos Entertainment */}
-            <div className="border border-gray-200 p-8">
-              <h3 className="text-xl font-medium text-gray-900 mb-4">neos entertainment</h3>
-              <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Neos Entertainment */}
+            <div className="group">
+              <div className="aspect-[3/1] relative mb-6 bg-[#E5F5F5] rounded-lg overflow-hidden flex items-center justify-center p-8">
+                <Image
+                  src="/neosent-full-width-logo.png"
+                  alt="neos entertainment"
+                  width={300}
+                  height={80}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed text-center mb-4">
                 A professional management group fostering talent, humanism, and global reach in the entertainment industry.
               </p>
-              <a
-                href="http://www.neosentertainment.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-900 hover:text-gray-600 text-sm font-medium transition-colors"
-              >
-                Visit website →
-              </a>
+              <div className="text-center">
+                <a
+                  href="http://www.neosentertainment.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-gray-900 hover:text-gray-600 text-sm font-medium transition-colors"
+                >
+                  Visit website
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
             {/* Neostory */}
-            <div className="border border-gray-200 p-8">
-              <h3 className="text-xl font-medium text-gray-900 mb-4">neostory</h3>
-              <p className="text-gray-600 mb-6 text-sm leading-relaxed">           Premier content creation company focused on webtoons and drama production.
+            <div className="group">
+              <div className="aspect-[3/1] relative mb-6 bg-[#E5F5F5] rounded-lg overflow-hidden flex items-center justify-center p-8">
+                <Image
+                  src="/neostory-full-width-logo.png"
+                  alt="neostory"
+                  width={300}
+                  height={80}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed text-center mb-4">
+                Premier content creation company focused on webtoons and drama production.
               </p>
-              <span className="text-gray-400 text-sm font-medium">            Coming soon
-              </span>
+              <div className="text-center">
+                <span className="inline-flex items-center text-gray-400 text-sm">
+                  Coming soon
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
+      <section id="contact" className="py-24 px-6 bg-gray-50">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-light text-gray-900 mb-6">Contact</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">            Get in touch to learn more about our companies and opportunities
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Get in touch to learn more about our companies and opportunities
           </p>
 
-          <div className="space-y-4">
-            <p className="text-gray-900">info@neoskorea.com</p>
+          <div className="inline-flex flex-col items-center">
+            <a
+              href="mailto:info@neoskorea.com"
+              className="text-gray-900 hover:text-gray-600 transition-colors mb-2"
+            >
+              info@neoskorea.com
+            </a>
             <p className="text-gray-600 text-sm">Seoul, South Korea</p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-100 py-12">
-        <div className="max-w-4xl mx-auto text-center">
+      <footer className="py-12 px-6 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="mb-6">
+            <Image
+              src="/neos-logo-text-crob.png"
+              alt="neos"
+              width={120}
+              height={22}
+              className="h-6 w-auto mx-auto opacity-50"
+              quality={100}
+            />
+          </div>
           <p className="text-gray-400 text-sm">
-            © 2025 neos. All rights reserved.
+            © 2024 neos. All rights reserved.
           </p>
         </div>
       </footer>
