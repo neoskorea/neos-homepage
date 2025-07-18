@@ -13,60 +13,26 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <Section className="h-screen flex items-center justify-center relative overflow-hidden">
+      <Section className="h-screen flex items-center justify-center relative overflow-hidden bg-primary">
         <div className="text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-light text-text-primary mb-8">
-            Professional.
-            <br />
-            Humanism.
-            <br />
-            Global.
-          </h1>
-          <p className="text-lg md:text-xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
-            A creative agency specializing in management, production, and global entertainment
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button href="/portfolio" size="lg" className="min-w-[200px]">
-              View Portfolio
-            </Button>
-            <Button href="/contact" variant="outline" size="lg" className="min-w-[200px]">
-              Get in Touch
-            </Button>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10" />
-      </Section>
-
-      {/* Vision & Mission Section */}
-      <Section className="py-32">
-        <div className="grid md:grid-cols-2 gap-24 items-center">
-          <div>
-            <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-12">Vision</h2>
-            <p className="text-lg text-text-secondary leading-relaxed mb-16">
-              To become a global leader in creative content and talent management, connecting cultures and creating opportunities across borders.
-            </p>
-            <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-12">Mission</h2>
-            <p className="text-lg text-text-secondary leading-relaxed">
-              We strive to discover and nurture exceptional talent, produce innovative content, and build bridges between different cultures through entertainment.
-            </p>
-          </div>
-          <div className="relative aspect-square">
+          <div className="mb-12">
             <Image
-              src="/neos-full-width-logo.png"
-              alt="neos vision"
-              fill
-              className="object-contain"
+              src="/neos-logo-text-white.png"
+              alt="neos logo"
+              width={400}
+              height={120}
+              className="mx-auto"
             />
           </div>
         </div>
       </Section>
 
-      {/* neos Philosophy Section */}
-      <Section className="py-32 bg-gray-50">
+      {/* Vision Section */}
+      <Section className="py-32">
         <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">neos Philosophy</h2>
+          <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Vision</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Our core values drive everything we do, from talent management to global production
+            Our core values that drive everything we do
           </p>
         </div>
 
@@ -104,6 +70,90 @@ export default function Home() {
             <h3 className="text-2xl font-light text-text-primary mb-4">Global</h3>
             <p className="text-lg text-text-secondary leading-relaxed">
               Connecting cultures and creating opportunities across borders
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Mission Section */}
+      <Section className="py-32 bg-gray-50">
+        <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Mission</h2>
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Our commitment to delivering exceptional value through innovative approaches
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-light text-text-primary mb-3">Trend</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Staying ahead of industry trends and market dynamics
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-light text-text-primary mb-3">Efficiency</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Optimizing processes and maximizing productivity
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-light text-text-primary mb-3">Integration</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Seamlessly connecting diverse elements and systems
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-light text-text-primary mb-3">Progressive</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Embracing innovation and forward-thinking approaches
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-light text-text-primary mb-3">High Quality</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Maintaining the highest standards in all deliverables
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-light text-text-primary mb-3">Completeness</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Delivering comprehensive and thorough solutions
             </p>
           </div>
         </div>
