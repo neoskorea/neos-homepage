@@ -13,14 +13,14 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <Section className="h-screen flex items-center justify-center relative overflow-hidden bg-primary">
+      <Section className="h-screen flex items-center justify-center relative overflow-hidden bg-primary pt-20">
         <div className="text-center relative z-10">
-          <div className="mb-12">
+          <div>
             <Image
               src="/neos-logo-text-white.png"
               alt="neos logo"
-              width={400}
-              height={120}
+              width={600}
+              height={180}
               className="mx-auto"
             />
           </div>
