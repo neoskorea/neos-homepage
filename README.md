@@ -1,6 +1,6 @@
-# NEOS Creative Agency Website
+# neos Creative Agency Website
 
-A modern, responsive website for NEOS Creative Agency built with Next.js and Tailwind CSS.
+A modern, responsive website for neos Creative Agency built with Next.js and Tailwind CSS.
 
 ## Features
 

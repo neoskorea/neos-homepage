@@ -15,7 +15,7 @@ const newsCategories = [
 const newsItems = [
   {
     id: 1,
-    title: 'NEOS Expands Global Operations with New Partnerships',
+    title: 'neos Expands Global Operations with New Partnerships',
     excerpt: 'Strategic partnerships in key markets strengthen our global presence and creative capabilities.',
     category: 'Press Releases',
     date: '2024-03-15',
@@ -28,7 +28,7 @@ const newsItems = [
   {
     id: 2,
     title: 'Introducing New IP Development Division',
-    excerpt: 'NEOS launches dedicated division for webtoon and drama production, focusing on global content creation.',
+    excerpt: 'neos launches dedicated division for webtoon and drama production, focusing on global content creation.',
     category: 'Company News',
     date: '2024-03-10',
     image: '/news/ip-development.jpg',
@@ -72,7 +72,7 @@ export default function NewsPage() {
             Latest News
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Stay updated with NEOS's latest announcements, insights, and achievements
+            Stay updated with neos's latest announcements, insights, and achievements
           </p>
         </div>
       </Section>
@@ -165,7 +165,7 @@ export default function NewsPage() {
             Stay Updated
           </h2>
           <p className="text-gray-600 mb-8">
-            Subscribe to our newsletter to receive the latest news and updates from NEOS
+            Subscribe to our newsletter to receive the latest news and updates from neos
           </p>
           <form className="flex gap-4 max-w-md mx-auto">
             <input

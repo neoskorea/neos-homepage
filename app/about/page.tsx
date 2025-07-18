@@ -12,7 +12,7 @@ export default function AboutPage() {
       <Section className="pt-32">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-light text-primary mb-6">
-            About NEOS
+            About neos
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
             A creative agency dedicated to fostering talent and creating global entertainment experiences
@@ -27,7 +27,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-light text-primary mb-6">CEO Message</h2>
             <div className="prose prose-lg">
               <p className="text-gray-600 mb-6">
-                At NEOS, we believe in the power of creativity to transform lives and connect cultures. Our journey began with a simple vision: to create a platform where talent can thrive and stories can reach global audiences.
+                At neos, we believe in the power of creativity to transform lives and connect cultures. Our journey began with a simple vision: to create a platform where talent can thrive and stories can reach global audiences.
               </p>
               <p className="text-gray-600">
                 Through our commitment to professional excellence, human-centered approach, and global perspective, we continue to push boundaries and create meaningful entertainment experiences.
@@ -69,7 +69,7 @@ export default function AboutPage() {
               <div className="absolute w-4 h-4 bg-gold rounded-full -left-[9px] top-0" />
               <div>
                 <p className="text-gold font-medium mb-2">2023</p>
-                <h3 className="text-xl font-medium text-primary mb-2">Launch of NEOSTORY</h3>
+                <h3 className="text-xl font-medium text-primary mb-2">Launch of neostory</h3>
                 <p className="text-gray-600">
                   Established content creation division focusing on webtoons and drama production
                 </p>
@@ -80,9 +80,9 @@ export default function AboutPage() {
               <div className="absolute w-4 h-4 bg-gold rounded-full -left-[9px] top-0" />
               <div>
                 <p className="text-gold font-medium mb-2">2022</p>
-                <h3 className="text-xl font-medium text-primary mb-2">Foundation of NEOS</h3>
+                <h3 className="text-xl font-medium text-primary mb-2">Foundation of neos</h3>
                 <p className="text-gray-600">
-                  Established NEOS with a vision to revolutionize creative management and production
+                  Established neos with a vision to revolutionize creative management and production
                 </p>
               </div>
             </div>

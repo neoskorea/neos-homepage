@@ -24,7 +24,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/neos-logo-text-crob.png"
-                alt="NEOS"
+                alt="neos"
                 width={120}
                 height={40}
                 className="h-8 w-auto"

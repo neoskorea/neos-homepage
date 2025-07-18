@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="space-y-8 xl:col-span-1">
             <Image
               src="/neos-logo-text-crob.png"
-              alt="NEOS"
+              alt="neos"
               width={120}
               height={40}
               className="h-8 w-auto"
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-primary/10 pt-8">
           <p className="text-sm text-text-secondary text-center">
-            &copy; {new Date().getFullYear()} NEOS. All rights reserved.
+            &copy; {new Date().getFullYear()} neos. All rights reserved.
           </p>
         </div>
       </div>

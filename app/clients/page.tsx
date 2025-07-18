@@ -13,7 +13,7 @@ const clients = [
 
 const testimonials = [
   {
-    quote: "NEOS has been instrumental in helping us reach new audiences in Asia. Their understanding of both local and global markets is unparalleled.",
+    quote: "neos has been instrumental in helping us reach new audiences in Asia. Their understanding of both local and global markets is unparalleled.",
     author: "John Smith",
     title: "Marketing Director",
     company: "Global Brand Co.",
@@ -25,7 +25,7 @@ const testimonials = [
     company: "Tech Innovations Inc.",
   },
   {
-    quote: "Working with NEOS has transformed how we approach talent management. Their professional yet personal approach makes all the difference.",
+    quote: "Working with neos has transformed how we approach talent management. Their professional yet personal approach makes all the difference.",
     author: "David Kim",
     title: "CEO",
     company: "Entertainment Plus",
