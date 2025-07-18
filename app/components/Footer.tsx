@@ -41,9 +41,9 @@ export default function Footer() {
             <Image
               src="/neos-logo-text-crob.png"
               alt="neos"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
+              width={2362}
+              height={429}
+              className="h-12 w-auto"
             />
             <p className="text-text-secondary text-sm">
               Professional. Humanism. Global.<br />
