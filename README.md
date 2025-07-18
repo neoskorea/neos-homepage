@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NEOS Creative Agency Website
+
+A modern, responsive website for NEOS Creative Agency built with Next.js and Tailwind CSS.
+
+## Features
+
+- Modern, minimalist design
+- Fully responsive layout
+- Server-side rendering with Next.js
+- Optimized images and performance
+- Smooth animations and transitions
+- Contact form with validation
+- Interactive portfolio filtering
+- News and blog section
+- Client testimonials
+- Newsletter subscription
+
+## Tech Stack
+
+- Next.js 14
+- React 19
+- TypeScript
+- Tailwind CSS
+- Class Variance Authority
+- Tailwind Typography
+- Tailwind Forms
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.0 or later
+- pnpm 8.0 or later
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/neos-homepage.git
+   cd neos-homepage
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Building for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm build
+pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+neos-homepage/
+├── app/                    # Next.js app directory
+│   ├── components/        # Reusable components
+│   ├── lib/              # Utility functions
+│   ├── about/            # About page
+│   ├── services/         # Services page
+│   ├── portfolio/        # Portfolio page
+│   ├── clients/          # Clients page
+│   ├── news/             # News page
+│   ├── contact/          # Contact page
+│   ├── layout.tsx        # Root layout
+│   └── page.tsx          # Home page
+├── public/               # Static assets
+│   ├── fonts/           # Web fonts
+│   └── images/          # Images
+├── styles/              # Global styles
+├── package.json         # Dependencies
+├── tailwind.config.js   # Tailwind configuration
+├── tsconfig.json        # TypeScript configuration
+└── README.md           # Project documentation
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development
 
-## Learn More
+### Code Style
 
-To learn more about Next.js, take a look at the following resources:
+- Follow the TypeScript and React best practices
+- Use functional components with hooks
+- Implement responsive design using Tailwind's utility classes
+- Keep components small and focused
+- Use proper semantic HTML elements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `Button`: Reusable button component with variants
+- `Container`: Layout container for consistent spacing
+- `Section`: Section component with background variants
+- `Navbar`: Navigation bar with mobile menu
+- `Footer`: Site footer with navigation and social links
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+
+For any inquiries, please contact:
+- Email: info@neos.com
+- Website: https://neos.com

@@ -1,185 +1,116 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { Button } from '@/components/Button';
+import { Section } from '@/components/Section';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center">
-              <Image
-                src="/neos-logo-text-crob.png"
-                alt="neos"
-                width={148}
-                height={27}
-                className="h-8 w-auto"
-                priority
-                quality={100}
-              />
-            </div>
-            <div className="hidden md:block">
-              <div className="flex items-center space-x-8">
-                <a href="#about" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">About</a>
-                <a href="#companies" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Companies</a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">Contact</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-light text-gray-900 mb-8">
-            Creative Management<br />& Production
+      <Section className="pt-32">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-light text-text-primary mb-6">
+            Professional. Humanism. Global.
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Empowering exceptional entertainment experiences through innovation and collaboration
+          <p className="text-lg md:text-xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
+            A creative agency specializing in management, production, and global entertainment
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#companies"
-              className="bg-gray-900 text-white px-8 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-            >
-              Discover our companies
-            </a>
+            <Button href="/portfolio" size="lg">
+              View Portfolio
+            </Button>
+            <Button href="/contact" variant="outline" size="lg">
+              Get in Touch
+            </Button>
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* About Section */}
-      <section id="about" className="py-24 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-light text-gray-900 mb-6">About Us</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              We are an entertainment group that empowers creative companies to innovate and excel in their respective fields.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Innovation</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Pioneering new approaches in entertainment and media</p>
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Collaboration</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Building strong partnerships across the industry</p>
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-lg font-medium text-gray-900 mb-3">Excellence</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Maintaining the highest standards in all we do</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Companies Section */}
-      <section id="companies" className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-light text-gray-900 mb-6">Our Companies</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Specialized companies bringing unique value to the entertainment industry
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Neos Entertainment */}
-            <div className="group">
-              <div className="aspect-[3/1] relative mb-6 bg-[#E5F5F5] rounded-lg overflow-hidden flex items-center justify-center p-8">
-                <Image
-                  src="/neosent-full-width-logo.png"
-                  alt="neos entertainment"
-                  width={300}
-                  height={80}
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <p className="text-gray-600 text-sm leading-relaxed text-center mb-4">
-                A professional management group fostering talent, humanism, and global reach in the entertainment industry.
-              </p>
-              <div className="text-center">
-                <a
-                  href="http://www.neosentertainment.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-gray-900 hover:text-gray-600 text-sm font-medium transition-colors"
-                >
-                  Visit website
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            {/* Neostory */}
-            <div className="group">
-              <div className="aspect-[3/1] relative mb-6 bg-[#E5F5F5] rounded-lg overflow-hidden flex items-center justify-center p-8">
-                <Image
-                  src="/neostory-full-width-logo.png"
-                  alt="neostory"
-                  width={300}
-                  height={80}
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <p className="text-gray-600 text-sm leading-relaxed text-center mb-4">
-                Premier content creation company focused on webtoons and drama production.
-              </p>
-              <div className="text-center">
-                <span className="inline-flex items-center text-gray-400 text-sm">
-                  Coming soon
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-24 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-light text-gray-900 mb-6">Contact</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Get in touch to learn more about our companies and opportunities
+      {/* Philosophy Section */}
+      <Section background="gray">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-light text-text-primary mb-6">NEOS Philosophy</h2>
+          <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Our core values drive everything we do, from talent management to global production
           </p>
+        </div>
 
-          <div className="inline-flex flex-col items-center">
-            <a
-              href="mailto:info@neoskorea.com"
-              className="text-gray-900 hover:text-gray-600 transition-colors mb-2"
-            >
-              info@neoskorea.com
-            </a>
-            <p className="text-gray-600 text-sm">Seoul, South Korea</p>
+        <div className="grid md:grid-cols-3 gap-12">
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-medium text-text-primary mb-3">Professional</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Excellence in every aspect of our work, from management to production
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-medium text-text-primary mb-3">Humanism</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Putting people first in everything we do, fostering growth and creativity
+            </p>
+          </div>
+
+          <div className="text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-medium text-text-primary mb-3">Global</h3>
+            <p className="text-text-secondary leading-relaxed">
+              Connecting cultures and creating opportunities across borders
+            </p>
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* Footer */}
-      <footer className="py-12 px-6 border-t border-gray-100">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-6">
+      {/* Recent Projects */}
+      <Section>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-light text-text-primary mb-6">Recent Projects</h2>
+          <p className="text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            Explore our latest work in entertainment, management, and global production
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Project cards will go here */}
+          <div className="group relative overflow-hidden rounded-lg bg-gray-100 aspect-[4/3]">
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <Image
-              src="/neos-logo-text-crob.png"
-              alt="neos"
-              width={120}
-              height={22}
-              className="h-6 w-auto mx-auto opacity-50"
-              quality={100}
+              src="/p1.png"
+              alt="Project 1"
+              fill
+              className="object-cover"
             />
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition">
+              <h3 className="text-lg font-medium mb-2">Project Title</h3>
+              <p className="text-sm text-gray-200">Brief project description</p>
+            </div>
           </div>
-          <p className="text-gray-400 text-sm">
-            © 2024 neos. All rights reserved.
-          </p>
         </div>
-      </footer>
+
+        <div className="text-center mt-12">
+          <Button href="/portfolio" variant="outline">
+            View All Projects
+          </Button>
+        </div>
+      </Section>
+
+      <Footer />
     </div>
   );
 }
