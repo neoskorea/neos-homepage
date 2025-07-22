@@ -171,7 +171,7 @@ export default function Home() {
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Our Journey</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Key milestones in our growth and evolution
+            우리의 성장과 발전의 주요 이정표
           </p>
         </div>
 
@@ -183,7 +183,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-2xl font-light text-text-primary mb-4">Global Expansion</h3>
-                <p className="text-lg text-text-secondary">Expanding our presence in key markets worldwide</p>
+                <p className="text-lg text-text-secondary">전 세계 주요 시장으로의 사업 확장</p>
               </div>
             </div>
             <div className="flex gap-12 items-start">
@@ -192,7 +192,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-2xl font-light text-text-primary mb-4">Launch of neostory</h3>
-                <p className="text-lg text-text-secondary">Established content creation division focusing on webtoons and drama production</p>
+                <p className="text-lg text-text-secondary">웹툰과 드라마 제작에 특화된 콘텐츠 제작 부문 설립</p>
               </div>
             </div>
             <div className="flex gap-12 items-start">
@@ -201,7 +201,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-2xl font-light text-text-primary mb-4">Foundation of neos</h3>
-                <p className="text-lg text-text-secondary">Established with a vision to revolutionize creative management and production</p>
+                <p className="text-lg text-text-secondary">창의적 매니지먼트와 제작을 혁신하겠다는 비전으로 설립</p>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function Home() {
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">neos Infrastructure</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Our comprehensive ecosystem supporting talent and content creation
+            인재와 콘텐츠 제작을 지원하는 우리의 종합 생태계
           </p>
         </div>
 
@@ -223,7 +223,7 @@ export default function Home() {
               <Image src="/window.svg" alt="Management" width={32} height={32} />
             </div>
             <h3 className="text-2xl font-light text-text-primary mb-4">Talent Management</h3>
-            <p className="text-lg text-text-secondary">Comprehensive artist and talent management services</p>
+            <p className="text-lg text-text-secondary">종합적인 아티스트 및 인재 매니지먼트 서비스</p>
           </div>
 
           <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
@@ -231,7 +231,7 @@ export default function Home() {
               <Image src="/file.svg" alt="Production" width={32} height={32} />
             </div>
             <h3 className="text-2xl font-light text-text-primary mb-4">Content Production</h3>
-            <p className="text-lg text-text-secondary">State-of-the-art production facilities and expertise</p>
+            <p className="text-lg text-text-secondary">최첨단 제작 시설과 전문성</p>
           </div>
 
           <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
@@ -239,7 +239,7 @@ export default function Home() {
               <Image src="/globe.svg" alt="Global Network" width={32} height={32} />
             </div>
             <h3 className="text-2xl font-light text-text-primary mb-4">Global Network</h3>
-            <p className="text-lg text-text-secondary">Extensive international partnerships and connections</p>
+            <p className="text-lg text-text-secondary">광범위한 국제 파트너십과 네트워크</p>
           </div>
 
           <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
@@ -249,7 +249,7 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-2xl font-light text-text-primary mb-4">Innovation Hub</h3>
-            <p className="text-lg text-text-secondary">Research and development in entertainment technology</p>
+            <p className="text-lg text-text-secondary">엔터테인먼트 기술의 연구개발</p>
           </div>
         </div>
       </Section>
@@ -259,7 +259,7 @@ export default function Home() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Featured Works</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Explore our latest achievements in entertainment and content creation
+            엔터테인먼트와 콘텐츠 제작 분야의 최신 성과를 확인하세요
           </p>
         </div>
 
@@ -274,7 +274,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="absolute bottom-0 left-0 right-0 p-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
               <h3 className="text-2xl font-light mb-3">Global Entertainment</h3>
-              <p className="text-gray-200">International content production and distribution</p>
+              <p className="text-gray-200">국제 콘텐츠 제작 및 유통</p>
             </div>
           </div>
 
@@ -288,7 +288,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="absolute bottom-0 left-0 right-0 p-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
               <h3 className="text-2xl font-light mb-3">Talent Development</h3>
-              <p className="text-gray-200">Nurturing the next generation of stars</p>
+              <p className="text-gray-200">차세대 스타 육성</p>
             </div>
           </div>
 
@@ -302,14 +302,14 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="absolute bottom-0 left-0 right-0 p-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
               <h3 className="text-2xl font-light mb-3">Creative Production</h3>
-              <p className="text-gray-200">Innovative content creation and storytelling</p>
+              <p className="text-gray-200">혁신적인 콘텐츠 제작과 스토리텔링</p>
             </div>
           </div>
         </div>
 
         <div className="text-center mt-16">
           <Button href="/portfolio" variant="outline" size="lg" className="min-w-[200px]">
-            View All Projects
+            모든 프로젝트 보기
           </Button>
         </div>
       </Section>
@@ -319,7 +319,7 @@ export default function Home() {
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Our Partners</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Collaborating with industry leaders to create exceptional value
+            업계 리더들과 협력하여 탁월한 가치를 창출합니다
           </p>
         </div>
 
