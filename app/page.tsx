@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <Section className="h-screen flex items-center justify-center relative overflow-hidden bg-primary pt-20">
+      <Section className="h-screen flex items-center justify-center relative overflow-hidden bg-primary">
         <div className="text-center relative z-10">
           <div>
             <Image

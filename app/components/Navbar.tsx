@@ -16,47 +16,49 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
 
   useEffect(() => {
-    // If not on homepage, always show navbar
-    if (!isHomePage) {
-      setIsVisible(true);
-      return;
-    }
-
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      const scrollY = window.scrollY;
+      const heroHeight = window.innerHeight; // Hero section height (100vh)
 
-      // Show navbar when scrolling down, hide when at top (only on homepage)
-      if (currentScrollY > 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      // If not on homepage, always show scrolled state
+      if (!isHomePage) {
+        setIsScrolled(true);
+        return;
       }
 
-      setLastScrollY(currentScrollY);
+      // On homepage, check if scrolled past hero section
+      setIsScrolled(scrollY > heroHeight * 0.8); // Start transition at 80% of hero height
     };
+
+    // Set initial state
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, isHomePage]);
+  }, [isHomePage]);
 
   return (
-    <nav className={`fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-primary/10 transition-transform duration-300 ${isHomePage ? (isVisible ? 'translate-y-0' : '-translate-y-full') : 'translate-y-0'}`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled
+        ? 'bg-white/95 backdrop-blur-sm border-b border-primary/10 shadow-sm'
+        : 'bg-transparent'
+        }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/neos-logo-text-crob.png"
+                src={isScrolled ? "/neos-logo-text-crob.png" : "/neos-logo-text-white.png"}
                 alt="neos-logo"
                 width={2362}
                 height={429}
-                className="h-10 w-auto"
+                className={`h-10 w-auto transition-all duration-500 ${!isScrolled && isHomePage ? 'opacity-0' : 'opacity-100'}`}
                 priority
               />
             </Link>
@@ -68,7 +70,10 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-text-secondary hover:text-primary text-sm font-medium transition-colors duration-200"
+                className={`text-sm font-medium transition-colors duration-300 ${isScrolled
+                  ? 'text-text-secondary hover:text-primary'
+                  : 'text-white/90 hover:text-white'
+                  }`}
               >
                 {item.name}
               </Link>
@@ -79,7 +84,10 @@ export default function Navbar() {
           <div className="flex md:hidden">
             <button
               type="button"
-              className="text-text-secondary hover:text-primary"
+              className={`transition-colors duration-300 ${isScrolled
+                ? 'text-text-secondary hover:text-primary'
+                : 'text-white/90 hover:text-white'
+                }`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
@@ -100,12 +108,18 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-primary/10">
+          <div className={`px-2 pt-2 pb-3 space-y-1 border-t transition-all duration-500 ${isScrolled
+            ? 'bg-white border-primary/10'
+            : 'bg-black/20 backdrop-blur-sm border-white/20'
+            }`}>
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-base font-medium text-text-secondary hover:text-primary hover:bg-primary/5 rounded-md"
+                className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-300 ${isScrolled
+                  ? 'text-text-secondary hover:text-primary hover:bg-primary/5'
+                  : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
