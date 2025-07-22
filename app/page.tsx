@@ -313,7 +313,7 @@ export default function Home() {
                 <span className="text-3xl text-primary font-light">2022</span>
               </div>
               <div>
-                <h3 className="text-2xl font-light text-text-primary mb-4">수오 아비디 이노우에 웹툰 「26번째 살인」 한일동시연재</h3>
+                <h3 className="text-2xl font-light text-text-primary mb-4">주식회사 네오스토리 - 수오•아비디 이노우에 웹툰 「26번째 살인」 한일동시연재</h3>
                 <p className="text-lg text-text-secondary">카카오웹툰과 픽코마를 통한 글로벌 웹툰 사업 확장</p>
               </div>
             </div>
