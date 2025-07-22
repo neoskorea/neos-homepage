@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navigation = [
   { name: 'About', href: '/about' },
@@ -17,12 +18,20 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
+    // If not on homepage, always show navbar
+    if (!isHomePage) {
+      setIsVisible(true);
+      return;
+    }
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Show navbar when scrolling down, hide when at top
+      // Show navbar when scrolling down, hide when at top (only on homepage)
       if (currentScrollY > 100) {
         setIsVisible(true);
       } else {
@@ -34,11 +43,10 @@ export default function Navbar() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, isHomePage]);
 
   return (
-    <nav className={`fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-primary/10 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}>
+    <nav className={`fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-primary/10 transition-transform duration-300 ${isHomePage ? (isVisible ? 'translate-y-0' : '-translate-y-full') : 'translate-y-0'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
