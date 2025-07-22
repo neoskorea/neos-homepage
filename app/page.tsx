@@ -233,7 +233,7 @@ export default function Home() {
                 <span className="text-3xl text-primary font-light">2012</span>
               </div>
               <div>
-                <h3 className="text-2xl font-light text-text-primary mb-4">정유미 SBS 연기대상 여자 최우수연기상 수상</h3>
+                <h3 className="text-2xl font-light text-text-primary mb-4">(전)소속배우 정유미 SBS 연기대상 여자 최우수연기상 수상</h3>
                 <p className="text-lg text-text-secondary">소속 배우의 성과로 매니지먼트 역량 입증</p>
               </div>
             </div>
@@ -273,7 +273,7 @@ export default function Home() {
                 <span className="text-3xl text-primary font-light">2018</span>
               </div>
               <div>
-                <h3 className="text-2xl font-light text-text-primary mb-4">장승조 MBC연기대상 최우수연기상 수상</h3>
+                <h3 className="text-2xl font-light text-text-primary mb-4">(전)소속배우 장승조 MBC연기대상 최우수연기상 수상</h3>
                 <p className="text-lg text-text-secondary">소속 배우의 지속적인 성과</p>
               </div>
             </div>
@@ -327,52 +327,6 @@ export default function Home() {
                 <p className="text-lg text-text-secondary">엔터테인먼트와 콘텐츠 제작 분야의 지속적 성장</p>
               </div>
             </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* neos INFRA Section */}
-      <Section className="py-32 bg-gray-50">
-        <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">neos Infrastructure</h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            인재와 콘텐츠 제작을 지원하는 우리의 종합 생태계
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <Image src="/window.svg" alt="Management" width={32} height={32} />
-            </div>
-            <h3 className="text-2xl font-light text-text-primary mb-4">Talent Management</h3>
-            <p className="text-lg text-text-secondary">종합적인 아티스트 및 인재 매니지먼트 서비스</p>
-          </div>
-
-          <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <Image src="/file.svg" alt="Production" width={32} height={32} />
-            </div>
-            <h3 className="text-2xl font-light text-text-primary mb-4">Content Production</h3>
-            <p className="text-lg text-text-secondary">최첨단 제작 시설과 전문성</p>
-          </div>
-
-          <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <Image src="/globe.svg" alt="Global Network" width={32} height={32} />
-            </div>
-            <h3 className="text-2xl font-light text-text-primary mb-4">Global Network</h3>
-            <p className="text-lg text-text-secondary">광범위한 국제 파트너십과 네트워크</p>
-          </div>
-
-          <div className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-light text-text-primary mb-4">Innovation Hub</h3>
-            <p className="text-lg text-text-secondary">엔터테인먼트 기술의 연구개발</p>
           </div>
         </div>
       </Section>
