@@ -109,5 +109,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For any inquiries, please contact:
-- Email: info@neos.com
-- Website: https://neos.com
+- Email: ethan@neoskorea.com
+- Website: https://neoskorea.com

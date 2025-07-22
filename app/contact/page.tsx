@@ -153,10 +153,10 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-lg font-medium text-primary mb-2">Email</h3>
                 <a
-                  href="mailto:info@neos.com"
+                  href="mailto:ethan@neoskorea.com"
                   className="text-gray-600 hover:text-primary transition-colors"
                 >
-                  info@neos.com
+                  ethan@neoskorea.com
                 </a>
               </div>
 
