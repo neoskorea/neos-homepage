@@ -58,7 +58,7 @@ export default function Navbar() {
                 alt="neos-logo"
                 width={2362}
                 height={429}
-                className={`h-10 w-auto transition-all duration-500 ${!isScrolled && isHomePage ? 'opacity-0' : 'opacity-100'}`}
+                className={`-mb-2 h-10 w-auto transition-all duration-500 ${!isScrolled && isHomePage ? 'opacity-0' : 'opacity-100'}`}
                 priority
               />
             </Link>
