@@ -175,33 +175,155 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="space-y-16">
             <div className="flex gap-12 items-start">
               <div className="w-48 flex-shrink-0 text-right">
-                <span className="text-3xl text-primary font-light">2024</span>
+                <span className="text-3xl text-primary font-light">1999</span>
               </div>
               <div>
-                <h3 className="text-2xl font-light text-text-primary mb-4">Global Expansion</h3>
-                <p className="text-lg text-text-secondary">전 세계 주요 시장으로의 사업 확장</p>
+                <h3 className="text-2xl font-light text-text-primary mb-4">광고·영상제작사 NEOS(네오스) 설립</h3>
+                <p className="text-lg text-text-secondary">광고 및 영상 제작 전문 회사로 시작</p>
               </div>
             </div>
+
             <div className="flex gap-12 items-start">
               <div className="w-48 flex-shrink-0 text-right">
-                <span className="text-3xl text-primary font-light">2023</span>
+                <span className="text-3xl text-primary font-light">2003</span>
               </div>
               <div>
-                <h3 className="text-2xl font-light text-text-primary mb-4">Launch of neostory</h3>
-                <p className="text-lg text-text-secondary">웹툰과 드라마 제작에 특화된 콘텐츠 제작 부문 설립</p>
+                <h3 className="text-2xl font-light text-text-primary mb-4">법인 전환 주식회사 네오스 설립</h3>
+                <p className="text-lg text-text-secondary">기업의 체계적 성장을 위한 법인 전환</p>
               </div>
             </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2004</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">광고 캐스팅 사업팀 신설</h3>
+                <p className="text-lg text-text-secondary">광고 캐스팅 전문 부문 확장</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2006</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">Nintendo KOREA LAUNCHING</h3>
+                <p className="text-lg text-text-secondary">광고 제작 캐스팅 총괄 담당</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2009</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">UNIQLO KOREA LAUNCHING & 연예 매니지먼트팀 신설</h3>
+                <p className="text-lg text-text-secondary">UNIQLO 한국 런칭 광고 제작 캐스팅 총괄 및 연예 매니지먼트 사업 확장</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2012</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">정유미 SBS 연기대상 여자 최우수연기상 수상</h3>
+                <p className="text-lg text-text-secondary">소속 배우의 성과로 매니지먼트 역량 입증</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2013</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">자회사 주식회사 네오스 엔터테인먼트 설립</h3>
+                <p className="text-lg text-text-secondary">엔터테인먼트 전문 자회사 설립으로 사업 영역 확장</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2015</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">캐스팅 사업팀 중국 진출</h3>
+                <p className="text-lg text-text-secondary">글로벌 시장 진출의 첫 걸음</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2016</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">colopl KOREA LAUNCHING</h3>
+                <p className="text-lg text-text-secondary">광고 제작 총괄 담당</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2018</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">장승조 MBC연기대상 최우수연기상 수상</h3>
+                <p className="text-lg text-text-secondary">소속 배우의 지속적인 성과</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2019</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">판권(IP) 비지니스팀 신설</h3>
+                <p className="text-lg text-text-secondary">지적재산권 사업으로 콘텐츠 가치 창출 확장</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2020</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">레이블 네오스토리 설립</h3>
+                <p className="text-lg text-text-secondary">웹툰과 드라마 제작에 특화된 콘텐츠 레이블 출범</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2021</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">주식회사 네오스토리 설립 & 웹툰 사업 확장</h3>
+                <p className="text-lg text-text-secondary">히가시무라 아키코 웹툰 「나를 기억하나요」 카카오웹툰/카카오페이지/픽코마 한일동시연재</p>
+              </div>
+            </div>
+
             <div className="flex gap-12 items-start">
               <div className="w-48 flex-shrink-0 text-right">
                 <span className="text-3xl text-primary font-light">2022</span>
               </div>
               <div>
-                <h3 className="text-2xl font-light text-text-primary mb-4">Foundation of neos</h3>
-                <p className="text-lg text-text-secondary">창의적 매니지먼트와 제작을 혁신하겠다는 비전으로 설립</p>
+                <h3 className="text-2xl font-light text-text-primary mb-4">수오 아비디 이노우에 웹툰 「26번째 살인」 한일동시연재</h3>
+                <p className="text-lg text-text-secondary">카카오웹툰과 픽코마를 통한 글로벌 웹툰 사업 확장</p>
+              </div>
+            </div>
+
+            <div className="flex gap-12 items-start">
+              <div className="w-48 flex-shrink-0 text-right">
+                <span className="text-3xl text-primary font-light">2023</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-light text-text-primary mb-4">지속적인 글로벌 확장</h3>
+                <p className="text-lg text-text-secondary">엔터테인먼트와 콘텐츠 제작 분야의 지속적 성장</p>
               </div>
             </div>
           </div>
