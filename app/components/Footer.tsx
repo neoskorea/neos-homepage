@@ -82,8 +82,8 @@ export default function Footer() {
               <h3 className="text-sm font-semibold text-text-primary tracking-wider uppercase">Contact</h3>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <a href="mailto:ethan@neoskorea.com" className="text-sm text-text-secondary hover:text-primary transition-colors">
-                    ethan@neoskorea.com
+                  <a href="mailto:contact@neoskorea.com" className="text-sm text-text-secondary hover:text-primary transition-colors">
+                    contact@neoskorea.com
                   </a>
                 </li>
                 <li>
