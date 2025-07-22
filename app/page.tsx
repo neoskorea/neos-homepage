@@ -32,7 +32,7 @@ export default function Home() {
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Vision</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Our core values that drive everything we do
+            주식회사 네오스는 내일의 비전을 오늘의 현실로 바꿔나갑니다
           </p>
         </div>
 
@@ -45,7 +45,10 @@ export default function Home() {
             </div>
             <h3 className="text-2xl font-light text-text-primary mb-4">Professional</h3>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Excellence in every aspect of our work, from management to production
+              주식회사 네오스는 풍부한 노하우를 보유한 전문가 그룹입니다.
+              각계 전문 인력의 영입으로 업계 최고의 맨파워 조직을 구성했습니다.
+              또한, 독립적인 파트 구성을 통하여 전문성을 강화한
+              프로페셔널한 비즈니스를 지향합니다.
             </p>
           </div>
 
@@ -57,7 +60,9 @@ export default function Home() {
             </div>
             <h3 className="text-2xl font-light text-text-primary mb-4">Humanism</h3>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Putting people first in everything we do, fostering growth and creativity
+              주식회사 네오스의 핵심 분야는 바로 사람입니다.
+              비즈니스에만 치중한 기업이 아닌 사람과 사람 사이의 따뜻한 정이 흐르는
+              휴머니즘을 바탕으로 모두 함께 상생 할 수 있는 기업 문화를 추구합니다.
             </p>
           </div>
 
@@ -69,7 +74,9 @@ export default function Home() {
             </div>
             <h3 className="text-2xl font-light text-text-primary mb-4">Global</h3>
             <p className="text-lg text-text-secondary leading-relaxed">
-              Connecting cultures and creating opportunities across borders
+              주식회사 네오스의 경쟁력은 글로벌 네트워크입니다.
+              다년간의 글로벌 기업들과의 업무 제휴와 미디어 제작을 통하여 이미 검증된 바 있습니다.
+              압도적인 글로벌 네트워크를 기반으로 한 치밀한 전략과 협업을 통하여 해외 진출을 적극적으로 지원합니다.
             </p>
           </div>
         </div>
@@ -80,7 +87,7 @@ export default function Home() {
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Mission</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            Our commitment to delivering exceptional value through innovative approaches
+            주식회사 네오스는 클라이언트의 성공 스토리를 위하여 항상 매진합니다
           </p>
         </div>
 
@@ -93,7 +100,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-light text-text-primary mb-3">Trend</h3>
             <p className="text-text-secondary leading-relaxed">
-              Staying ahead of industry trends and market dynamics
+              흐름을 앞선 새로움
             </p>
           </div>
 
@@ -105,7 +112,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-light text-text-primary mb-3">Efficiency</h3>
             <p className="text-text-secondary leading-relaxed">
-              Optimizing processes and maximizing productivity
+              효율적인 제안
             </p>
           </div>
 
@@ -117,7 +124,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-light text-text-primary mb-3">Integration</h3>
             <p className="text-text-secondary leading-relaxed">
-              Seamlessly connecting diverse elements and systems
+              통합적인 솔루션
             </p>
           </div>
 
@@ -129,7 +136,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-light text-text-primary mb-3">Progressive</h3>
             <p className="text-text-secondary leading-relaxed">
-              Embracing innovation and forward-thinking approaches
+              크리에이티브의 혁신적 진보
             </p>
           </div>
 
@@ -141,7 +148,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-light text-text-primary mb-3">High Quality</h3>
             <p className="text-text-secondary leading-relaxed">
-              Maintaining the highest standards in all deliverables
+              크리에이티브의 질적 향상
             </p>
           </div>
 
@@ -153,7 +160,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-light text-text-primary mb-3">Completeness</h3>
             <p className="text-text-secondary leading-relaxed">
-              Delivering comprehensive and thorough solutions
+              그리고 완성도
             </p>
           </div>
         </div>
