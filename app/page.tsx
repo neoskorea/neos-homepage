@@ -391,6 +391,68 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Clients Section */}
+      <Section className="py-32 bg-gray-50 overflow-hidden">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Our Clients</h2>
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+            글로벌 리딩 브랜드들과 함께 성공 스토리를 만들어갑니다
+          </p>
+        </div>
+
+        <div className="space-y-8">
+          {/* First row - moving left */}
+          <div className="flex overflow-hidden">
+            <div className="flex animate-scroll-left">
+              {[
+                'nintendo.svg', 'uniqlo.svg', 'toyota.svg', 'sony.svg', 'google.svg',
+                'mcdonald.svg', 'lotte.svg', 'suntory.svg', 'shiseido.svg', 'nissan.svg',
+                'nhk.svg', 'otsuka.svg', 'secom.svg'
+              ].concat([
+                'nintendo.svg', 'uniqlo.svg', 'toyota.svg', 'sony.svg', 'google.svg',
+                'mcdonald.svg', 'lotte.svg', 'suntory.svg', 'shiseido.svg', 'nissan.svg',
+                'nhk.svg', 'otsuka.svg', 'secom.svg'
+              ]).map((logo, index) => (
+                <div key={index} className="flex-shrink-0 mx-8 w-32 h-16 flex items-center justify-center">
+                  <Image
+                    src={`/images/client-logos/${logo}`}
+                    alt={logo.replace('.svg', '').replace('.png', '')}
+                    width={120}
+                    height={60}
+                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Second row - moving right */}
+          <div className="flex overflow-hidden">
+            <div className="flex animate-scroll-right">
+              {[
+                'colopl.svg', 'daihatsu.svg', 'ms.svg', 'rohto.svg', 'perfetti.svg',
+                'tbc.svg', 'wowow.svg', 'ggd.svg', 'aeon.svg', 'missha.png',
+                'logo-asahi-super-dry.png', 'daiichikosho.png'
+              ].concat([
+                'colopl.svg', 'daihatsu.svg', 'ms.svg', 'rohto.svg', 'perfetti.svg',
+                'tbc.svg', 'wowow.svg', 'ggd.svg', 'aeon.svg', 'missha.png',
+                'logo-asahi-super-dry.png', 'daiichikosho.png'
+              ]).map((logo, index) => (
+                <div key={index} className="flex-shrink-0 mx-8 w-32 h-16 flex items-center justify-center">
+                  <Image
+                    src={`/images/client-logos/${logo}`}
+                    alt={logo.replace('.svg', '').replace('.png', '')}
+                    width={120}
+                    height={60}
+                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Partners Section */}
       <Section className="py-32">
         <div className="text-center mb-24">
