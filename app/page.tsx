@@ -392,15 +392,17 @@ export default function Home() {
       </Section>
 
       {/* Clients Section */}
-      <Section className="py-32 bg-gray-50 overflow-hidden">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Our Clients</h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-            글로벌 리딩 브랜드들과 함께 성공 스토리를 만들어갑니다
-          </p>
-        </div>
+      <section className="py-32 bg-gray-50">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Our Clients</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+              글로벌 리딩 브랜드들과 함께 성공 스토리를 만들어갑니다
+            </p>
+          </div>
+        </Container>
 
-        <div className="space-y-8">
+        <div className="space-y-8 overflow-hidden">
           {/* First row - moving left */}
           <div className="flex overflow-hidden">
             <div className="flex animate-scroll-left">
@@ -451,7 +453,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* Partners Section */}
       <Section className="py-32">
