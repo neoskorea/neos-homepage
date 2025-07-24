@@ -601,7 +601,7 @@ export default function Home() {
         .typing-text {
           color: transparent;
           font-size: 1.4rem;
-          font-weight: 200;
+          font-weight: 400;
           letter-spacing: 0.08em;
           font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
           overflow: hidden;
@@ -610,11 +610,11 @@ export default function Home() {
         }
 
         .text1 {
-          animation: showText1 0.1s ease-out 1.2s forwards, typing1 2s steps(18, end) 1.2s forwards;
+          animation: showText1 0.1s ease-out 1.2s forwards, typing1 1.5s steps(18, end) 1.2s forwards;
         }
 
         .text2 {
-          animation: showText2 0.1s ease-out 3.5s forwards, typing2 1.8s steps(12, end) 3.5s forwards;
+          animation: showText2 0.1s ease-out 3.5s forwards, typing2 1.3s steps(12, end) 3.5s forwards;
         }
 
         .logo-container {
