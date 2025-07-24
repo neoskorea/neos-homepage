@@ -344,7 +344,7 @@ export default function Home() {
       </Section>
 
       {/* Works Section */}
-      <Section>
+      <Section className="py-32 bg-gray-50">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Featured Works</h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
@@ -352,46 +352,84 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          <div className="group relative aspect-[3/4] overflow-hidden rounded-lg">
+        {/* Featured Work - Large Hero */}
+        <div className="mb-16">
+          <div className="group relative aspect-[16/9] overflow-hidden rounded-2xl shadow-2xl">
             <Image
-              src="/p1.png"
-              alt="Project 1"
+              src="/images/works/misamo-google.jpeg"
+              alt="MISAMO x Google Campaign"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-              <h3 className="text-2xl font-light mb-3">Global Entertainment</h3>
-              <p className="text-gray-200">국제 콘텐츠 제작 및 유통</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-12">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
+                  <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                  Featured Campaign
+                </div>
+                <h3 className="text-4xl md:text-5xl font-light text-white mb-4">MISAMO x Google</h3>
+                <p className="text-xl text-gray-200 leading-relaxed mb-6">
+                  TWICE 유닛 MISAMO와 Google의 글로벌 캠페인 제작 및 크리에이티브 디렉션
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm">Global Campaign</span>
+                  <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm">K-Pop</span>
+                  <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm">Tech Partnership</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Secondary Works Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-xl">
+            <Image
+              src="/images/works/sbc.jpg"
+              alt="SBC Broadcasting Project"
+              fill
+              className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-90" />
+            <div className="absolute inset-0 flex items-end">
+              <div className="p-8 w-full">
+                <div className="inline-flex items-center px-3 py-1 bg-primary/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-4">
+                  Broadcasting
+                </div>
+                <h3 className="text-2xl md:text-3xl font-light text-white mb-3">SBC Media Production</h3>
+                <p className="text-gray-200 leading-relaxed">
+                  방송 콘텐츠 제작 및 미디어 솔루션 제공
+                </p>
+                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-12 h-0.5 bg-primary"></div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="group relative aspect-[3/4] overflow-hidden rounded-lg">
+          <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-xl">
             <Image
-              src="/p1.png"
-              alt="Project 2"
+              src="/images/works/delete.jpg"
+              alt="DELETE Webtoon Project"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-              <h3 className="text-2xl font-light mb-3">Talent Development</h3>
-              <p className="text-gray-200">차세대 스타 육성</p>
-            </div>
-          </div>
-
-          <div className="group relative aspect-[3/4] overflow-hidden rounded-lg">
-            <Image
-              src="/p1.png"
-              alt="Project 3"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-8 text-white translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-              <h3 className="text-2xl font-light mb-3">Creative Production</h3>
-              <p className="text-gray-200">혁신적인 콘텐츠 제작과 스토리텔링</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-90" />
+            <div className="absolute inset-0 flex items-end">
+              <div className="p-8 w-full">
+                <div className="inline-flex items-center px-3 py-1 bg-primary/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-4">
+                  Webtoon Planning
+                </div>
+                <h3 className="text-2xl md:text-3xl font-light text-white mb-3">DELETE 웹툰</h3>
+                <p className="text-gray-200 leading-relaxed">
+                  네오스토리 단독 기획, 글: 우주 / 그림: 이시카와 세이코<br />
+                  카카오웹툰 · 픽코마 한일미 동시연재
+                </p>
+                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="w-12 h-0.5 bg-primary"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
