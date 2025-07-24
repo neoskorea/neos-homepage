@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local';
+import { Inter } from 'next/font/google';
 import "./globals.css";
 
 const pretendard = localFont({
@@ -8,6 +9,13 @@ const pretendard = localFont({
   display: 'swap',
   preload: true,
   fallback: ['Noto Sans KR', 'system-ui', 'sans-serif'],
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
@@ -44,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${pretendard.variable} scroll-smooth`}>
+    <html lang="en" className={`${pretendard.variable} ${inter.variable} scroll-smooth`}>
       <body className="font-sans antialiased bg-white text-[#111111]">
         {children}
       </body>

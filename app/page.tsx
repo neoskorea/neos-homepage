@@ -565,7 +565,7 @@ export default function Home() {
           font-size: 2.2rem;
           font-weight: 200;
           letter-spacing: 0.12em;
-          font-family: system-ui, -apple-system, sans-serif;
+          font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
           overflow: hidden;
           white-space: nowrap;
           width: 0;
