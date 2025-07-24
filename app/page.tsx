@@ -27,7 +27,7 @@ export default function Home() {
             </div>
 
             {/* 실제 로고 (나중에 나타남) */}
-            <div className="logo-container">
+            <div className="logo-container" style={{ visibility: 'hidden', opacity: 0 }}>
               <Image
                 src="/images/neos-logo-text-white-nopd.png"
                 alt="neos logo"
@@ -547,7 +547,7 @@ export default function Home() {
           left: 50%;
           transform: translate(-50%, -50%);
           opacity: 0;
-          animation: fadeInTyping 0.5s ease-out 0.8s forwards, fadeOutTyping 0.8s ease-in-out 4.2s forwards;
+          animation: fadeInTyping 0.5s ease-out 0.8s forwards, fadeOutTyping 0.8s ease-in-out 5.8s forwards;
         }
 
         .typing-line {
@@ -576,13 +576,14 @@ export default function Home() {
         }
 
         .text2 {
-          animation: showText2 0.1s ease-out 3.5s forwards, typing2 1.5s steps(12, end) 3.5s forwards;
+          animation: showText2 0.1s ease-out 3.5s forwards, typing2 1.8s steps(12, end) 3.5s forwards;
         }
 
         .logo-container {
+          visibility: hidden;
           opacity: 0;
           transform: scale(0.95);
-          animation: fadeInLogo 1s ease-out 5.5s forwards;
+          animation: fadeInLogo 1s ease-out 7s forwards;
         }
 
         .hero-logo {
@@ -627,10 +628,15 @@ export default function Home() {
 
         @keyframes fadeInLogo {
           0% { 
+            visibility: hidden;
             opacity: 0; 
             transform: scale(0.95);
           }
+          1% {
+            visibility: visible;
+          }
           100% { 
+            visibility: visible;
             opacity: 1; 
             transform: scale(1);
           }
