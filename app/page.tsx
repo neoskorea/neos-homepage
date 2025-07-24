@@ -15,15 +15,27 @@ export default function Home() {
       {/* Hero Section */}
       <Section className="h-screen flex items-center justify-center relative overflow-hidden bg-primary">
         <div className="text-center relative z-10">
-          <div>
-            <Image
-              src="/images/neos-logo-text-white-nopd.png"
-              // src="/images/neos-group-logo.png"
-              alt="neos logo"
-              width={600}
-              height={180}
-              className="mx-auto px-12"
-            />
+          <div className="hero-content">
+            {/* 타이핑 텍스트 */}
+            <div className="typing-container">
+              <div className="typing-line line1">
+                <span className="typing-text text1" style={{ color: 'transparent' }}>CREATIVE MANAGEMENT</span>
+              </div>
+              <div className="typing-line line2">
+                <span className="typing-text text2" style={{ color: 'transparent' }}>&amp; PRODUCTION</span>
+              </div>
+            </div>
+
+            {/* 실제 로고 (나중에 나타남) */}
+            <div className="logo-container">
+              <Image
+                src="/images/neos-logo-text-white-nopd.png"
+                alt="neos logo"
+                width={600}
+                height={180}
+                className="mx-auto px-12 hero-logo"
+              />
+            </div>
           </div>
         </div>
       </Section>
@@ -519,6 +531,138 @@ export default function Home() {
       </Section>
 
       <Footer />
+
+      <style jsx>{`
+        .hero-content {
+          position: relative;
+          min-height: 180px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .typing-container {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          animation: fadeInTyping 0.5s ease-out 0.8s forwards, fadeOutTyping 0.8s ease-in-out 4.2s forwards;
+        }
+
+        .typing-line {
+          display: flex;
+          justify-content: center;
+          margin: 0.5rem 0;
+        }
+
+        .line1 {
+          margin-bottom: 0.8rem;
+        }
+
+        .typing-text {
+          color: transparent;
+          font-size: 2.2rem;
+          font-weight: 200;
+          letter-spacing: 0.12em;
+          font-family: system-ui, -apple-system, sans-serif;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 0;
+        }
+
+        .text1 {
+          animation: showText1 0.1s ease-out 1.2s forwards, typing1 2s steps(18, end) 1.2s forwards;
+        }
+
+        .text2 {
+          animation: showText2 0.1s ease-out 3.5s forwards, typing2 1.5s steps(12, end) 3.5s forwards;
+        }
+
+        .logo-container {
+          opacity: 0;
+          transform: scale(0.95);
+          animation: fadeInLogo 1s ease-out 5.5s forwards;
+        }
+
+        .hero-logo {
+          display: block;
+        }
+
+        @keyframes fadeInTyping {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        @keyframes showText1 {
+          0% { color: transparent; }
+          100% { color: rgba(255, 255, 255, 0.95); }
+        }
+
+        @keyframes showText2 {
+          0% { color: transparent; }
+          100% { color: rgba(255, 255, 255, 0.95); }
+        }
+
+        @keyframes typing1 {
+          0% { width: 0; }
+          100% { width: 100%; }
+        }
+
+        @keyframes typing2 {
+          0% { width: 0; }
+          100% { width: 100%; }
+        }
+
+        @keyframes fadeOutTyping {
+          0% { 
+            opacity: 1; 
+            transform: translate(-50%, -50%) scale(1);
+          }
+          100% { 
+            opacity: 0; 
+            transform: translate(-50%, -50%) scale(1.05);
+          }
+        }
+
+        @keyframes fadeInLogo {
+          0% { 
+            opacity: 0; 
+            transform: scale(0.95);
+          }
+          100% { 
+            opacity: 1; 
+            transform: scale(1);
+          }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .typing-text {
+            font-size: 1.6rem;
+            letter-spacing: 0.08em;
+          }
+          
+          .line1 {
+            margin-bottom: 0.6rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .typing-text {
+            font-size: 1.2rem;
+            letter-spacing: 0.06em;
+          }
+          
+          .typing-line {
+            margin: 0.3rem 0;
+          }
+          
+          .line1 {
+            margin-bottom: 0.4rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }
