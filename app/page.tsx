@@ -464,43 +464,57 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-16 items-center">
-          <div className="p-8">
-            <Image
-              src="/neostory-full-width-logo.png"
-              alt="neostory"
-              width={240}
-              height={80}
-              className="mx-auto filter grayscale hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
-          <div className="p-8">
-            <Image
-              src="/neosent-full-width-logo.png"
-              alt="neosent"
-              width={240}
-              height={80}
-              className="mx-auto filter grayscale hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
-          <div className="p-8">
-            <Image
-              src="/neos-full-width-logo.png"
-              alt="neos"
-              width={240}
-              height={80}
-              className="mx-auto filter grayscale hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
-          <div className="p-8">
-            <Image
-              src="/neos-logo-with-text.png"
-              alt="neos brand"
-              width={240}
-              height={80}
-              className="mx-auto filter grayscale hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
+        <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-6 md:gap-8 lg:gap-12 items-center justify-items-center">
+          {Array.from({ length: 27 }, (_, i) => {
+            const partnerLogos = [
+              { file: '1_jtbc.png', name: 'JTBC' },
+              { file: '2_tvn.png', name: 'tvN' },
+              { file: '3_sbs.png', name: 'SBS' },
+              { file: '4_mbc.png', name: 'MBC' },
+              { file: '5_kbs.png', name: 'KBS' },
+              { file: '6_sm.svg', name: 'SM Entertainment' },
+              { file: '7_jyp.svg', name: 'JYP Entertainment' },
+              { file: '8_yg.png', name: 'YG Entertainment' },
+              { file: '9_pledis.png', name: 'Pledis Entertainment' },
+              { file: '10_cube.svg', name: 'Cube Entertainment' },
+              { file: '11_esteem_fashion.png', name: 'Esteem Fashion' },
+              { file: '12_esteem_ent.png', name: 'Esteem Entertainment' },
+              { file: '13_blossom.png', name: 'Blossom Entertainment' },
+              { file: '14_keyeast.png', name: 'KeyEast' },
+              { file: '15_adk.png', name: 'ADK' },
+              { file: '16_dentsu.svg', name: 'Dentsu' },
+              { file: '17_hakuhodo.png', name: 'Hakuhodo' },
+              { file: '18_mccann.png', name: 'McCann' },
+              { file: '19_innocean.svg', name: 'Innocean' },
+              { file: '20_tfc.webp', name: 'TFC' },
+              { file: '21_nhk.svg', name: 'NHK' },
+              { file: '22_aoipro.svg', name: 'AOI Pro' },
+              { file: '23_monster.svg', name: 'Monster' },
+              { file: '24_tyo.png', name: 'TYO' },
+              { file: '25_robot.webp', name: 'Robot' },
+              { file: '26_sonymusic.svg', name: 'Sony Music' },
+              { file: '27_universal.svg', name: 'Universal' }
+            ];
+
+            const partner = partnerLogos[i];
+            return (
+              <div
+                key={i}
+                className="group relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-all duration-300"
+              >
+                <Image
+                  src={`/images/partners-logos/${partner.file}`}
+                  alt={partner.name}
+                  width={100}
+                  height={60}
+                  className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300 opacity-60 group-hover:opacity-100"
+                />
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                  {partner.name}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </Section>
 
