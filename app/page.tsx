@@ -547,7 +547,7 @@ export default function Home() {
           left: 50%;
           transform: translate(-50%, -50%);
           opacity: 0;
-          animation: fadeInTyping 0.5s ease-out 0.8s forwards, fadeOutTyping 0.8s ease-in-out 5.8s forwards;
+          animation: fadeInTyping 0.5s ease-out 0.8s forwards, fadeOutTyping 0.5s ease-in-out 5.8s forwards;
         }
 
         .typing-line {
