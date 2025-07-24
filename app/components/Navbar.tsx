@@ -54,7 +54,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src={isScrolled ? "/neos-logo-text-crob.png" : "/neos-logo-text-white.png"}
+                src={"/images/neos-logo-text-crob.png"}
                 alt="neos-logo"
                 width={2362}
                 height={429}

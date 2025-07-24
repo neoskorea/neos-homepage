@@ -17,8 +17,8 @@ export default function Home() {
         <div className="text-center relative z-10">
           <div>
             <Image
-              // src="/neos-logo-text-white.png"
-              src="/images/neos-group-logo.png"
+              src="/images/neos-logo-text-white-nopd.png"
+              // src="/images/neos-group-logo.png"
               alt="neos logo"
               width={600}
               height={180}

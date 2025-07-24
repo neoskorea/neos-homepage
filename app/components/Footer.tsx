@@ -39,7 +39,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <Image
-              src="/neos-logo-text-crob.png"
+              src="/images/neos-logo-text-crob.png"
               alt="neos"
               width={2362}
               height={429}
