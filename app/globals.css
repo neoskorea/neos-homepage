@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Fonts */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -25,6 +34,10 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .font-heading {
+    font-family: 'Cormorant Garamond', serif;
   }
 }
 

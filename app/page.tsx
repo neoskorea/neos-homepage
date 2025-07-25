@@ -54,17 +54,10 @@ export default function Home() {
       {/* Vision Section */}
       <Section className="py-16 sm:py-24 md:py-32">
         <div className="text-left mb-12 sm:mb-16 md:mb-24 px-4">
-          <div className="flex items-start mb-6 sm:mb-8 md:mb-12">
-            <div className="w-4 sm:w-5 md:w-6 h-12 sm:h-16 md:h-20 bg-primary mr-4 sm:mr-6 flex-shrink-0 mt-2 sm:mt-3 md:mt-4"></div>
-            <div>
-              <h2 className="text-3xl sm:text-4xl md:text-6xl font-light text-text-primary mb-4 sm:mb-6 md:mb-8">Vision</h2>
-            </div>
-          </div>
-          <div className="pl-8 sm:pl-11 md:pl-16">
-            <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">
-              주식회사 네오스는 내일의 비전을 오늘의 현실로 바꿔나갑니다
-            </p>
-          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold font-heading text-text-primary mb-4 sm:mb-6 md:mb-8">Vision</h2>
+          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">
+            주식회사 네오스는 내일의 비전을 오늘의 현실로 바꿔나갑니다
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 md:gap-20 px-4">
@@ -72,7 +65,7 @@ export default function Home() {
             <div className="flex items-start mb-6 sm:mb-8">
               <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-text-primary mb-6 sm:mb-8">Professional</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light font-heading text-text-primary mb-6 sm:mb-8">Professional</h3>
               </div>
             </div>
             <div className="pl-7">
@@ -94,7 +87,7 @@ export default function Home() {
             <div className="flex items-start mb-6 sm:mb-8">
               <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-text-primary mb-6 sm:mb-8">Humanism</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light font-heading text-text-primary mb-6 sm:mb-8">Humanism</h3>
               </div>
             </div>
             <div className="pl-7">
@@ -116,7 +109,7 @@ export default function Home() {
             <div className="flex items-start mb-6 sm:mb-8">
               <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-text-primary mb-6 sm:mb-8">Global</h3>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light font-heading text-text-primary mb-6 sm:mb-8">Global</h3>
               </div>
             </div>
             <div className="pl-7">
@@ -138,9 +131,9 @@ export default function Home() {
 
       {/* Mission Section */}
       <Section className="py-16 sm:py-24 md:py-32 bg-gray-50">
-        <div className="text-center mb-12 sm:mb-16 md:mb-24 px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-light text-text-primary mb-4 sm:mb-6 md:mb-8">Mission</h2>
-          <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
+        <div className="text-left mb-12 sm:mb-16 md:mb-24 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold font-heading text-text-primary mb-4 sm:mb-6 md:mb-8">Mission</h2>
+          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">
             주식회사 네오스는 클라이언트의 성공 스토리를 위하여 항상 매진합니다
           </p>
         </div>
@@ -222,9 +215,9 @@ export default function Home() {
 
       {/* History Section */}
       <Section className="py-16 sm:py-24 md:py-32">
-        <div className="text-center mb-12 sm:mb-16 md:mb-24 px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-light text-text-primary mb-4 sm:mb-6 md:mb-8">Our Journey</h2>
-          <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
+        <div className="text-left mb-12 sm:mb-16 md:mb-24 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold font-heading text-text-primary mb-4 sm:mb-6 md:mb-8">Our Journey</h2>
+          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">
             우리의 성장과 발전의 주요 이정표
           </p>
         </div>
@@ -386,9 +379,9 @@ export default function Home() {
 
       {/* Works Section */}
       <Section className="py-16 sm:py-24 md:py-32 bg-gray-50">
-        <div className="text-center mb-12 sm:mb-16 px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-light text-text-primary mb-4 sm:mb-6 md:mb-8">Featured Works</h2>
-          <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
+        <div className="text-left mb-12 sm:mb-16 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold font-heading text-text-primary mb-4 sm:mb-6 md:mb-8">Featured Works</h2>
+          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">
             엔터테인먼트와 콘텐츠 제작 분야의 최신 성과를 확인하세요
           </p>
         </div>
@@ -485,9 +478,9 @@ export default function Home() {
       {/* Clients Section */}
       <section className="py-32 bg-gray-50">
         <Container>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Our Clients</h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+          <div className="text-left mb-16 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold font-heading text-text-primary mb-4 sm:mb-6 md:mb-8">Our Clients</h2>
+            <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">
               글로벌 리딩 브랜드들과 함께 성공 스토리를 만들어갑니다
             </p>
           </div>
@@ -548,9 +541,9 @@ export default function Home() {
 
       {/* Partners Section */}
       <Section className="py-32">
-        <div className="text-center mb-24">
-          <h2 className="text-4xl md:text-6xl font-light text-text-primary mb-8">Our Partners</h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
+        <div className="text-left mb-24 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold font-heading text-text-primary mb-4 sm:mb-6 md:mb-8">Our Partners</h2>
+          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">
             업계 리더들과 협력하여 탁월한 가치를 창출합니다
           </p>
         </div>
