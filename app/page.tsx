@@ -53,55 +53,85 @@ export default function Home() {
 
       {/* Vision Section */}
       <Section className="py-16 sm:py-24 md:py-32">
-        <div className="text-center mb-12 sm:mb-16 md:mb-24 px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-light text-text-primary mb-4 sm:mb-6 md:mb-8">Vision</h2>
-          <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed px-4">
-            주식회사 네오스는 내일의 비전을 오늘의 현실로 바꿔나갑니다
-          </p>
+        <div className="text-left mb-12 sm:mb-16 md:mb-24 px-4">
+          <div className="flex items-start mb-6 sm:mb-8 md:mb-12">
+            <div className="w-4 sm:w-5 md:w-6 h-12 sm:h-16 md:h-20 bg-primary mr-4 sm:mr-6 flex-shrink-0 mt-2 sm:mt-3 md:mt-4"></div>
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-light text-text-primary mb-4 sm:mb-6 md:mb-8">Vision</h2>
+            </div>
+          </div>
+          <div className="pl-8 sm:pl-11 md:pl-16">
+            <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl leading-relaxed">
+              주식회사 네오스는 내일의 비전을 오늘의 현실로 바꿔나갑니다
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 md:gap-16 px-4">
-          <div className="text-center">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 sm:w-10 sm:h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16 md:gap-20 px-4">
+          <div className="text-left">
+            <div className="flex items-start mb-6 sm:mb-8">
+              <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-text-primary mb-6 sm:mb-8">Professional</h3>
+              </div>
             </div>
-            <h3 className="text-xl sm:text-2xl font-light text-text-primary mb-3 sm:mb-4">Professional</h3>
-            <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
-              주식회사 네오스는 풍부한 노하우를 보유한 전문가 그룹입니다.
-              각계 전문 인력의 영입으로 업계 최고의 맨파워 조직을 구성했습니다.
-              또한, 독립적인 파트 구성을 통하여 전문성을 강화한
-              프로페셔널한 비즈니스를 지향합니다.
-            </p>
+            <div className="pl-7">
+              <p className="text-base sm:text-lg md:text-xl text-text-primary leading-relaxed mb-4 sm:mb-6 font-medium">
+                주식회사 네오스는<br />
+                풍부한 노하우를 보유한 전문가 그룹입니다.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
+                각계 전문 인력의 영입으로<br />
+                업계 최고의 맨파워 조직을 구성했습니다.<br />
+                또한, 독립적인 파트 구성을 통하여<br />
+                전문성을 강화한<br />
+                프로페셔널한 비즈니스를 지향합니다.
+              </p>
+            </div>
           </div>
 
-          <div className="text-center">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 sm:w-10 sm:h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
+          <div className="text-left">
+            <div className="flex items-start mb-6 sm:mb-8">
+              <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-text-primary mb-6 sm:mb-8">Humanism</h3>
+              </div>
             </div>
-            <h3 className="text-xl sm:text-2xl font-light text-text-primary mb-3 sm:mb-4">Humanism</h3>
-            <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
-              주식회사 네오스의 핵심 분야는 바로 사람입니다.
-              비즈니스에만 치중한 기업이 아닌 사람과 사람 사이의 따뜻한 정이 흐르는
-              휴머니즘을 바탕으로 모두 함께 상생 할 수 있는 기업 문화를 추구합니다.
-            </p>
+            <div className="pl-7">
+              <p className="text-base sm:text-lg md:text-xl text-text-primary leading-relaxed mb-4 sm:mb-6 font-medium">
+                주식회사 네오스의<br />
+                핵심 분야는 바로 사람입니다.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
+                비즈니스에만 치중하는 기업이 아닌<br />
+                사람과 사람 사이의 따뜻한 정이 흐르는<br />
+                휴머니즘을  바탕으로<br />
+                모두 함께 상생 할 수 있는<br />
+                기업 문화를 추구합니다.
+              </p>
+            </div>
           </div>
 
-          <div className="text-center">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 sm:w-10 sm:h-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+          <div className="text-left">
+            <div className="flex items-start mb-6 sm:mb-8">
+              <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-text-primary mb-6 sm:mb-8">Global</h3>
+              </div>
             </div>
-            <h3 className="text-xl sm:text-2xl font-light text-text-primary mb-3 sm:mb-4">Global</h3>
-            <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
-              주식회사 네오스의 경쟁력은 글로벌 네트워크입니다.
-              다년간의 글로벌 기업들과의 업무 제휴와 미디어 제작을 통하여 이미 검증된 바 있습니다.
-              압도적인 글로벌 네트워크를 기반으로 한 치밀한 전략과 협업을 통하여 해외 진출을 적극적으로 지원합니다.
-            </p>
+            <div className="pl-7">
+              <p className="text-base sm:text-lg md:text-xl text-text-primary leading-relaxed mb-4 sm:mb-6 font-medium">
+                주식회사 네오스의<br />
+                경쟁력은 글로벌 네트워크입니다.
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed">
+                다년간의 글로벌 기업들과의 업무 제휴와<br />
+                미디어 제작을 통하여 이미 검증된 바<br />
+                있습니다. 압도적인 글로벌 네트워크를<br />
+                기반으로 한 치밀한 전략과 협업을 통하여<br />
+                해외 진출을 적극적으로 지원합니다.
+              </p>
+            </div>
           </div>
         </div>
       </Section>
