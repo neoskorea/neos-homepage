@@ -12,7 +12,7 @@ export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
-    // Intersection Observer 설정
+    // 기본 Intersection Observer 설정
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -27,12 +27,33 @@ export default function Home() {
       }
     );
 
-    // 관찰할 요소들 선택
-    const animateElements = document.querySelectorAll('.fade-in-on-scroll');
+    // Our Journey 섹션을 위한 더 관대한 Observer 설정
+    const journeyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.05, // 더 낮은 threshold
+        rootMargin: '0px 0px 100px 0px' // 더 일찍 트리거되도록 설정
+      }
+    );
+
+    // 기본 관찰할 요소들 선택
+    const animateElements = document.querySelectorAll('.fade-in-on-scroll:not(.journey-fade-in)');
     animateElements.forEach((el) => {
       if (observerRef.current) {
         observerRef.current.observe(el);
       }
+    });
+
+    // Our Journey 섹션 요소들 선택
+    const journeyElements = document.querySelectorAll('.journey-fade-in');
+    journeyElements.forEach((el) => {
+      journeyObserver.observe(el);
     });
 
     // cleanup
@@ -40,6 +61,7 @@ export default function Home() {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
+      journeyObserver.disconnect();
     };
   }, []);
 
@@ -255,7 +277,7 @@ export default function Home() {
       </Section>
 
       {/* History Section */}
-      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll">
+      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll journey-fade-in">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -268,7 +290,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-8 sm:space-y-12 md:space-y-16">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.1s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.1s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">1999</span>
               </div>
@@ -278,7 +300,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.2s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.2s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2003</span>
               </div>
@@ -288,7 +310,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.3s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2004</span>
               </div>
@@ -298,7 +320,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.4s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2006</span>
               </div>
@@ -308,7 +330,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.5s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.5s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2009</span>
               </div>
@@ -318,7 +340,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.6s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.6s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2012</span>
               </div>
@@ -328,7 +350,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.7s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.7s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2013</span>
               </div>
@@ -338,7 +360,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.8s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.8s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2015</span>
               </div>
@@ -348,7 +370,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.9s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.9s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2016</span>
               </div>
@@ -358,7 +380,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.0s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.0s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2018</span>
               </div>
@@ -368,7 +390,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.1s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.1s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2019</span>
               </div>
@@ -378,7 +400,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.2s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.2s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2020</span>
               </div>
@@ -388,7 +410,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.3s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2021</span>
               </div>
@@ -398,7 +420,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.4s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.4s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2022</span>
               </div>
@@ -408,7 +430,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.5s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.5s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2023</span>
               </div>
