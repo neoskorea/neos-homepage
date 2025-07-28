@@ -138,78 +138,74 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 px-4">
-          <div className="text-center">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-light text-text-primary mb-2 sm:mb-3">Trend</h3>
-            <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              흐름을 앞선 새로움
-            </p>
+        {/* Mission Flow Container */}
+        <div className="relative max-w-7xl mx-auto px-4">
+
+          {/* Mission Items Grid */}
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 z-10">
+            {[
+              {
+                icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
+                title: "Trend",
+                description: "흐름을 앞선 새로움",
+                delay: "0ms"
+              },
+              {
+                icon: "M13 10V3L4 14h7v7l9-11h-7z",
+                title: "Efficiency",
+                description: "효율적인 제안",
+                delay: "200ms"
+              },
+              {
+                icon: "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z",
+                title: "Integration",
+                description: "통합적인 솔루션",
+                delay: "400ms"
+              },
+              {
+                icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
+                title: "Progressive",
+                description: "크리에이티브의 혁신적 진보",
+                delay: "600ms"
+              },
+              {
+                icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
+                title: "High Quality",
+                description: "크리에이티브의 질적 향상",
+                delay: "800ms"
+              },
+              {
+                icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+                title: "Completeness",
+                description: "그리고 완성도",
+                delay: "1000ms"
+              }
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="mission-item group relative"
+                style={{ animationDelay: item.delay }}
+              >
+                <div className="text-center relative">
+                  {/* Icon container with enhanced styling */}
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 bg-white border-2 border-primary/20 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:border-primary/40 transition-all duration-500 group-hover:scale-105">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/15 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <svg className="relative w-8 h-8 sm:w-10 sm:h-10 text-primary group-hover:text-primary/80 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl font-light text-text-primary mb-3 sm:mb-4 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed group-hover:text-text-primary transition-colors duration-300">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className="text-center">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-light text-text-primary mb-2 sm:mb-3">Efficiency</h3>
-            <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              효율적인 제안
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-light text-text-primary mb-2 sm:mb-3">Integration</h3>
-            <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              통합적인 솔루션
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-light text-text-primary mb-2 sm:mb-3">Progressive</h3>
-            <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              크리에이티브의 혁신적 진보
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-light text-text-primary mb-2 sm:mb-3">High Quality</h3>
-            <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              크리에이티브의 질적 향상
-            </p>
-          </div>
-
-          <div className="text-center">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-lg sm:text-xl font-light text-text-primary mb-2 sm:mb-3">Completeness</h3>
-            <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
-              그리고 완성도
-            </p>
-          </div>
         </div>
       </Section>
 
@@ -797,6 +793,24 @@ export default function Home() {
           }
         }
 
+        /* Mission Flow Animations */
+        .mission-item {
+          opacity: 0;
+          transform: translateY(30px);
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
           .hero-content {
@@ -825,6 +839,8 @@ export default function Home() {
           .line1 {
             margin-bottom: 0.4rem;
           }
+          
+
         }
 
         @media (max-width: 480px) {
@@ -858,6 +874,8 @@ export default function Home() {
           .line1 {
             margin-bottom: 0.3rem;
           }
+          
+
         }
       `}</style>
     </div>
