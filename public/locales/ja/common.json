@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "vision": {
+    "title": "Vision",
+    "subtitle": "株式会社ネオスは明日のビジョンを今日の現実に変えていきます",
+    "professional": {
+      "title": "Professional",
+      "heading": "株式会社ネオスは\n豊富なノウハウを保有する専門家グループです。",
+      "description": "各界の専門人材を採用し\n業界最高の人材組織を構成しました。\nまた、独立的な部門構成を通じて\n専門性を強化した\nプロフェッショナルなビジネスを目指しています。"
+    },
+    "humanism": {
+      "title": "Humanism",
+      "heading": "株式会社ネオスの\n核心分野はまさに人です。",
+      "description": "ビジネスにのみ専念する企業ではなく\n人と人の間の温かい情が流れる\nヒューマニズムを基盤として\n皆が共に共生できる\n企業文化を追求します。"
+    },
+    "global": {
+      "title": "Global",
+      "heading": "株式会社ネオスの\n競争力はグローバルネットワークです。",
+      "description": "長年のグローバル企業との業務提携と\nメディア制作を通じてすでに検証されて\nいます。圧倒的なグローバルネットワークを\n基盤とした緻密な戦略と協業を通じて\n海外進出を積極的に支援します。"
+    }
+  },
+  "mission": {
+    "title": "Mission",
+    "subtitle": "株式会社ネオスはクライアントの成功ストーリーのために常に邁進します",
+    "trend": {
+      "title": "Trend",
+      "description": "流れを先取りした新しさ"
+    },
+    "efficiency": {
+      "title": "Efficiency",
+      "description": "効率的な提案"
+    },
+    "integration": {
+      "title": "Integration",
+      "description": "統合的なソリューション"
+    },
+    "progressive": {
+      "title": "Progressive",
+      "description": "クリエイティブの革新的進歩"
+    },
+    "highQuality": {
+      "title": "High Quality",
+      "description": "クリエイティブの質的向上"
+    },
+    "completeness": {
+      "title": "Completeness",
+      "description": "そして完成度"
+    }
+  },
+  "history": {
+    "title": "Our Journey",
+    "subtitle": "私たちの成長と発展の主要マイルストーン",
+    "events": {
+      "1999": {
+        "title": "広告・映像制作会社NEOS（ネオス）設立",
+        "description": "広告及び映像制作専門会社としてスタート"
+      },
+      "2003": {
+        "title": "法人転換株式会社ネオス設立",
+        "description": "企業の体系的成長のための法人転換"
+      },
+      "2004": {
+        "title": "広告キャスティング事業チーム新設",
+        "description": "広告キャスティング専門部門拡張"
+      },
+      "2006": {
+        "title": "Nintendo KOREA LAUNCHING",
+        "description": "広告制作キャスティング総括担当"
+      },
+      "2009": {
+        "title": "UNIQLO KOREA LAUNCHING & 芸能マネジメントチーム新設",
+        "description": "UNIQLO韓国ローンチ広告制作キャスティング総括及び芸能マネジメント事業拡張"
+      },
+      "2012": {
+        "title": "（元）所属俳優チョン・ユミSBS演技大賞女子最優秀演技賞受賞",
+        "description": "所属俳優の成果でマネジメント能力立証"
+      },
+      "2013": {
+        "title": "子会社株式会社ネオスエンターテインメント設立",
+        "description": "エンターテインメント専門子会社設立で事業領域拡張"
+      },
+      "2015": {
+        "title": "キャスティング事業チーム中国進出",
+        "description": "グローバル市場進出の第一歩"
+      },
+      "2016": {
+        "title": "colopl KOREA LAUNCHING",
+        "description": "広告制作総括担当"
+      },
+      "2018": {
+        "title": "（元）所属俳優チャン・スンジョMBC演技大賞最優秀演技賞受賞 & 版権（IP）ビジネスチーム新設",
+        "description": "所属俳優の持続的な成果と知的財産権事業でコンテンツ価値創出拡張"
+      },
+      "2019": {
+        "title": "レーベルネオストーリー設立",
+        "description": "ウェブトゥーンとドラマ制作に特化したコンテンツレーベル出帆"
+      },
+      "2020": {
+        "title": "レーベルネオストーリー - 東村アキコウェブトゥーン「私を覚えていますか」",
+        "description": "カカオページ/ピッコマ韓日同時連載"
+      },
+      "2021": {
+        "title": "株式会社ネオストーリー設立",
+        "description": "株式会社ネオストーリー - 東村アキコウェブトゥーン「私を覚えていますか」カカオウェブトゥーン連載"
+      },
+      "2022": {
+        "title": "株式会社ネオストーリー - スオ・アビディ井上ウェブトゥーン「26番目の殺人」韓日同時連載",
+        "description": "カカオウェブトゥーンとピッコマを通じたグローバルウェブトゥーン事業拡張"
+      },
+      "2023": {
+        "title": "持続的なグローバル拡張",
+        "description": "エンターテインメントとコンテンツ制作分野の持続的成長"
+      }
+    }
+  },
+  "works": {
+    "title": "Featured Works",
+    "subtitle": "エンターテインメントとコンテンツ制作分野の最新成果をご確認ください",
+    "viewAll": "すべてのプロジェクトを見る",
+    "misamoGoogle": {
+      "title": "MISAMO x Google",
+      "description": "TWICEユニットMISAMOとGoogleのグローバルキャンペーン制作及びクリエイティブディレクション",
+      "tags": {
+        "globalCampaign": "Global Campaign",
+        "kpop": "K-Pop",
+        "techPartnership": "Tech Partnership"
+      }
+    },
+    "sbc": {
+      "title": "SBC Media Production",
+      "description": "放送コンテンツ制作及びメディアソリューション提供"
+    },
+    "delete": {
+      "title": "DELETE ウェブトゥーン",
+      "description": "ネオストーリー単独企画、作：宇宙 / 絵：石川セイコ\nカカオウェブトゥーン・ピッコマ韓日米同時連載"
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "グローバルリーディングブランドと共に成功ストーリーを作り上げます"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "業界リーダーとの協力を通じて卓越した価値を創出します"
+  },
+  "labels": {
+    "featuredCampaign": "Featured Campaign",
+    "broadcasting": "Broadcasting",
+    "webtoonPlanning": "Webtoon Planning"
+  }
+} 

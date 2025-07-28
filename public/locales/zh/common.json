@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "vision": {
+    "title": "Vision",
+    "subtitle": "NEOS株式会社将明天的愿景转化为今天的现实",
+    "professional": {
+      "title": "Professional",
+      "heading": "NEOS株式会社是\n拥有丰富经验的专家团队。",
+      "description": "通过招募各界专业人才\n组建了业界最顶尖的人力组织。\n同时，通过独立的部门构成\n加强专业性，\n追求专业化的商业模式。"
+    },
+    "humanism": {
+      "title": "Humanism",
+      "heading": "NEOS株式会社的\n核心领域正是人。",
+      "description": "我们不是仅专注于商业的企业，\n而是以人与人之间温暖情感流动的\n人文主义为基础，\n追求所有人都能\n共同共生的企业文化。"
+    },
+    "global": {
+      "title": "Global",
+      "heading": "NEOS株式会社的\n竞争力是全球网络。",
+      "description": "通过多年与全球企业的业务合作\n和媒体制作已得到验证。\n基于压倒性的全球网络，\n通过精密的战略和协作\n积极支持海外拓展。"
+    }
+  },
+  "mission": {
+    "title": "Mission",
+    "subtitle": "NEOS株式会社始终致力于客户的成功故事",
+    "trend": {
+      "title": "Trend",
+      "description": "引领潮流的创新"
+    },
+    "efficiency": {
+      "title": "Efficiency",
+      "description": "高效的提案"
+    },
+    "integration": {
+      "title": "Integration",
+      "description": "整合性解决方案"
+    },
+    "progressive": {
+      "title": "Progressive",
+      "description": "创意的革新性进步"
+    },
+    "highQuality": {
+      "title": "High Quality",
+      "description": "创意的质量提升"
+    },
+    "completeness": {
+      "title": "Completeness",
+      "description": "以及完成度"
+    }
+  },
+  "history": {
+    "title": "Our Journey",
+    "subtitle": "我们成长与发展的重要里程碑",
+    "events": {
+      "1999": {
+        "title": "广告·影像制作公司NEOS（尼奥斯）成立",
+        "description": "作为广告及影像制作专业公司起步"
+      },
+      "2003": {
+        "title": "法人转换NEOS株式会社成立",
+        "description": "为企业系统性成长而进行法人转换"
+      },
+      "2004": {
+        "title": "广告选角事业团新设",
+        "description": "广告选角专业部门扩张"
+      },
+      "2006": {
+        "title": "Nintendo KOREA LAUNCHING",
+        "description": "广告制作选角总体负责"
+      },
+      "2009": {
+        "title": "UNIQLO KOREA LAUNCHING & 演艺经纪团队新设",
+        "description": "UNIQLO韩国启动广告制作选角总体负责及演艺经纪事业扩张"
+      },
+      "2012": {
+        "title": "（前）签约演员郑有美获SBS演技大赏女子最优秀演技奖",
+        "description": "通过签约演员的成果证明经纪能力"
+      },
+      "2013": {
+        "title": "子公司NEOS娱乐株式会社成立",
+        "description": "通过设立娱乐专业子公司扩张事业领域"
+      },
+      "2015": {
+        "title": "选角事业团进军中国",
+        "description": "全球市场拓展的第一步"
+      },
+      "2016": {
+        "title": "colopl KOREA LAUNCHING",
+        "description": "广告制作总体负责"
+      },
+      "2018": {
+        "title": "（前）签约演员张胜祖获MBC演技大赏最优秀演技奖 & 版权（IP）商务团新设",
+        "description": "签约演员的持续成果和通过知识产权事业扩张内容价值创造"
+      },
+      "2019": {
+        "title": "厂牌NEOSTORY成立",
+        "description": "专门从事网络漫画和电视剧制作的内容厂牌启航"
+      },
+      "2020": {
+        "title": "厂牌NEOSTORY - 东村明子网络漫画「还记得我吗」",
+        "description": "KakaoPage/Piccoma韩日同时连载"
+      },
+      "2021": {
+        "title": "NEOSTORY株式会社成立",
+        "description": "NEOSTORY株式会社 - 东村明子网络漫画「还记得我吗」Kakao网络漫画连载"
+      },
+      "2022": {
+        "title": "NEOSTORY株式会社 - 须王·阿比迪井上网络漫画「第26次杀人」韩日同时连载",
+        "description": "通过Kakao网络漫画和Piccoma的全球网络漫画事业扩张"
+      },
+      "2023": {
+        "title": "持续的全球扩张",
+        "description": "娱乐和内容制作领域的持续成长"
+      }
+    }
+  },
+  "works": {
+    "title": "Featured Works",
+    "subtitle": "请确认娱乐和内容制作领域的最新成果",
+    "viewAll": "查看所有项目",
+    "misamoGoogle": {
+      "title": "MISAMO x Google",
+      "description": "TWICE小分队MISAMO与Google的全球活动制作及创意指导",
+      "tags": {
+        "globalCampaign": "Global Campaign",
+        "kpop": "K-Pop",
+        "techPartnership": "Tech Partnership"
+      }
+    },
+    "sbc": {
+      "title": "SBC Media Production",
+      "description": "广播内容制作及媒体解决方案提供"
+    },
+    "delete": {
+      "title": "DELETE 网络漫画",
+      "description": "NEOSTORY独家企划，编剧：宇宙 / 作画：石川清子\nKakao网络漫画·Piccoma韩日美同时连载"
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "与全球领先品牌共同创造成功故事"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "通过与行业领导者的合作创造卓越价值"
+  },
+  "labels": {
+    "featuredCampaign": "Featured Campaign",
+    "broadcasting": "Broadcasting",
+    "webtoonPlanning": "Webtoon Planning"
+  }
+} 

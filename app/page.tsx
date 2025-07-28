@@ -7,9 +7,11 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/Button';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const { t, language } = useLanguage();
 
   useEffect(() => {
     // 기본 Intersection Observer 설정
@@ -113,11 +115,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Vision
+              {t('vision.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
-              주식회사 네오스는 내일의 비전을 오늘의 현실로 바꿔나갑니다
+              {t('vision.subtitle')}
             </p>
           </div>
 
@@ -126,20 +128,15 @@ export default function Home() {
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">Professional</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.professional.title')}</h3>
                 </div>
               </div>
               <div className="md:pl-7">
-                <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium">
-                  주식회사 네오스는<br />
-                  풍부한 노하우를 보유한 전문가 그룹입니다.
+                <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium whitespace-pre-line">
+                  {t('vision.professional.heading')}
                 </p>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light">
-                  각계 전문 인력의 영입으로<br />
-                  업계 최고의 맨파워 조직을 구성했습니다.<br />
-                  또한, 독립적인 파트 구성을 통하여<br />
-                  전문성을 강화한<br />
-                  프로페셔널한 비즈니스를 지향합니다.
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light whitespace-pre-line">
+                  {t('vision.professional.description')}
                 </p>
               </div>
             </div>
@@ -148,20 +145,15 @@ export default function Home() {
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">Humanism</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.humanism.title')}</h3>
                 </div>
               </div>
               <div className="md:pl-7">
-                <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium">
-                  주식회사 네오스의<br />
-                  핵심 분야는 바로 사람입니다.
+                <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium whitespace-pre-line">
+                  {t('vision.humanism.heading')}
                 </p>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light">
-                  비즈니스에만 치중하는 기업이 아닌<br />
-                  사람과 사람 사이의 따뜻한 정이 흐르는<br />
-                  휴머니즘을  바탕으로<br />
-                  모두 함께 상생 할 수 있는<br />
-                  기업 문화를 추구합니다.
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light whitespace-pre-line">
+                  {t('vision.humanism.description')}
                 </p>
               </div>
             </div>
@@ -170,20 +162,15 @@ export default function Home() {
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">Global</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.global.title')}</h3>
                 </div>
               </div>
               <div className="md:pl-7">
-                <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium">
-                  주식회사 네오스의<br />
-                  경쟁력은 글로벌 네트워크입니다.
+                <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium whitespace-pre-line">
+                  {t('vision.global.heading')}
                 </p>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light">
-                  다년간의 글로벌 기업들과의 업무 제휴와<br />
-                  미디어 제작을 통하여 이미 검증된 바<br />
-                  있습니다. 압도적인 글로벌 네트워크를<br />
-                  기반으로 한 치밀한 전략과 협업을 통하여<br />
-                  해외 진출을 적극적으로 지원합니다.
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light whitespace-pre-line">
+                  {t('vision.global.description')}
                 </p>
               </div>
             </div>
@@ -196,11 +183,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Mission
+              {t('mission.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
-              주식회사 네오스는 클라이언트의 성공 스토리를 위하여 항상 매진합니다
+              {t('mission.subtitle')}
             </p>
           </div>
 
@@ -212,38 +199,38 @@ export default function Home() {
               {[
                 {
                   icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
-                  title: "Trend",
-                  description: "흐름을 앞선 새로움",
+                  titleKey: "mission.trend.title",
+                  descriptionKey: "mission.trend.description",
                   delay: "0ms"
                 },
                 {
                   icon: "M13 10V3L4 14h7v7l9-11h-7z",
-                  title: "Efficiency",
-                  description: "효율적인 제안",
+                  titleKey: "mission.efficiency.title",
+                  descriptionKey: "mission.efficiency.description",
                   delay: "200ms"
                 },
                 {
                   icon: "M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z",
-                  title: "Integration",
-                  description: "통합적인 솔루션",
+                  titleKey: "mission.integration.title",
+                  descriptionKey: "mission.integration.description",
                   delay: "400ms"
                 },
                 {
                   icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
-                  title: "Progressive",
-                  description: "크리에이티브의 혁신적 진보",
+                  titleKey: "mission.progressive.title",
+                  descriptionKey: "mission.progressive.description",
                   delay: "600ms"
                 },
                 {
                   icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z",
-                  title: "High Quality",
-                  description: "크리에이티브의 질적 향상",
+                  titleKey: "mission.highQuality.title",
+                  descriptionKey: "mission.highQuality.description",
                   delay: "800ms"
                 },
                 {
                   icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
-                  title: "Completeness",
-                  description: "그리고 완성도",
+                  titleKey: "mission.completeness.title",
+                  descriptionKey: "mission.completeness.description",
                   delay: "1000ms"
                 }
               ].map((item, index) => (
@@ -262,10 +249,10 @@ export default function Home() {
                     </div>
 
                     <h3 className="text-xl sm:text-2xl font-light text-text-primary mb-3 sm:mb-4 group-hover:text-primary transition-colors duration-300">
-                      {item.title}
+                      {t(item.titleKey)}
                     </h3>
                     <p className="text-sm sm:text-base text-text-secondary leading-relaxed group-hover:text-text-primary transition-colors duration-300">
-                      {item.description}
+                      {t(item.descriptionKey)}
                     </p>
 
                     {/* Bottom accent line */}
@@ -280,166 +267,166 @@ export default function Home() {
       </Section>
 
       {/* History Section */}
-      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll journey-fade-in">
+      <Section className="py-20 md:py-32 lg:py-40">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Our Journey
+              {t('history.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
-              우리의 성장과 발전의 주요 이정표
+              {t('history.subtitle')}
             </p>
           </div>
 
-          <div className="space-y-8 sm:space-y-12 md:space-y-16">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.1s' }}>
+          <div className="space-y-8 sm:space-y-12 md:space-y-16" key={`history-${language}`}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">1999</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">광고·영상제작사 NEOS(네오스) 설립</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">광고 및 영상 제작 전문 회사로 시작</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.1999.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.1999.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.2s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2003</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">법인 전환 주식회사 네오스 설립</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">기업의 체계적 성장을 위한 법인 전환</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2003.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2003.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2004</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">광고 캐스팅 사업팀 신설</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">광고 캐스팅 전문 부문 확장</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2004.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2004.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2006</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">Nintendo KOREA LAUNCHING</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">광고 제작 캐스팅 총괄 담당</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2006.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2006.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.5s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2009</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">UNIQLO KOREA LAUNCHING & 연예 매니지먼트팀 신설</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">UNIQLO 한국 런칭 광고 제작 캐스팅 총괄 및 연예 매니지먼트 사업 확장</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2009.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2009.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.6s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2012</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">(전)소속배우 정유미 SBS 연기대상 여자 최우수연기상 수상</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">소속 배우의 성과로 매니지먼트 역량 입증</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2012.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2012.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.7s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2013</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">자회사 주식회사 네오스 엔터테인먼트 설립</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">엔터테인먼트 전문 자회사 설립으로 사업 영역 확장</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2013.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2013.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.8s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2015</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">캐스팅 사업팀 중국 진출</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">글로벌 시장 진출의 첫 걸음</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2015.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2015.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '0.9s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2016</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">colopl KOREA LAUNCHING</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">광고 제작 총괄 담당</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2016.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2016.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.0s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2018</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">(전)소속배우 장승조 MBC연기대상 최우수연기상 수상 & 판권(IP) 비즈니스팀 신설</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">소속 배우의 지속적인 성과와 지적재산권 사업으로 콘텐츠 가치 창출 확장</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2018.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2018.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.1s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2019</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">레이블 네오스토리 설립</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">웹툰과 드라마 제작에 특화된 콘텐츠 레이블 출범</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2019.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2019.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.2s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2020</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">레이블 네오스토리 - 히가시무라 아키코 웹툰 「나를 기억하나요」</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">카카오페이지/픽코마 한일동시연재</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2020.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2020.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.3s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2021</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">주식회사 네오스토리 설립</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">주식회사 네오스토리 - 히가시무라 아키코 웹툰 「나를 기억하나요」 카카오웹툰 연재</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2021.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2021.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.4s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2022</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">주식회사 네오스토리 - 수오•아비디 이노우에 웹툰 「26번째 살인」 한일동시연재</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">카카오웹툰과 픽코마를 통한 글로벌 웹툰 사업 확장</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2022.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2022.description')}</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll journey-fade-in" style={{ transitionDelay: '1.5s' }}>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2023</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">지속적인 글로벌 확장</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">엔터테인먼트와 콘텐츠 제작 분야의 지속적 성장</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">{t('history.events.2023.title')}</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">{t('history.events.2023.description')}</p>
               </div>
             </div>
           </div>
@@ -451,11 +438,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Featured Works
+              {t('works.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
-              엔터테인먼트와 콘텐츠 제작 분야의 최신 성과를 확인하세요
+              {t('works.subtitle')}
             </p>
           </div>
 
@@ -473,16 +460,16 @@ export default function Home() {
                 <div className="max-w-2xl">
                   <div className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm font-medium mb-3 sm:mb-4 md:mb-6">
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full mr-1.5 sm:mr-2"></span>
-                    Featured Campaign
+                    {t('labels.featuredCampaign')}
                   </div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white mb-2 sm:mb-3 md:mb-4">MISAMO x Google</h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white mb-2 sm:mb-3 md:mb-4">{t('works.misamoGoogle.title')}</h3>
                   <p className="text-sm sm:text-lg md:text-xl text-gray-200 leading-relaxed mb-3 sm:mb-4 md:mb-6">
-                    TWICE 유닛 MISAMO와 Google의 글로벌 캠페인 제작 및 크리에이티브 디렉션
+                    {t('works.misamoGoogle.description')}
                   </p>
                   <div className="flex flex-wrap gap-2 sm:gap-3">
-                    <span className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm">Global Campaign</span>
-                    <span className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm">K-Pop</span>
-                    <span className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm">Tech Partnership</span>
+                    <span className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm">{t('works.misamoGoogle.tags.globalCampaign')}</span>
+                    <span className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm">{t('works.misamoGoogle.tags.kpop')}</span>
+                    <span className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs sm:text-sm">{t('works.misamoGoogle.tags.techPartnership')}</span>
                   </div>
                 </div>
               </div>
@@ -502,11 +489,11 @@ export default function Home() {
               <div className="absolute inset-0 flex items-end">
                 <div className="p-4 sm:p-6 md:p-8 w-full">
                   <div className="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 bg-primary/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-2 sm:mb-3 md:mb-4">
-                    Broadcasting
+                    {t('labels.broadcasting')}
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white mb-2 sm:mb-3">SBC Media Production</h3>
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white mb-2 sm:mb-3">{t('works.sbc.title')}</h3>
                   <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
-                    방송 콘텐츠 제작 및 미디어 솔루션 제공
+                    {t('works.sbc.description')}
                   </p>
                   <div className="mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="w-8 sm:w-12 h-0.5 bg-primary"></div>
@@ -526,12 +513,11 @@ export default function Home() {
               <div className="absolute inset-0 flex items-end">
                 <div className="p-4 sm:p-6 md:p-8 w-full">
                   <div className="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 bg-primary/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-2 sm:mb-3 md:mb-4">
-                    Webtoon Planning
+                    {t('labels.webtoonPlanning')}
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white mb-2 sm:mb-3">DELETE 웹툰</h3>
-                  <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
-                    네오스토리 단독 기획, 글: 우주 / 그림: 이시카와 세이코<br className="hidden sm:block" />
-                    <span className="block sm:inline">카카오웹툰 · 픽코마 한일미 동시연재</span>
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white mb-2 sm:mb-3">{t('works.delete.title')}</h3>
+                  <p className="text-sm sm:text-base text-gray-200 leading-relaxed whitespace-pre-line">
+                    {t('works.delete.description')}
                   </p>
                   <div className="mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="w-8 sm:w-12 h-0.5 bg-primary"></div>
@@ -543,7 +529,7 @@ export default function Home() {
 
           <div className="text-center mt-12 sm:mt-16 fade-in-on-scroll" style={{ transitionDelay: '0.8s' }}>
             <Button href="/portfolio" variant="outline" size="lg" className="min-w-[180px] sm:min-w-[200px] text-sm sm:text-base">
-              모든 프로젝트 보기
+              {t('works.viewAll')}
             </Button>
           </div>
         </div>
@@ -554,11 +540,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Our Clients
+              {t('clients.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
-              글로벌 리딩 브랜드들과 함께 성공 스토리를 만들어갑니다
+              {t('clients.subtitle')}
             </p>
           </div>
         </div>
@@ -621,11 +607,11 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Our Partners
+              {t('partners.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
-              업계 리더들과 협력하여 탁월한 가치를 창출합니다
+              {t('partners.subtitle')}
             </p>
           </div>
 

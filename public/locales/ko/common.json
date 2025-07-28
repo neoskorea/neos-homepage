@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "vision": {
+    "title": "Vision",
+    "subtitle": "주식회사 네오스는 내일의 비전을 오늘의 현실로 바꿔나갑니다",
+    "professional": {
+      "title": "Professional",
+      "heading": "주식회사 네오스는\n풍부한 노하우를 보유한 전문가 그룹입니다.",
+      "description": "각계 전문 인력의 영입으로\n업계 최고의 맨파워 조직을 구성했습니다.\n또한, 독립적인 파트 구성을 통하여\n전문성을 강화한\n프로페셔널한 비즈니스를 지향합니다."
+    },
+    "humanism": {
+      "title": "Humanism",
+      "heading": "주식회사 네오스의\n핵심 분야는 바로 사람입니다.",
+      "description": "비즈니스에만 치중하는 기업이 아닌\n사람과 사람 사이의 따뜻한 정이 흐르는\n휴머니즘을  바탕으로\n모두 함께 상생 할 수 있는\n기업 문화를 추구합니다."
+    },
+    "global": {
+      "title": "Global",
+      "heading": "주식회사 네오스의\n경쟁력은 글로벌 네트워크입니다.",
+      "description": "다년간의 글로벌 기업들과의 업무 제휴와\n미디어 제작을 통하여 이미 검증된 바\n있습니다. 압도적인 글로벌 네트워크를\n기반으로 한 치밀한 전략과 협업을 통하여\n해외 진출을 적극적으로 지원합니다."
+    }
+  },
+  "mission": {
+    "title": "Mission",
+    "subtitle": "주식회사 네오스는 클라이언트의 성공 스토리를 위하여 항상 매진합니다",
+    "trend": {
+      "title": "Trend",
+      "description": "흐름을 앞선 새로움"
+    },
+    "efficiency": {
+      "title": "Efficiency",
+      "description": "효율적인 제안"
+    },
+    "integration": {
+      "title": "Integration",
+      "description": "통합적인 솔루션"
+    },
+    "progressive": {
+      "title": "Progressive",
+      "description": "크리에이티브의 혁신적 진보"
+    },
+    "highQuality": {
+      "title": "High Quality",
+      "description": "크리에이티브의 질적 향상"
+    },
+    "completeness": {
+      "title": "Completeness",
+      "description": "그리고 완성도"
+    }
+  },
+  "history": {
+    "title": "Our Journey",
+    "subtitle": "우리의 성장과 발전의 주요 이정표",
+    "events": {
+      "1999": {
+        "title": "광고·영상제작사 NEOS(네오스) 설립",
+        "description": "광고 및 영상 제작 전문 회사로 시작"
+      },
+      "2003": {
+        "title": "법인 전환 주식회사 네오스 설립",
+        "description": "기업의 체계적 성장을 위한 법인 전환"
+      },
+      "2004": {
+        "title": "광고 캐스팅 사업팀 신설",
+        "description": "광고 캐스팅 전문 부문 확장"
+      },
+      "2006": {
+        "title": "Nintendo KOREA LAUNCHING",
+        "description": "광고 제작 캠페인 총괄 담당"
+      },
+      "2009": {
+        "title": "UNIQLO KOREA LAUNCHING & 연예 매니지먼트팀 신설",
+        "description": "UNIQLO 한국 런칭 광고 제작 캐스팅 총괄 및 연예 매니지먼트 사업 확장"
+      },
+      "2012": {
+        "title": "(전)소속배우 정유미 SBS 연기대상 여자 최우수연기상 수상",
+        "description": "소속 배우의 성과로 매니지먼트 역량 입증"
+      },
+      "2013": {
+        "title": "자회사 주식회사 네오스 엔터테인먼트 설립",
+        "description": "엔터테인먼트 전문 자회사 설립으로 사업 영역 확장"
+      },
+      "2015": {
+        "title": "캐스팅 사업팀 중국 진출",
+        "description": "글로벌 시장 진출의 첫 걸음"
+      },
+      "2016": {
+        "title": "colopl KOREA LAUNCHING",
+        "description": "광고 제작 총괄 담당"
+      },
+      "2018": {
+        "title": "(전)소속배우 장승조 MBC연기대상 최우수연기상 수상 & 판권(IP) 비즈니스팀 신설",
+        "description": "소속 배우의 지속적인 성과와 지적재산권 사업으로 콘텐츠 가치 창출 확장"
+      },
+      "2019": {
+        "title": "레이블 네오스토리 설립",
+        "description": "웹툰과 드라마 제작에 특화된 콘텐츠 레이블 출범"
+      },
+      "2020": {
+        "title": "레이블 네오스토리 - 히가시무라 아키코 웹툰 「나를 기억하나요」",
+        "description": "카카오페이지/픽코마 한일동시연재"
+      },
+      "2021": {
+        "title": "주식회사 네오스토리 설립",
+        "description": "주식회사 네오스토리 - 히가시무라 아키코 웹툰 「나를 기억하나요」 카카오웹툰 연재"
+      },
+      "2022": {
+        "title": "주식회사 네오스토리 - 수오•아비디 이노우에 웹툰 「26번째 살인」 한일동시연재",
+        "description": "카카오웹툰과 픽코마를 통한 글로벌 웹툰 사업 확장"
+      },
+      "2023": {
+        "title": "지속적인 글로벌 확장",
+        "description": "엔터테인먼트와 콘텐츠 제작 분야의 지속적 성장"
+      }
+    }
+  },
+  "works": {
+    "title": "Featured Works",
+    "subtitle": "엔터테인먼트와 콘텐츠 제작 분야의 최신 성과를 확인하세요",
+    "viewAll": "모든 프로젝트 보기",
+    "misamoGoogle": {
+      "title": "MISAMO x Google",
+      "description": "TWICE 유닛 MISAMO와 Google의 글로벌 캠페인 제작 및 크리에이티브 디렉션",
+      "tags": {
+        "globalCampaign": "Global Campaign",
+        "kpop": "K-Pop",
+        "techPartnership": "Tech Partnership"
+      }
+    },
+    "sbc": {
+      "title": "SBC Media Production",
+      "description": "방송 콘텐츠 제작 및 미디어 솔루션 제공"
+    },
+    "delete": {
+      "title": "DELETE 웹툰",
+      "description": "네오스토리 단독 기획, 글: 우주 / 그림: 이시카와 세이코\n카카오웹툰 · 픽코마 한일미 동시연재"
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "글로벌 리딩 브랜드들과 함께 성공 스토리를 만들어갑니다"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "업계 리더들과 협력하여 탁월한 가치를 창출합니다"
+  },
+  "labels": {
+    "featuredCampaign": "Featured Campaign",
+    "broadcasting": "Broadcasting",
+    "webtoonPlanning": "Webtoon Planning"
+  }
+} 

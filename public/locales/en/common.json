@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "vision": {
+    "title": "Vision",
+    "subtitle": "NEOS Corporation transforms tomorrow's vision into today's reality",
+    "professional": {
+      "title": "Professional",
+      "heading": "NEOS Corporation is\na group of experts with abundant expertise.",
+      "description": "We have assembled the industry's top talent\nby recruiting professionals from various fields.\nThrough independent team structures,\nwe pursue professional business\nwith enhanced expertise."
+    },
+    "humanism": {
+      "title": "Humanism",
+      "heading": "At the core of NEOS Corporation\nlies people.",
+      "description": "Rather than being a company focused solely on business,\nwe pursue a corporate culture based on humanism\nwhere warm relationships flow between people,\nallowing everyone to prosper together\nin mutual growth."
+    },
+    "global": {
+      "title": "Global",
+      "heading": "NEOS Corporation's competitive advantage\nis our global network.",
+      "description": "We have already proven our capabilities\nthrough years of business partnerships\nwith global companies and media production.\nBased on our overwhelming global network,\nwe actively support overseas expansion\nthrough meticulous strategy and collaboration."
+    }
+  },
+  "mission": {
+    "title": "Mission",
+    "subtitle": "NEOS Corporation is always dedicated to our clients' success stories",
+    "trend": {
+      "title": "Trend",
+      "description": "Innovation ahead of the curve"
+    },
+    "efficiency": {
+      "title": "Efficiency",
+      "description": "Efficient proposals"
+    },
+    "integration": {
+      "title": "Integration",
+      "description": "Integrated solutions"
+    },
+    "progressive": {
+      "title": "Progressive",
+      "description": "Innovative advancement in creativity"
+    },
+    "highQuality": {
+      "title": "High Quality",
+      "description": "Qualitative improvement of creativity"
+    },
+    "completeness": {
+      "title": "Completeness",
+      "description": "And perfection"
+    }
+  },
+  "history": {
+    "title": "Our Journey",
+    "subtitle": "Key milestones in our growth and development",
+    "events": {
+      "1999": {
+        "title": "Establishment of NEOS advertising and video production company",
+        "description": "Started as a specialized advertising and video production company"
+      },
+      "2003": {
+        "title": "Corporate conversion to NEOS Corporation",
+        "description": "Corporate conversion for systematic business growth"
+      },
+      "2004": {
+        "title": "Establishment of advertising casting business team",
+        "description": "Expansion into specialized advertising casting division"
+      },
+      "2006": {
+        "title": "Nintendo KOREA LAUNCHING",
+        "description": "Overall responsibility for advertising production casting"
+      },
+      "2009": {
+        "title": "UNIQLO KOREA LAUNCHING & Establishment of entertainment management team",
+        "description": "Overall responsibility for UNIQLO Korea launch advertising production casting and expansion into entertainment management business"
+      },
+      "2012": {
+        "title": "Former actress Jung Yu-mi wins SBS Acting Awards Best Actress Award",
+        "description": "Proved management capabilities through talent achievements"
+      },
+      "2013": {
+        "title": "Establishment of subsidiary NEOS Entertainment Corporation",
+        "description": "Business expansion through establishment of entertainment-specialized subsidiary"
+      },
+      "2015": {
+        "title": "Casting business team enters China",
+        "description": "First step into global market expansion"
+      },
+      "2016": {
+        "title": "colopl KOREA LAUNCHING",
+        "description": "Overall responsibility for advertising production"
+      },
+      "2018": {
+        "title": "Former actor Jang Seung-jo wins MBC Acting Awards Best Actor Award & Establishment of IP business team",
+        "description": "Continuous talent achievements and expansion into content value creation through intellectual property business"
+      },
+      "2019": {
+        "title": "Establishment of label NEOSTORY",
+        "description": "Launch of content label specialized in webtoon and drama production"
+      },
+      "2020": {
+        "title": "NEOSTORY label - Akiko Higashimura webtoon 'Do You Remember Me?'",
+        "description": "Simultaneous serialization on KakaoPage/Piccoma in Korea and Japan"
+      },
+      "2021": {
+        "title": "Establishment of NEOSTORY Corporation",
+        "description": "NEOSTORY Corporation - Akiko Higashimura webtoon 'Do You Remember Me?' serialized on Kakao Webtoon"
+      },
+      "2022": {
+        "title": "NEOSTORY Corporation - Suo•Abidi Inoue webtoon '26th Murder' simultaneous Korea-Japan serialization",
+        "description": "Global webtoon business expansion through Kakao Webtoon and Piccoma"
+      },
+      "2023": {
+        "title": "Continuous global expansion",
+        "description": "Sustained growth in entertainment and content production fields"
+      }
+    }
+  },
+  "works": {
+    "title": "Featured Works",
+    "subtitle": "Discover our latest achievements in entertainment and content production",
+    "viewAll": "View All Projects",
+    "misamoGoogle": {
+      "title": "MISAMO x Google",
+      "description": "Global campaign production and creative direction for TWICE unit MISAMO and Google",
+      "tags": {
+        "globalCampaign": "Global Campaign",
+        "kpop": "K-Pop",
+        "techPartnership": "Tech Partnership"
+      }
+    },
+    "sbc": {
+      "title": "SBC Media Production",
+      "description": "Broadcasting content production and media solution provision"
+    },
+    "delete": {
+      "title": "DELETE Webtoon",
+      "description": "Exclusively planned by NEOSTORY, Writer: Space / Artist: Seiko Ishikawa\nSimultaneous serialization on Kakao Webtoon · Piccoma in Korea, Japan, and US"
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "Creating success stories together with global leading brands"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "Creating exceptional value through collaboration with industry leaders"
+  },
+  "labels": {
+    "featuredCampaign": "Featured Campaign",
+    "broadcasting": "Broadcasting",
+    "webtoonPlanning": "Webtoon Planning"
+  }
+} 

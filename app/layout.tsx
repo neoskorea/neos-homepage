@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from 'next/font/local';
 import { Inter } from 'next/font/google';
 import "./globals.css";
+import { LanguageProvider } from './contexts/LanguageContext';
 
 const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',
@@ -54,7 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${pretendard.variable} ${inter.variable} scroll-smooth`}>
       <body className="font-sans antialiased bg-white text-[#111111]">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

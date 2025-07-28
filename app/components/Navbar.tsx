@@ -4,14 +4,16 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const navigation = [
-  { name: 'About', href: '/about' },
+  { name: 'nav.about', href: '/about' },
   // { name: 'Services', href: '/services' },
-  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'nav.portfolio', href: '/portfolio' },
   // { name: 'Clients', href: '/clients' },
   // { name: 'News', href: '/news' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'nav.contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -19,6 +21,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,13 +78,19 @@ export default function Navbar() {
                   : 'text-white/90 hover:text-white'
                   }`}
               >
-                {item.name}
+                {t(item.name)}
               </Link>
             ))}
+
+            {/* Language Switcher */}
+            <LanguageSwitcher isScrolled={isScrolled} isHomePage={isHomePage} />
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex md:hidden">
+          <div className="flex md:hidden items-center space-x-2">
+            {/* Mobile Language Switcher */}
+            <LanguageSwitcher isScrolled={isScrolled} isHomePage={isHomePage} />
+
             <button
               type="button"
               className={`transition-colors duration-300 ${isScrolled
@@ -122,7 +131,7 @@ export default function Navbar() {
                   }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item.name}
+                {t(item.name)}
               </Link>
             ))}
           </div>
