@@ -569,43 +569,47 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-6 md:gap-8 lg:gap-12 items-center justify-items-center">
-            {Array.from({ length: 27 }, (_, i) => {
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-12">
+            {Array.from({ length: 31 }, (_, i) => {
               const partnerLogos = [
-                { file: '1_jtbc.png', name: 'JTBC' },
-                { file: '2_tvn.png', name: 'tvN' },
-                { file: '3_sbs.png', name: 'SBS' },
-                { file: '4_mbc.png', name: 'MBC' },
-                { file: '5_kbs.png', name: 'KBS' },
-                { file: '6_sm.svg', name: 'SM Entertainment' },
-                { file: '7_jyp.svg', name: 'JYP Entertainment' },
-                { file: '8_yg.png', name: 'YG Entertainment' },
-                { file: '9_pledis.png', name: 'Pledis Entertainment' },
-                { file: '10_cube.svg', name: 'Cube Entertainment' },
-                { file: '11_esteem_fashion.png', name: 'Esteem Fashion' },
-                { file: '12_esteem_ent.png', name: 'Esteem Entertainment' },
-                { file: '13_blossom.png', name: 'Blossom Entertainment' },
-                { file: '14_keyeast.png', name: 'KeyEast' },
-                { file: '15_adk.png', name: 'ADK' },
-                { file: '16_dentsu.svg', name: 'Dentsu' },
-                { file: '17_hakuhodo.png', name: 'Hakuhodo' },
-                { file: '18_mccann.png', name: 'McCann' },
-                { file: '19_innocean.svg', name: 'Innocean' },
-                { file: '20_tfc.webp', name: 'TFC' },
-                { file: '21_nhk.svg', name: 'NHK' },
-                { file: '22_aoipro.svg', name: 'AOI Pro' },
-                { file: '23_monster.svg', name: 'Monster' },
-                { file: '24_tyo.png', name: 'TYO' },
-                { file: '25_robot.webp', name: 'Robot' },
-                { file: '26_sonymusic.svg', name: 'Sony Music' },
-                { file: '27_universal.svg', name: 'Universal' }
+                { file: '1_jtbc.png', name: 'JTBC Co., Ltd.' },
+                { file: '2_tvn.png', name: 'CJ ENM Co., Ltd.' },
+                { file: '3_sbs.png', name: 'Seoul Broadcasting System Co., Ltd.' },
+                { file: '4_mbc.png', name: 'Munhwa Broadcasting Corporation' },
+                { file: '5_kbs.png', name: 'Korean Broadcasting System' },
+                { file: '6_sm.svg', name: 'SM Entertainment Co., Ltd.' },
+                { file: '7_jyp.svg', name: 'JYP Entertainment Corporation' },
+                { file: '8_yg.png', name: 'YG Entertainment Inc.' },
+                { file: '29.hybe.png', name: 'HYBE Co., Ltd.' },
+                { file: '9_pledis.png', name: 'Pledis Entertainment Co., Ltd.' },
+                { file: '10_cube.svg', name: 'Cube Entertainment Inc.' },
+                { file: '11_esteem_fashion.png', name: 'Esteem Group' },
+                { file: '12_esteem_ent.png', name: 'Esteem Entertainment Co., Ltd.' },
+                { file: '13_blossom.png', name: 'Blossom Entertainment Co., Ltd.' },
+                { file: '14_keyeast.png', name: 'KEYEAST Co., Ltd.' },
+                { file: '15_adk.png', name: 'ADK Holdings Inc.' },
+                { file: '16_dentsu.svg', name: 'Dentsu Inc.' },
+                { file: '17_hakuhodo.png', name: 'Hakuhodo Inc.' },
+                { file: '18_mccann.png', name: 'McCann Worldgroup' },
+                { file: '19_innocean.svg', name: 'Innocean Worldwide Inc.' },
+                { file: '20_tfc.webp', name: 'TOHOKUSHINSHA FILM CORPORATION' },
+                { file: '21_nhk.svg', name: 'Japan Broadcasting Corporation' },
+                { file: '22_aoipro.svg', name: 'AOI Pro. Inc.' },
+                { file: '23_monster.svg', name: 'MONSTER' },
+                { file: '24_tyo.png', name: 'TYO Inc.' },
+                { file: '25_robot.webp', name: 'Robot Communications Inc.' },
+                { file: '26_sonymusic.svg', name: 'Sony Music Entertainment (Japan) Inc.' },
+                { file: '27_universal.svg', name: 'Universal Music Group' },
+                { file: '28.tbs.svg', name: 'Tokyo Broadcasting System Television, Inc.' },
+                { file: '30.fuji-television.png', name: 'Fuji Television Network, Inc.' },
+                { file: '31.kansai-television.svg', name: 'Kansai Television Co. Ltd.' },
               ];
 
               const partner = partnerLogos[i];
               return (
                 <div
                   key={i}
-                  className="group relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-all duration-300"
+                  className="group relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex-shrink-0 flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-all duration-300"
                 >
                   <Image
                     src={`/images/partners-logos/${partner.file}`}
