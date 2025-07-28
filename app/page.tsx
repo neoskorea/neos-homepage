@@ -44,7 +44,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
@@ -422,7 +422,7 @@ export default function Home() {
       </Section>
 
       {/* Works Section */}
-      <Section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll">
+      <Section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -525,7 +525,7 @@ export default function Home() {
       </Section>
 
       {/* Clients Section */}
-      <section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll">
+      <section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -551,7 +551,7 @@ export default function Home() {
                 'mcdonald.svg', 'lotte.svg', 'suntory.svg', 'shiseido.svg', 'nissan.svg',
                 'nhk.svg', 'otsuka.svg', 'secom.svg'
               ]).map((logo, index) => (
-                <div key={index} className="flex-shrink-0 mx-8 w-32 h-16 flex items-center justify-center">
+                <div key={index} className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8 w-24 sm:w-28 md:w-32 h-12 sm:h-14 md:h-16 flex items-center justify-center">
                   <Image
                     src={`/images/client-logos/${logo}`}
                     alt={logo.replace('.svg', '').replace('.png', '')}
@@ -576,7 +576,7 @@ export default function Home() {
                 'tbc.svg', 'wowow.svg', 'ggd.svg', 'aeon.svg', 'missha.png',
                 'logo-asahi-super-dry.png', 'daiichikosho.png'
               ]).map((logo, index) => (
-                <div key={index} className="flex-shrink-0 mx-8 w-32 h-16 flex items-center justify-center">
+                <div key={index} className="flex-shrink-0 mx-4 sm:mx-6 md:mx-8 w-24 sm:w-28 md:w-32 h-12 sm:h-14 md:h-16 flex items-center justify-center">
                   <Image
                     src={`/images/client-logos/${logo}`}
                     alt={logo.replace('.svg', '').replace('.png', '')}
@@ -592,7 +592,7 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll">
+      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -604,7 +604,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-12">
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12">
             {Array.from({ length: 31 }, (_, i) => {
               const partnerLogos = [
                 { file: '1_jtbc.png', name: 'JTBC Co., Ltd.' },
@@ -644,7 +644,7 @@ export default function Home() {
               return (
                 <div
                   key={i}
-                  className="group relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex-shrink-0 flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-all duration-300"
+                  className="group relative w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 flex-shrink-0 flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-all duration-300"
                 >
                   <Image
                     src={`/images/partners-logos/${partner.file}`}
