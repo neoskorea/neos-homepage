@@ -4,10 +4,10 @@ import Link from 'next/link';
 const navigation = {
   main: [
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
+    // { name: 'Services', href: '/services' },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Clients', href: '/clients' },
-    { name: 'News', href: '/news' },
+    // { name: 'Clients', href: '/clients' },
+    // { name: 'News', href: '/news' },
     { name: 'Contact', href: '/contact' },
   ],
   social: [
