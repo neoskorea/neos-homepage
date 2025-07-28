@@ -65,14 +65,14 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
-            <div className="text-left">
-              <div className="flex items-start mb-8 md:mb-10">
+            <div className="text-center md:text-left">
+              <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">Professional</h3>
                 </div>
               </div>
-              <div className="pl-7">
+              <div className="md:pl-7">
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium">
                   주식회사 네오스는<br />
                   풍부한 노하우를 보유한 전문가 그룹입니다.
@@ -87,14 +87,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-left">
-              <div className="flex items-start mb-8 md:mb-10">
+            <div className="text-center md:text-left">
+              <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">Humanism</h3>
                 </div>
               </div>
-              <div className="pl-7">
+              <div className="md:pl-7">
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium">
                   주식회사 네오스의<br />
                   핵심 분야는 바로 사람입니다.
@@ -109,14 +109,14 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-left">
-              <div className="flex items-start mb-8 md:mb-10">
+            <div className="text-center md:text-left">
+              <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
                   <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">Global</h3>
                 </div>
               </div>
-              <div className="pl-7">
+              <div className="md:pl-7">
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium">
                   주식회사 네오스의<br />
                   경쟁력은 글로벌 네트워크입니다.
