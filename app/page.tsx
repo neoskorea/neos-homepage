@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/Button';
@@ -8,6 +9,40 @@ import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 
 export default function Home() {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    // Intersection Observer 설정
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    // 관찰할 요소들 선택
+    const animateElements = document.querySelectorAll('.fade-in-on-scroll');
+    animateElements.forEach((el) => {
+      if (observerRef.current) {
+        observerRef.current.observe(el);
+      }
+    });
+
+    // cleanup
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -52,7 +87,7 @@ export default function Home() {
       </Section>
 
       {/* Vision Section */}
-      <Section className="py-20 md:py-32 lg:py-40">
+      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -65,7 +100,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left fade-in-on-scroll" style={{ transitionDelay: '0.2s' }}>
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
@@ -87,7 +122,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left fade-in-on-scroll" style={{ transitionDelay: '0.4s' }}>
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
@@ -109,7 +144,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left fade-in-on-scroll" style={{ transitionDelay: '0.6s' }}>
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
@@ -135,7 +170,7 @@ export default function Home() {
       </Section>
 
       {/* Mission Section */}
-      <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
+      <Section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -192,8 +227,8 @@ export default function Home() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="mission-item group relative"
-                  style={{ animationDelay: item.delay }}
+                  className="fade-in-on-scroll group relative"
+                  style={{ transitionDelay: `${index * 0.1 + 0.2}s` }}
                 >
                   <div className="text-center relative">
                     {/* Icon container with enhanced styling */}
@@ -220,7 +255,7 @@ export default function Home() {
       </Section>
 
       {/* History Section */}
-      <Section className="py-20 md:py-32 lg:py-40">
+      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -233,7 +268,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-8 sm:space-y-12 md:space-y-16">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.1s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">1999</span>
               </div>
@@ -243,7 +278,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.2s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2003</span>
               </div>
@@ -253,7 +288,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.3s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2004</span>
               </div>
@@ -263,7 +298,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.4s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2006</span>
               </div>
@@ -273,7 +308,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.5s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2009</span>
               </div>
@@ -283,7 +318,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.6s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2012</span>
               </div>
@@ -293,7 +328,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.7s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2013</span>
               </div>
@@ -303,7 +338,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.8s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2015</span>
               </div>
@@ -313,7 +348,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '0.9s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2016</span>
               </div>
@@ -323,7 +358,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.0s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2018</span>
               </div>
@@ -333,7 +368,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.1s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2019</span>
               </div>
@@ -343,7 +378,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.2s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2020</span>
               </div>
@@ -353,7 +388,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.3s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2021</span>
               </div>
@@ -363,7 +398,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.4s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2022</span>
               </div>
@@ -373,7 +408,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start fade-in-on-scroll" style={{ transitionDelay: '1.5s' }}>
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2023</span>
               </div>
@@ -387,7 +422,7 @@ export default function Home() {
       </Section>
 
       {/* Works Section */}
-      <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
+      <Section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -400,7 +435,7 @@ export default function Home() {
           </div>
 
           {/* Featured Work - Large Hero */}
-          <div className="mb-8 sm:mb-12 md:mb-16">
+          <div className="mb-8 sm:mb-12 md:mb-16 fade-in-on-scroll" style={{ transitionDelay: '0.2s' }}>
             <div className="group relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl">
               <Image
                 src="/images/works/misamo-google.jpeg"
@@ -431,7 +466,7 @@ export default function Home() {
 
           {/* Secondary Works Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
-            <div className="group relative aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl">
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl fade-in-on-scroll" style={{ transitionDelay: '0.4s' }}>
               <Image
                 src="/images/works/sbc.jpg"
                 alt="SBC Broadcasting Project"
@@ -455,7 +490,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group relative aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl">
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl fade-in-on-scroll" style={{ transitionDelay: '0.6s' }}>
               <Image
                 src="/images/works/delete.jpg"
                 alt="DELETE Webtoon Project"
@@ -481,7 +516,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-12 sm:mt-16">
+          <div className="text-center mt-12 sm:mt-16 fade-in-on-scroll" style={{ transitionDelay: '0.8s' }}>
             <Button href="/portfolio" variant="outline" size="lg" className="min-w-[180px] sm:min-w-[200px] text-sm sm:text-base">
               모든 프로젝트 보기
             </Button>
@@ -490,7 +525,7 @@ export default function Home() {
       </Section>
 
       {/* Clients Section */}
-      <section className="py-20 md:py-32 lg:py-40 bg-gray-50">
+      <section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -557,7 +592,7 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <Section className="py-20 md:py-32 lg:py-40">
+      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -823,23 +858,19 @@ export default function Home() {
           }
         }
 
-        /* Mission Flow Animations */
-        .mission-item {
+        /* Scroll-triggered fade-in animations */
+        .fade-in-on-scroll {
           opacity: 0;
           transform: translateY(30px);
-          animation: fadeInUp 0.8s ease-out forwards;
+          transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
-        @keyframes fadeInUp {
-          0% {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        .fade-in-on-scroll.animate-in {
+          opacity: 1;
+          transform: translateY(0);
         }
+
+        /* Mission Flow Animations - 기존에 스크롤 애니메이션으로 대체됨 */
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
