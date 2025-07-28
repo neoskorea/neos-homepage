@@ -249,11 +249,11 @@ export default function Home() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="fade-in-on-scroll group relative"
+                  className="fade-in-on-scroll group relative text-center py-4"
                   style={{ transitionDelay: `${index * 0.1 + 0.2}s` }}
                 >
-                  <div className="text-center relative">
-                    {/* Icon container with enhanced styling */}
+                  <div className="relative">
+                    {/* Icon container with clean styling */}
                     <div className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 bg-white border-2 border-primary/20 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:border-primary/40 transition-all duration-500 group-hover:scale-105">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/15 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <svg className="relative w-8 h-8 sm:w-10 sm:h-10 text-primary group-hover:text-primary/80 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -267,6 +267,9 @@ export default function Home() {
                     <p className="text-sm sm:text-base text-text-secondary leading-relaxed group-hover:text-text-primary transition-colors duration-300">
                       {item.description}
                     </p>
+
+                    {/* Bottom accent line */}
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-primary/50 to-primary rounded-full group-hover:w-12 transition-all duration-500"></div>
                   </div>
                 </div>
               ))}
@@ -547,7 +550,7 @@ export default function Home() {
       </Section>
 
       {/* Clients Section */}
-      <section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll overflow-hidden">
+      <section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -614,7 +617,7 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll overflow-hidden">
+      <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll overflow-hidden bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
