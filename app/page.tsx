@@ -328,24 +328,14 @@ export default function Home() {
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2018</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">(전)소속배우 장승조 MBC연기대상 최우수연기상 수상</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">소속 배우의 지속적인 성과</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">(전)소속배우 장승조 MBC연기대상 최우수연기상 수상 & 판권(IP) 비즈니스팀 신설</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">소속 배우의 지속적인 성과와 지적재산권 사업으로 콘텐츠 가치 창출 확장</p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2019</span>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">판권(IP) 비지니스팀 신설</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">지적재산권 사업으로 콘텐츠 가치 창출 확장</p>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
-              <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
-                <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2020</span>
               </div>
               <div className="flex-1">
                 <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">레이블 네오스토리 설립</h3>
@@ -355,11 +345,21 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
               <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
+                <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2020</span>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">레이블 네오스토리 - 히가시무라 아키코 웹툰 「나를 기억하나요」</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">카카오페이지/픽코마 한일동시연재</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12 items-start">
+              <div className="w-full sm:w-32 md:w-48 flex-shrink-0 text-left sm:text-right">
                 <span className="text-2xl md:text-3xl text-primary font-light tracking-tight">2021</span>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">주식회사 네오스토리 설립 & 웹툰 사업 확장</h3>
-                <p className="text-base md:text-lg text-gray-600 font-light">히가시무라 아키코 웹툰 「나를 기억하나요」 카카오웹툰/카카오페이지/픽코마 한일동시연재</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-gray-800 mb-3 md:mb-4 tracking-tight">주식회사 네오스토리 설립</h3>
+                <p className="text-base md:text-lg text-gray-600 font-light">주식회사 네오스토리 - 히가시무라 아키코 웹툰 「나를 기억하나요」 카카오웹툰 연재</p>
               </div>
             </div>
 
