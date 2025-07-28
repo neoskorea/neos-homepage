@@ -22,6 +22,8 @@ const serviceTypes = [
   '기타',
 ];
 
+type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -32,10 +34,81 @@ export default function ContactPage() {
     message: '',
   });
 
+  const [formStatus, setFormStatus] = useState<FormStatus>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const validateForm = () => {
+    if (!formData.name.trim()) {
+      setErrorMessage('성함을 입력해주세요.');
+      return false;
+    }
+    if (!formData.email.trim()) {
+      setErrorMessage('이메일을 입력해주세요.');
+      return false;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setErrorMessage('올바른 이메일 형식을 입력해주세요.');
+      return false;
+    }
+    if (!formData.service) {
+      setErrorMessage('서비스 분야를 선택해주세요.');
+      return false;
+    }
+    if (!formData.message.trim()) {
+      setErrorMessage('프로젝트 상세 내용을 입력해주세요.');
+      return false;
+    }
+    if (formData.message.trim().length < 10) {
+      setErrorMessage('프로젝트 상세 내용을 10자 이상 입력해주세요.');
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+
+    // 폼 유효성 검사
+    if (!validateForm()) {
+      setFormStatus('error');
+      return;
+    }
+
+    setFormStatus('submitting');
+    setErrorMessage('');
+
+    try {
+      // 실제 API 호출 시뮬레이션 (2초 대기)
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          // 90% 확률로 성공, 10% 확률로 실패 (테스트용)
+          if (Math.random() > 0.1) {
+            resolve('success');
+          } else {
+            reject(new Error('서버 오류가 발생했습니다.'));
+          }
+        }, 2000);
+      });
+
+      setFormStatus('success');
+      // 성공 시 폼 리셋
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        budget: '',
+        service: '',
+        message: '',
+      });
+    } catch (error) {
+      setFormStatus('error');
+      setErrorMessage('문의 전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+    }
+  };
+
+  const resetForm = () => {
+    setFormStatus('idle');
+    setErrorMessage('');
   };
 
   return (
@@ -78,130 +151,219 @@ export default function ContactPage() {
                   <h3 className="text-2xl md:text-3xl font-light text-primary">프로젝트 문의하기</h3>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                {/* Success Message */}
+                {formStatus === 'success' && (
+                  <div className="mb-8 p-6 bg-green-50 border border-green-200 rounded-xl">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                        <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-green-800">문의가 성공적으로 전송되었습니다!</h4>
+                        <p className="text-green-700 text-sm mt-1">빠른 시일 내에 담당자가 연락드리겠습니다.</p>
+                      </div>
+                    </div>
+                    <button
+                      onClick={resetForm}
+                      className="mt-4 text-sm text-green-600 hover:text-green-800 font-medium"
+                    >
+                      새 문의 작성하기 →
+                    </button>
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {formStatus === 'error' && errorMessage && (
+                  <div className="mb-8 p-6 bg-red-50 border border-red-200 rounded-xl">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                        <svg className="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-red-800">문의 전송에 실패했습니다</h4>
+                        <p className="text-red-700 text-sm mt-1">{errorMessage}</p>
+                      </div>
+                    </div>
+                    {/* <button
+                      onClick={resetForm}
+                      className="mt-4 text-sm text-red-600 hover:text-red-800 font-medium"
+                    >
+                      다시 시도하기 →
+                    </button> */}
+                  </div>
+                )}
+
+                {/* Form - Hidden when successful */}
+                {formStatus !== 'success' && (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-3">
+                          성함 <span className="text-primary">*</span>
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          disabled={formStatus === 'submitting'}
+                          className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 placeholder-gray-400 ${formStatus === 'submitting'
+                            ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
+                            : 'border-gray-200 focus:border-primary hover:border-gray-300'
+                            }`}
+                          placeholder="홍길동"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-semibold text-gray-800 mb-3">
+                          이메일 <span className="text-primary">*</span>
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          disabled={formStatus === 'submitting'}
+                          className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 placeholder-gray-400 ${formStatus === 'submitting'
+                            ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
+                            : 'border-gray-200 focus:border-primary hover:border-gray-300'
+                            }`}
+                          placeholder="your@email.com"
+                          required
+                        />
+                      </div>
+                    </div>
+
                     <div>
-                      <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-3">
-                        성함 <span className="text-primary">*</span>
+                      <label htmlFor="company" className="block text-sm font-semibold text-gray-800 mb-3">
+                        회사명
                       </label>
                       <input
                         type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="block w-full rounded-xl border-2 border-gray-200 px-4 py-3 focus:border-primary focus:ring-0 transition-colors text-gray-800 placeholder-gray-400"
-                        placeholder="홍길동"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        disabled={formStatus === 'submitting'}
+                        className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 placeholder-gray-400 ${formStatus === 'submitting'
+                          ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
+                          : 'border-gray-200 focus:border-primary hover:border-gray-300'
+                          }`}
+                        placeholder="회사명을 입력해주세요"
+                      />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="service" className="block text-sm font-semibold text-gray-800 mb-3">
+                          서비스 분야 <span className="text-primary">*</span>
+                        </label>
+                        <select
+                          id="service"
+                          name="service"
+                          value={formData.service}
+                          onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                          disabled={formStatus === 'submitting'}
+                          className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 ${formStatus === 'submitting'
+                            ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
+                            : 'border-gray-200 focus:border-primary hover:border-gray-300'
+                            }`}
+                          required
+                        >
+                          <option value="">서비스를 선택해주세요</option>
+                          {serviceTypes.map((service) => (
+                            <option key={service} value={service}>
+                              {service}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div>
+                        <label htmlFor="budget" className="block text-sm font-semibold text-gray-800 mb-3">
+                          예산 범위
+                        </label>
+                        <select
+                          id="budget"
+                          name="budget"
+                          value={formData.budget}
+                          onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                          disabled={formStatus === 'submitting'}
+                          className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 ${formStatus === 'submitting'
+                            ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
+                            : 'border-gray-200 focus:border-primary hover:border-gray-300'
+                            }`}
+                        >
+                          <option value="">예산 범위를 선택해주세요</option>
+                          {budgetRanges.map((range) => (
+                            <option key={range} value={range}>
+                              {range}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-semibold text-gray-800 mb-3">
+                        프로젝트 상세 내용 <span className="text-primary">*</span>
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={5}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        disabled={formStatus === 'submitting'}
+                        className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 placeholder-gray-400 resize-none ${formStatus === 'submitting'
+                          ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
+                          : 'border-gray-200 focus:border-primary hover:border-gray-300'
+                          }`}
+                        placeholder="프로젝트에 대한 구체적인 내용, 목표, 일정 등을 자세히 알려주세요..."
                         required
                       />
                     </div>
 
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-gray-800 mb-3">
-                        이메일 <span className="text-primary">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="block w-full rounded-xl border-2 border-gray-200 px-4 py-3 focus:border-primary focus:ring-0 transition-colors text-gray-800 placeholder-gray-400"
-                        placeholder="your@email.com"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-gray-800 mb-3">
-                      회사명
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="block w-full rounded-xl border-2 border-gray-200 px-4 py-3 focus:border-primary focus:ring-0 transition-colors text-gray-800 placeholder-gray-400"
-                      placeholder="회사명을 입력해주세요"
-                    />
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="service" className="block text-sm font-semibold text-gray-800 mb-3">
-                        서비스 분야 <span className="text-primary">*</span>
-                      </label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="block w-full rounded-xl border-2 border-gray-200 px-4 py-3 focus:border-primary focus:ring-0 transition-colors text-gray-800"
-                        required
+                    <div className="pt-6">
+                      <Button
+                        type="submit"
+                        size="lg"
+                        disabled={formStatus === 'submitting'}
+                        className={`w-full font-semibold py-4 rounded-xl shadow-lg transition-all duration-300 ${formStatus === 'submitting'
+                          ? 'bg-gray-400 cursor-not-allowed'
+                          : 'bg-primary hover:bg-primary/90 hover:shadow-xl transform hover:-translate-y-0.5'
+                          } text-white`}
                       >
-                        <option value="">서비스를 선택해주세요</option>
-                        {serviceTypes.map((service) => (
-                          <option key={service} value={service}>
-                            {service}
-                          </option>
-                        ))}
-                      </select>
+                        <span className="flex items-center justify-center gap-2">
+                          {formStatus === 'submitting' ? (
+                            <>
+                              <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                              </svg>
+                              전송 중...
+                            </>
+                          ) : (
+                            <>
+                              문의 보내기
+                              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                              </svg>
+                            </>
+                          )}
+                        </span>
+                      </Button>
                     </div>
-
-                    <div>
-                      <label htmlFor="budget" className="block text-sm font-semibold text-gray-800 mb-3">
-                        예산 범위
-                      </label>
-                      <select
-                        id="budget"
-                        name="budget"
-                        value={formData.budget}
-                        onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="block w-full rounded-xl border-2 border-gray-200 px-4 py-3 focus:border-primary focus:ring-0 transition-colors text-gray-800"
-                      >
-                        <option value="">예산 범위를 선택해주세요</option>
-                        {budgetRanges.map((range) => (
-                          <option key={range} value={range}>
-                            {range}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-800 mb-3">
-                      프로젝트 상세 내용 <span className="text-primary">*</span>
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="block w-full rounded-xl border-2 border-gray-200 px-4 py-3 focus:border-primary focus:ring-0 transition-colors text-gray-800 placeholder-gray-400 resize-none"
-                      placeholder="프로젝트에 대한 구체적인 내용, 목표, 일정 등을 자세히 알려주세요..."
-                      required
-                    />
-                  </div>
-
-                  <div className="pt-6">
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
-                    >
-                      <span className="flex items-center justify-center gap-2">
-                        문의 보내기
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
-                      </span>
-                    </Button>
-                  </div>
-                </form>
+                  </form>
+                )}
               </div>
             </div>
 
