@@ -9,8 +9,8 @@ import { Button } from '@/components/Button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const getFilterOptions = (t: (key: string) => string) => ({
-  year: ['2024', '2023', '2022'],
-  brand: ['Nike', 'UNIQLO', 'Google', 'Samsung', 'MediQttO', 'SENKA', 'KARA'],
+  year: ['2024', '2023', '2022', '2021', '2020', '2019'],
+  brand: ['Nike', 'UNIQLO', 'Google', 'Samsung', 'MediQttO', 'SENKA', 'KARA', 'Paradise City', 'Bibigo', 'ENHYPEN', 'GLIDiC', 'TXT', 'T1419', 'Edel House', 'LOONA', 'NU\'EST', 'IZ*ONE', 'Jeju Air', 'TVXQ'],
   region: [t('portfolio.regions.global'), t('portfolio.regions.asia'), t('portfolio.regions.northAmerica'), t('portfolio.regions.europe')],
   category: [t('portfolio.categories.advertising'), t('portfolio.categories.production'), t('portfolio.categories.creative'), t('portfolio.categories.ip')],
 });
@@ -65,6 +65,126 @@ const getProjects = (t: (key: string) => string) => [
     brand: 'KARA',
     region: t('portfolio.regions.global'),
     category: t('portfolio.categories.ip'),
+  },
+  {
+    id: 6,
+    title: t('portfolio.projects.paradiseCityParkSeojun.title'),
+    description: t('portfolio.projects.paradiseCityParkSeojun.description'),
+    image: '/images/works/6-paradise-city-parkseojun.png',
+    year: '2023',
+    brand: 'Paradise City',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 7,
+    title: t('portfolio.projects.paradiseCityCasino.title'),
+    description: t('portfolio.projects.paradiseCityCasino.description'),
+    image: '/images/works/7-paradise-city-casino-parkseojun.png',
+    year: '2023',
+    brand: 'Paradise City',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 8,
+    title: t('portfolio.projects.bibigoParkSeojun.title'),
+    description: t('portfolio.projects.bibigoParkSeojun.description'),
+    image: '/images/works/8-bibigo-parkseojun.png',
+    year: '2023',
+    brand: 'Bibigo',
+    region: t('portfolio.regions.global'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 9,
+    title: t('portfolio.projects.nikeAbcmartEnhypen.title'),
+    description: t('portfolio.projects.nikeAbcmartEnhypen.description'),
+    image: '/images/works/9-nike-abcmart-enhypen.jpg',
+    year: '2022',
+    brand: 'Nike',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 10,
+    title: t('portfolio.projects.glidicTxt.title'),
+    description: t('portfolio.projects.glidicTxt.description'),
+    image: '/images/works/10-GLIDiC-TOMORROWxTOGETHER.jpg',
+    year: '2022',
+    brand: 'GLIDiC',
+    region: t('portfolio.regions.global'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 11,
+    title: t('portfolio.projects.t1419Debut.title'),
+    description: t('portfolio.projects.t1419Debut.description'),
+    image: '/images/works/11-t1419-debut-pv-runup.png',
+    year: '2021',
+    brand: 'T1419',
+    region: t('portfolio.regions.global'),
+    category: t('portfolio.categories.production'),
+  },
+  {
+    id: 12,
+    title: t('portfolio.projects.t1419EdelHouse.title'),
+    description: t('portfolio.projects.t1419EdelHouse.description'),
+    image: '/images/works/12-t1419-edel-house.png',
+    year: '2021',
+    brand: 'T1419',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 13,
+    title: t('portfolio.projects.orbitUniverse.title'),
+    description: t('portfolio.projects.orbitUniverse.description'),
+    image: '/images/works/13-orbit-japan-pv-universe.png',
+    year: '2021',
+    brand: 'LOONA',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.production'),
+  },
+  {
+    id: 14,
+    title: t('portfolio.projects.nuestDrive.title'),
+    description: t('portfolio.projects.nuestDrive.description'),
+    image: '/images/works/14-nu\'est-japn-pv-drive.png',
+    year: '2020',
+    brand: 'NU\'EST',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.production'),
+  },
+  {
+    id: 15,
+    title: t('portfolio.projects.izoneVampire.title'),
+    description: t('portfolio.projects.izoneVampire.description'),
+    image: '/images/works/15-izone-japan-pv-vampire.png',
+    year: '2020',
+    brand: 'IZ*ONE',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.production'),
+  },
+  {
+    id: 16,
+    title: t('portfolio.projects.jejuAirTvxq.title'),
+    description: t('portfolio.projects.jejuAirTvxq.description'),
+    image: '/images/works/16-jeju-air-tvxq.png',
+    year: '2020',
+    brand: 'Jeju Air',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 17,
+    title: t('portfolio.projects.nikeAbcmart2019.title'),
+    description: t('portfolio.projects.nikeAbcmart2019.description'),
+    image: '/images/works/17-2019-abcmart-nike-ab6.png',
+    year: '2019',
+    brand: 'Nike',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.advertising'),
   },
 ];
 
@@ -167,24 +287,27 @@ export default function PortfolioPage() {
                 key={project.id}
                 className="group relative overflow-hidden rounded-2xl bg-gray-100 aspect-[4/3] hover:shadow-2xl transition-all duration-500"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white translate-y-4 opacity-20 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                  <h3 className="text-lg md:text-xl font-medium mb-3 leading-tight drop-shadow-lg">{project.title}</h3>
+                {/* Dark overlay that appears on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Text overlay that slides up on hover */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <h3 className="text-lg md:text-xl font-semibold mb-3 leading-tight drop-shadow-lg">{project.title}</h3>
                   <p className="text-sm md:text-base text-gray-100 mb-4 leading-relaxed drop-shadow-md">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30 drop-shadow-sm">
+                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/30 drop-shadow-sm font-medium">
                       {project.category}
                     </span>
-                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30 drop-shadow-sm">
+                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/30 drop-shadow-sm font-medium">
                       {project.brand}
                     </span>
-                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30 drop-shadow-sm">
+                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/30 drop-shadow-sm font-medium">
                       {project.region}
                     </span>
                   </div>

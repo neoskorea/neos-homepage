@@ -238,6 +238,54 @@
       "kara": {
         "title": "KARA IP项目",
         "description": "传奇K-POP组合KARA的IP利用全球娱乐项目"
+      },
+      "paradiseCityParkSeojun": {
+        "title": "Paradise City x 朴叙俊 广告活动",
+        "description": "Paradise City度假村与演员朴叙俊的奢华品牌合作项目"
+      },
+      "paradiseCityCasino": {
+        "title": "Paradise City Casino x 朴叙俊",
+        "description": "Paradise City赌场的高端品牌活动"
+      },
+      "bibigoParkSeojun": {
+        "title": "Bibigo x 朴叙俊 广告活动",
+        "description": "CJ必品阁与演员朴叙俊的全球K-美食品牌活动"
+      },
+      "nikeAbcmartEnhypen": {
+        "title": "Nike x ABC Mart x ENHYPEN",
+        "description": "Nike与ABC Mart的ENHYPEN合作运动鞋活动"
+      },
+      "glidicTxt": {
+        "title": "GLIDiC x TOMORROW X TOGETHER",
+        "description": "GLIDiC耳机品牌与TOMORROW X TOGETHER的全球活动"
+      },
+      "t1419Debut": {
+        "title": "T1419 出道宣传视频",
+        "description": "新人男团T1419的出道宣传及音乐视频制作"
+      },
+      "t1419EdelHouse": {
+        "title": "T1419 x Edel House 广告活动",
+        "description": "T1419与化妆品品牌Edel House的合作活动"
+      },
+      "orbitUniverse": {
+        "title": "ORBIT Japan 'UNIVERSE' 项目",
+        "description": "LOONA日本粉丝俱乐部ORBIT的特别项目视频制作"
+      },
+      "nuestDrive": {
+        "title": "NU'EST Japan 'DRIVE' 音乐视频",
+        "description": "NU'EST日本活动音乐视频及宣传视频制作"
+      },
+      "izoneVampire": {
+        "title": "IZ*ONE Japan 'Vampire' 音乐视频",
+        "description": "IZ*ONE日本活动'Vampire'音乐视频制作"
+      },
+      "jejuAirTvxq": {
+        "title": "Jeju Air x TVXQ 广告活动",
+        "description": "济州航空与东方神起的品牌合作广告活动"
+      },
+      "nikeAbcmart2019": {
+        "title": "2019 Nike ABC Mart 活动",
+        "description": "Nike与ABC Mart的2019年品牌活动"
       }
     },
     "categories": {

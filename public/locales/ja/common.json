@@ -238,6 +238,54 @@
       "kara": {
         "title": "KARA IPプロジェクト",
         "description": "伝説的なK-POPグループ KARAのIP活用グローバルエンターテインメントプロジェクト"
+      },
+      "paradiseCityParkSeojun": {
+        "title": "Paradise City x パク・ソジュン 広告キャンペーン",
+        "description": "Paradise Cityリゾートと俳優パク・ソジュンのラグジュアリーブランドコラボレーションプロジェクト"
+      },
+      "paradiseCityCasino": {
+        "title": "Paradise City Casino x パク・ソジュン",
+        "description": "Paradise City カジノのプレミアムブランドキャンペーン"
+      },
+      "bibigoParkSeojun": {
+        "title": "Bibigo x パク・ソジュン 広告キャンペーン",
+        "description": "CJ ビビゴと俳優パク・ソジュンのグローバルK-フードブランドキャンペーン"
+      },
+      "nikeAbcmartEnhypen": {
+        "title": "Nike x ABC Mart x ENHYPEN",
+        "description": "NikeとABC MartのENHYPENコラボレーションスニーカーキャンペーン"
+      },
+      "glidicTxt": {
+        "title": "GLIDiC x TOMORROW X TOGETHER",
+        "description": "GLIDiCイヤホンブランドとTOMORROW X TOGETHERのグローバルキャンペーン"
+      },
+      "t1419Debut": {
+        "title": "T1419 デビュープロモーション映像",
+        "description": "新人ボーイグループT1419のデビュープロモーション及びミュージックビデオ制作"
+      },
+      "t1419EdelHouse": {
+        "title": "T1419 x Edel House 広告キャンペーン",
+        "description": "T1419と化粧品ブランドEdel Houseのコラボレーションキャンペーン"
+      },
+      "orbitUniverse": {
+        "title": "ORBIT Japan 'UNIVERSE' プロジェクト",
+        "description": "LOONAの日本ファンクラブORBITの特別プロジェクト映像制作"
+      },
+      "nuestDrive": {
+        "title": "NU'EST Japan 'DRIVE' ミュージックビデオ",
+        "description": "NU'EST日本活動ミュージックビデオ及びプロモーション映像制作"
+      },
+      "izoneVampire": {
+        "title": "IZ*ONE Japan 'Vampire' ミュージックビデオ",
+        "description": "IZ*ONE日本活動'Vampire'ミュージックビデオ制作"
+      },
+      "jejuAirTvxq": {
+        "title": "Jeju Air x TVXQ 広告キャンペーン",
+        "description": "済州航空と東方神起のブランドコラボレーション広告キャンペーン"
+      },
+      "nikeAbcmart2019": {
+        "title": "2019 Nike ABC Mart キャンペーン",
+        "description": "NikeとABC Martの2019年ブランドキャンペーン"
       }
     },
     "categories": {

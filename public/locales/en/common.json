@@ -238,6 +238,54 @@
       "kara": {
         "title": "KARA IP Project",
         "description": "Global entertainment project utilizing the IP of legendary K-POP group KARA"
+      },
+      "paradiseCityParkSeojun": {
+        "title": "Paradise City x Park Seo-jun Advertising Campaign",
+        "description": "Luxury brand collaboration project between Paradise City Resort and actor Park Seo-jun"
+      },
+      "paradiseCityCasino": {
+        "title": "Paradise City Casino x Park Seo-jun",
+        "description": "Premium brand campaign for Paradise City Casino"
+      },
+      "bibigoParkSeojun": {
+        "title": "Bibigo x Park Seo-jun Advertising Campaign",
+        "description": "Global K-food brand campaign featuring CJ Bibigo and actor Park Seo-jun"
+      },
+      "nikeAbcmartEnhypen": {
+        "title": "Nike x ABC Mart x ENHYPEN",
+        "description": "Nike and ABC Mart collaboration sneaker campaign featuring ENHYPEN"
+      },
+      "glidicTxt": {
+        "title": "GLIDiC x TOMORROW X TOGETHER",
+        "description": "Global campaign for GLIDiC earphone brand featuring TOMORROW X TOGETHER"
+      },
+      "t1419Debut": {
+        "title": "T1419 Debut Promotion Video",
+        "description": "Debut promotion and music video production for rookie boy group T1419"
+      },
+      "t1419EdelHouse": {
+        "title": "T1419 x Edel House Advertising Campaign",
+        "description": "Collaboration campaign between T1419 and cosmetics brand Edel House"
+      },
+      "orbitUniverse": {
+        "title": "ORBIT Japan 'UNIVERSE' Project",
+        "description": "Special project video production for LOONA's Japanese fan club ORBIT"
+      },
+      "nuestDrive": {
+        "title": "NU'EST Japan 'DRIVE' Music Video",
+        "description": "Music video and promotional content production for NU'EST's Japanese activities"
+      },
+      "izoneVampire": {
+        "title": "IZ*ONE Japan 'Vampire' Music Video",
+        "description": "Music video production for IZ*ONE's Japanese single 'Vampire'"
+      },
+      "jejuAirTvxq": {
+        "title": "Jeju Air x TVXQ Advertising Campaign",
+        "description": "Brand collaboration advertising campaign between Jeju Air and TVXQ"
+      },
+      "nikeAbcmart2019": {
+        "title": "2019 Nike ABC Mart Campaign",
+        "description": "Nike and ABC Mart brand campaign from 2019"
       }
     },
     "categories": {
