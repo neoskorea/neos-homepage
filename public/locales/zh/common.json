@@ -226,6 +226,18 @@
       "sbc": {
         "title": "SBC 品牌活动",
         "description": "强有力的信息和创意视觉突出的品牌活动"
+      },
+      "momoMediQttO": {
+        "title": "MOMO x MediQttO 广告活动",
+        "description": "K-POP明星MOMO与足爽MediQttO的全球合作项目"
+      },
+      "senka": {
+        "title": "SENKA 创意活动",
+        "description": "资生堂SENKA品牌针对亚洲市场的创意指导"
+      },
+      "kara": {
+        "title": "KARA IP项目",
+        "description": "传奇K-POP组合KARA的IP利用全球娱乐项目"
       }
     },
     "categories": {

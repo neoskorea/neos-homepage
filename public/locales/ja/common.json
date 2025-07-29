@@ -226,6 +226,18 @@
       "sbc": {
         "title": "SBC ブランドキャンペーン",
         "description": "力強いメッセージと創造的ビジュアルが印象的なブランドキャンペーン"
+      },
+      "momoMediQttO": {
+        "title": "MOMO x MediQttO 広告キャンペーン",
+        "description": "K-POPスター MOMOとドクターショール MediQttOのグローバルコラボレーションプロジェクト"
+      },
+      "senka": {
+        "title": "SENKA クリエイティブキャンペーン",
+        "description": "資生堂 SENKAブランドのアジア市場向けクリエイティブディレクション"
+      },
+      "kara": {
+        "title": "KARA IPプロジェクト",
+        "description": "伝説的なK-POPグループ KARAのIP活用グローバルエンターテインメントプロジェクト"
       }
     },
     "categories": {

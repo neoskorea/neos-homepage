@@ -226,6 +226,18 @@
       "sbc": {
         "title": "SBC Brand Campaign",
         "description": "A brand campaign featuring powerful messages and creative visuals"
+      },
+      "momoMediQttO": {
+        "title": "MOMO x MediQttO Advertising Campaign",
+        "description": "Global collaboration project between K-POP star MOMO and Dr. Scholl's MediQttO"
+      },
+      "senka": {
+        "title": "SENKA Creative Campaign",
+        "description": "Creative direction for Shiseido SENKA brand targeting the Asian market"
+      },
+      "kara": {
+        "title": "KARA IP Project",
+        "description": "Global entertainment project utilizing the IP of legendary K-POP group KARA"
       }
     },
     "categories": {

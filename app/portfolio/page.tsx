@@ -10,7 +10,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const getFilterOptions = (t: (key: string) => string) => ({
   year: ['2024', '2023', '2022'],
-  brand: ['Nike', 'UNIQLO', 'Google', 'Samsung'],
+  brand: ['Nike', 'UNIQLO', 'Google', 'Samsung', 'MediQttO', 'SENKA', 'KARA'],
   region: [t('portfolio.regions.global'), t('portfolio.regions.asia'), t('portfolio.regions.northAmerica'), t('portfolio.regions.europe')],
   category: [t('portfolio.categories.advertising'), t('portfolio.categories.production'), t('portfolio.categories.creative'), t('portfolio.categories.ip')],
 });
@@ -35,6 +35,36 @@ const getProjects = (t: (key: string) => string) => [
     brand: 'Samsung',
     region: t('portfolio.regions.asia'),
     category: t('portfolio.categories.production'),
+  },
+  {
+    id: 3,
+    title: t('portfolio.projects.momoMediQttO.title'),
+    description: t('portfolio.projects.momoMediQttO.description'),
+    image: '/images/works/neos-momo-MediQttO.jpg',
+    year: '2024',
+    brand: 'MediQttO',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 4,
+    title: t('portfolio.projects.senka.title'),
+    description: t('portfolio.projects.senka.description'),
+    image: '/images/works/neos-senka.png',
+    year: '2024',
+    brand: 'SENKA',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.creative'),
+  },
+  {
+    id: 5,
+    title: t('portfolio.projects.kara.title'),
+    description: t('portfolio.projects.kara.description'),
+    image: '/images/works/neos-kara.png',
+    year: '2024',
+    brand: 'KARA',
+    region: t('portfolio.regions.global'),
+    category: t('portfolio.categories.ip'),
   },
 ];
 
@@ -137,24 +167,24 @@ export default function PortfolioPage() {
                 key={project.id}
                 className="group relative overflow-hidden rounded-2xl bg-gray-100 aspect-[4/3] hover:shadow-2xl transition-all duration-500"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <h3 className="text-lg md:text-xl font-medium mb-3 leading-tight">{project.title}</h3>
-                  <p className="text-sm md:text-base text-gray-200 mb-4 leading-relaxed">{project.description}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white translate-y-4 opacity-20 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <h3 className="text-lg md:text-xl font-medium mb-3 leading-tight drop-shadow-lg">{project.title}</h3>
+                  <p className="text-sm md:text-base text-gray-100 mb-4 leading-relaxed drop-shadow-md">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="text-xs bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
+                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30 drop-shadow-sm">
                       {project.category}
                     </span>
-                    <span className="text-xs bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
+                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30 drop-shadow-sm">
                       {project.brand}
                     </span>
-                    <span className="text-xs bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
+                    <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30 drop-shadow-sm">
                       {project.region}
                     </span>
                   </div>
