@@ -1,14 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const navigation = {
   main: [
-    { name: 'About', href: '/about' },
-    // { name: 'Services', href: '/services' },
-    { name: 'Portfolio', href: '/portfolio' },
-    // { name: 'Clients', href: '/clients' },
-    // { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' },
+    { nameKey: 'nav.about', href: '/about' },
+    { nameKey: 'nav.portfolio', href: '/portfolio' },
+    { nameKey: 'nav.contact', href: '/contact' },
   ],
   social: [
     {
@@ -24,6 +24,8 @@ const navigation = {
 };
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-white border-t border-primary/10">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -36,9 +38,8 @@ export default function Footer() {
               height={429}
               className="h-12 w-auto"
             />
-            <p className="text-text-secondary text-sm">
-              Professional. Humanism. Global.<br />
-              Creative Management & Production
+            <p className="text-text-secondary text-sm whitespace-pre-line">
+              {t('footer.tagline')}
             </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
@@ -56,22 +57,22 @@ export default function Footer() {
           </div>
           <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
             <div>
-              <h3 className="text-sm font-semibold text-text-primary tracking-wider uppercase">Navigation</h3>
+              <h3 className="text-sm font-semibold text-text-primary tracking-wider uppercase">{t('footer.navigation')}</h3>
               <ul className="mt-4 space-y-4">
                 {navigation.main.map((item) => (
-                  <li key={item.name}>
+                  <li key={item.nameKey}>
                     <Link
                       href={item.href}
                       className="text-sm text-text-secondary hover:text-primary transition-colors"
                     >
-                      {item.name}
+                      {t(item.nameKey)}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-text-primary tracking-wider uppercase">Contact</h3>
+              <h3 className="text-sm font-semibold text-text-primary tracking-wider uppercase">{t('footer.contact')}</h3>
               <ul className="mt-4 space-y-4">
                 <li>
                   <a href="mailto:contact@neoskorea.com" className="text-sm text-text-secondary hover:text-primary transition-colors">
@@ -79,8 +80,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <p className="text-sm text-text-secondary">
-                    서울특별시 강남구 논현로128길 20, JS빌딩 6층
+                  <p className="text-sm text-text-secondary whitespace-pre-line">
+                    {t('footer.address')}
                   </p>
                 </li>
               </ul>
@@ -89,7 +90,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t border-primary/10 pt-8">
           <p className="text-sm text-text-secondary text-center">
-            &copy; {new Date().getFullYear()} neos inc. All rights reserved.
+            &copy; {new Date().getFullYear()} {t('footer.copyright')}
           </p>
         </div>
       </div>

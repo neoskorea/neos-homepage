@@ -151,5 +151,158 @@
     "featuredCampaign": "Featured Campaign",
     "broadcasting": "Broadcasting",
     "webtoonPlanning": "Webtoon Planning"
+  },
+  "footer": {
+    "tagline": "Professional. Humanism. Global.\nCreative Management & Production",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "address": "서울특별시 강남구 논현로128길 20, JS빌딩 6층",
+    "copyright": "neos inc. All rights reserved."
+  },
+  "about": {
+    "title": "About neos",
+    "subtitle": "한국과 일본을 잇는 광고·영상 시장의 선두주자로서\n새로운 미래를 만들어갑니다",
+    "ceoMessage": {
+      "title": "CEO Message",
+      "content": {
+        "paragraph1": "주식회사 네오스는 빠르게 변화하는 광고 영상 시장 속 가장 가까운 나라인 일본의 광고 시장을 국내로 눈을 돌리게 한 첫 선두주자로서, 한국과 일본을 잇는 교두보로서의 역할을 성공적으로 이끈 바 있습니다. 이에 그치지 않고, 지속적인 모니터링과 커뮤니케이션을 통해 한국과 일본, 상호간의 긴밀한 네트워크 및 폭넓은 비즈니스 포지셔닝으로 광고 영상 제작 시장에서 영향력 있는 위치에 이르렀습니다.",
+        "paragraph2": "주식회사 네오스는 2010년 매니지먼트 사업부를 신설, 2013년에 네오스 엔터테인먼트를 자회사로 발족하였습니다. 영향력 있는 배우 군단이라는 양질의 인프라를 구축하고 새로운 비즈니스를 활용 · 접목 시키는 형태로 광고주에게 최상의 서비스를 제공하고 있습니다. 또한 역량 있는 배우를 육성할 수 있는 환경을 조성하여 업계 내에서의 인지도를 높여 나가고 있습니다.",
+        "paragraph3": "주식회사 네오스는 2018년 \"한류\"와 \"콘텐츠\"라는 시대적 흐름에 발맞추어 일본 및 아시아 굴지의 크리에이터들과의 파트너십을 통한 새로운 콘텐츠 비즈니스를 사업부인 neostory를 신설. 2021년에는 주식회사 neostory를 설립하였습니다.",
+        "paragraph4": "웹툰이라고 불리는 인터넷 만화나 소설 등의 콘텐츠를 제작해 이것을 영상화 하는 것으로 다양한 사람들과 협업하여 세계에 펼쳐 보이겠습니다.",
+        "paragraph5": "네오스 그룹은 앞으로도 지금껏 경험하지 못한 새로운 시장의 선두자적 역할을 다할 것입니다."
+      },
+      "ceoName": "남현지",
+      "ceoTitle": "대표이사 / CEO"
+    },
+    "groupCompanies": {
+      "title": "Group Companies",
+      "neosEntertainment": {
+        "founded": "Founded 2013",
+        "description": "네오스의 자회사로서 영향력 있는 배우 군단을 통한 양질의 인프라를 구축하고, 체계적인 배우 육성 및 매니지먼트 서비스를 제공하는 엔터테인먼트 전문 회사입니다."
+      },
+      "neostory": {
+        "founded": "Founded 2021",
+        "description": "웹툰, 소설 등 다양한 콘텐츠를 기획 및 제작하며, 한일 동시 연재를 통한 글로벌 콘텐츠 사업을 전개하는 콘텐츠 제작 전문 회사입니다."
+      }
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "creativeProduction": {
+        "title": "Creative Production",
+        "description": "광고·영상 제작 분야의\n선도적 역할"
+      },
+      "talentManagement": {
+        "title": "Talent Management",
+        "description": "전문적이고 체계적인\n아티스트 매니지먼트"
+      },
+      "contentCreation": {
+        "title": "Content Creation",
+        "description": "글로벌 시장을 향한\n혁신적 콘텐츠 제작"
+      },
+      "finalStatement": "세 개의 전문 영역이 유기적으로 연결되어\n통합적이고 혁신적인 엔터테인먼트 솔루션을 제공합니다"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "다양한 산업과 지역에서 펼쳐낸\n우리의 창의적 작업들을 만나보세요",
+    "filters": {
+      "title": "Project Filters",
+      "year": "연도",
+      "brand": "브랜드",
+      "region": "지역",
+      "category": "카테고리",
+      "all": "전체"
+    },
+    "featuredWorks": "Featured Works",
+    "noResults": {
+      "title": "선택한 필터에 해당하는 프로젝트가 없습니다",
+      "subtitle": "다른 필터 조합을 시도해보세요"
+    },
+    "projects": {
+      "misamoGoogle": {
+        "title": "MISAMO x Google 광고 캠페인",
+        "description": "일본 대표 걸그룹 MISAMO와 Google의 혁신적인 협업 프로젝트"
+      },
+      "sbc": {
+        "title": "SBC 브랜드 캠페인",
+        "description": "강력한 메시지와 창의적 비주얼이 돋보이는 브랜드 캠페인"
+      }
+    },
+    "categories": {
+      "advertising": "광고",
+      "production": "제작",
+      "creative": "크리에이티브 디렉션",
+      "ip": "IP"
+    },
+    "regions": {
+      "global": "글로벌",
+      "asia": "아시아",
+      "northAmerica": "북미",
+      "europe": "유럽"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "당신의 비전을 현실로 만들어줄\n파트너가 되어드리겠습니다",
+    "getInTouch": "Get in Touch",
+    "form": {
+      "title": "프로젝트 문의하기",
+      "name": "성함",
+      "email": "이메일",
+      "company": "회사명",
+      "service": "서비스 분야",
+      "budget": "예산 범위",
+      "message": "프로젝트 상세 내용",
+      "submit": "문의 보내기",
+      "submitting": "전송 중...",
+      "success": "문의가 성공적으로 전송되었습니다!",
+      "successSubtitle": "빠른 시일 내에 담당자가 연락드리겠습니다.",
+      "newInquiry": "새 문의 작성하기",
+      "error": "문의 전송에 실패했습니다",
+      "required": "*",
+      "placeholders": {
+        "name": "홍길동",
+        "email": "your@email.com",
+        "company": "회사명을 입력해주세요",
+        "service": "서비스를 선택해주세요",
+        "budget": "예산 범위를 선택해주세요",
+        "message": "프로젝트에 대한 구체적인 내용, 목표, 일정 등을 자세히 알려주세요..."
+      }
+    },
+    "info": {
+      "title": "연락처 정보",
+      "address": {
+        "title": "본사 위치",
+        "content": "서울특별시 강남구 논현로128길 20\nJS빌딩 6층"
+      },
+      "email": {
+        "title": "이메일"
+      },
+      "hours": {
+        "title": "운영 시간",
+        "content": "평일: 오전 10시 - 오후 7시\n토요일, 일요일 및 공휴일 휴무"
+      },
+      "social": {
+        "title": "소셜 미디어"
+      },
+      "map": {
+        "title": "찾아오시는 길",
+        "directions": "지하철 7호선 학동역 1번 출구에서 도보 5분"
+      }
+    },
+    "services": {
+      "advertising": "광고 제작",
+      "video": "영상 제작",
+      "consulting": "크리에이티브 컨설팅",
+      "management": "매니지먼트",
+      "content": "콘텐츠 기획",
+      "other": "기타"
+    },
+    "budgetRanges": {
+      "under10m": "1천만원 미만",
+      "10to50m": "1천만원 - 5천만원",
+      "50to100m": "5천만원 - 1억원",
+      "over100m": "1억원 이상"
+    }
   }
 } 

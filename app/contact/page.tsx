@@ -5,26 +5,28 @@ import { Section } from '@/components/Section';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/Button';
-
-const budgetRanges = [
-  '1천만원 미만',
-  '1천만원 - 5천만원',
-  '5천만원 - 1억원',
-  '1억원 이상',
-];
-
-const serviceTypes = [
-  '광고 제작',
-  '영상 제작',
-  '크리에이티브 컨설팅',
-  '매니지먼트',
-  '콘텐츠 기획',
-  '기타',
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+
+  const budgetRanges = [
+    t('contact.budgetRanges.under10m'),
+    t('contact.budgetRanges.10to50m'),
+    t('contact.budgetRanges.50to100m'),
+    t('contact.budgetRanges.over100m'),
+  ];
+
+  const serviceTypes = [
+    t('contact.services.advertising'),
+    t('contact.services.video'),
+    t('contact.services.consulting'),
+    t('contact.services.management'),
+    t('contact.services.content'),
+    t('contact.services.other'),
+  ];
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,11 +41,11 @@ export default function ContactPage() {
 
   const validateForm = () => {
     if (!formData.name.trim()) {
-      setErrorMessage('성함을 입력해주세요.');
+      setErrorMessage(`${t('contact.form.name')}을 입력해주세요.`);
       return false;
     }
     if (!formData.email.trim()) {
-      setErrorMessage('이메일을 입력해주세요.');
+      setErrorMessage(`${t('contact.form.email')}을 입력해주세요.`);
       return false;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
@@ -51,15 +53,15 @@ export default function ContactPage() {
       return false;
     }
     if (!formData.service) {
-      setErrorMessage('서비스 분야를 선택해주세요.');
+      setErrorMessage(`${t('contact.form.service')}를 선택해주세요.`);
       return false;
     }
     if (!formData.message.trim()) {
-      setErrorMessage('프로젝트 상세 내용을 입력해주세요.');
+      setErrorMessage(`${t('contact.form.message')}을 입력해주세요.`);
       return false;
     }
     if (formData.message.trim().length < 10) {
-      setErrorMessage('프로젝트 상세 내용을 10자 이상 입력해주세요.');
+      setErrorMessage(`${t('contact.form.message')}을 10자 이상 입력해주세요.`);
       return false;
     }
     return true;
@@ -119,11 +121,10 @@ export default function ContactPage() {
       <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
         <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-primary mb-8 md:mb-12 tracking-tight">
-            Contact
+            {t('contact.title')}
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light">
-            당신의 비전을 현실로 만들어줄<br className="hidden sm:block" />
-            파트너가 되어드리겠습니다
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light whitespace-pre-line">
+            {t('contact.subtitle')}
           </p>
         </div>
       </Section>
@@ -133,7 +134,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Get in Touch
+              {t('contact.getInTouch')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto"></div>
           </div>
@@ -148,7 +149,7 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-light text-primary">프로젝트 문의하기</h3>
+                  <h3 className="text-2xl md:text-3xl font-light text-primary">{t('contact.form.title')}</h3>
                 </div>
 
                 {/* Success Message */}
@@ -161,15 +162,15 @@ export default function ContactPage() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-green-800">문의가 성공적으로 전송되었습니다!</h4>
-                        <p className="text-green-700 text-sm mt-1">빠른 시일 내에 담당자가 연락드리겠습니다.</p>
+                        <h4 className="text-lg font-semibold text-green-800">{t('contact.form.success')}</h4>
+                        <p className="text-green-700 text-sm mt-1">{t('contact.form.successSubtitle')}</p>
                       </div>
                     </div>
                     <button
                       onClick={resetForm}
                       className="mt-4 text-sm text-green-600 hover:text-green-800 font-medium"
                     >
-                      새 문의 작성하기 →
+                      {t('contact.form.newInquiry')} →
                     </button>
                   </div>
                 )}
@@ -184,7 +185,7 @@ export default function ContactPage() {
                         </svg>
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-red-800">문의 전송에 실패했습니다</h4>
+                        <h4 className="text-lg font-semibold text-red-800">{t('contact.form.error')}</h4>
                         <p className="text-red-700 text-sm mt-1">{errorMessage}</p>
                       </div>
                     </div>
@@ -203,7 +204,7 @@ export default function ContactPage() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-3">
-                          성함 <span className="text-primary">*</span>
+                          {t('contact.form.name')} <span className="text-primary">{t('contact.form.required')}</span>
                         </label>
                         <input
                           type="text"
@@ -216,14 +217,14 @@ export default function ContactPage() {
                             ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
                             : 'border-gray-200 focus:border-primary hover:border-gray-300'
                             }`}
-                          placeholder="홍길동"
+                          placeholder={t('contact.form.placeholders.name')}
                           required
                         />
                       </div>
 
                       <div>
                         <label htmlFor="email" className="block text-sm font-semibold text-gray-800 mb-3">
-                          이메일 <span className="text-primary">*</span>
+                          {t('contact.form.email')} <span className="text-primary">{t('contact.form.required')}</span>
                         </label>
                         <input
                           type="email"
@@ -236,7 +237,7 @@ export default function ContactPage() {
                             ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
                             : 'border-gray-200 focus:border-primary hover:border-gray-300'
                             }`}
-                          placeholder="your@email.com"
+                          placeholder={t('contact.form.placeholders.email')}
                           required
                         />
                       </div>
@@ -244,7 +245,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="company" className="block text-sm font-semibold text-gray-800 mb-3">
-                        회사명
+                        {t('contact.form.company')}
                       </label>
                       <input
                         type="text"
@@ -257,14 +258,14 @@ export default function ContactPage() {
                           ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
                           : 'border-gray-200 focus:border-primary hover:border-gray-300'
                           }`}
-                        placeholder="회사명을 입력해주세요"
+                        placeholder={t('contact.form.placeholders.company')}
                       />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="service" className="block text-sm font-semibold text-gray-800 mb-3">
-                          서비스 분야 <span className="text-primary">*</span>
+                          {t('contact.form.service')} <span className="text-primary">{t('contact.form.required')}</span>
                         </label>
                         <select
                           id="service"
@@ -278,7 +279,7 @@ export default function ContactPage() {
                             }`}
                           required
                         >
-                          <option value="">서비스를 선택해주세요</option>
+                          <option value="">{t('contact.form.placeholders.service')}</option>
                           {serviceTypes.map((service) => (
                             <option key={service} value={service}>
                               {service}
@@ -289,7 +290,7 @@ export default function ContactPage() {
 
                       <div>
                         <label htmlFor="budget" className="block text-sm font-semibold text-gray-800 mb-3">
-                          예산 범위
+                          {t('contact.form.budget')}
                         </label>
                         <select
                           id="budget"
@@ -302,7 +303,7 @@ export default function ContactPage() {
                             : 'border-gray-200 focus:border-primary hover:border-gray-300'
                             }`}
                         >
-                          <option value="">예산 범위를 선택해주세요</option>
+                          <option value="">{t('contact.form.placeholders.budget')}</option>
                           {budgetRanges.map((range) => (
                             <option key={range} value={range}>
                               {range}
@@ -314,7 +315,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-semibold text-gray-800 mb-3">
-                        프로젝트 상세 내용 <span className="text-primary">*</span>
+                        {t('contact.form.message')} <span className="text-primary">{t('contact.form.required')}</span>
                       </label>
                       <textarea
                         id="message"
@@ -327,7 +328,7 @@ export default function ContactPage() {
                           ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
                           : 'border-gray-200 focus:border-primary hover:border-gray-300'
                           }`}
-                        placeholder="프로젝트에 대한 구체적인 내용, 목표, 일정 등을 자세히 알려주세요..."
+                        placeholder={t('contact.form.placeholders.message')}
                         required
                       />
                     </div>
@@ -349,11 +350,11 @@ export default function ContactPage() {
                                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                               </svg>
-                              전송 중...
+                              {t('contact.form.submitting')}
                             </>
                           ) : (
                             <>
-                              문의 보내기
+                              {t('contact.form.submit')}
                               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                               </svg>
@@ -378,7 +379,7 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-light text-primary">연락처 정보</h3>
+                  <h3 className="text-2xl md:text-3xl font-light text-primary">{t('contact.info.title')}</h3>
                 </div>
 
                 <div className="space-y-8">
@@ -390,10 +391,9 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-base font-semibold text-gray-800 mb-2">본사 위치</h4>
-                      <p className="text-gray-600 leading-relaxed text-sm">
-                        서울특별시 강남구 논현로128길 20<br />
-                        JS빌딩 6층
+                      <h4 className="text-base font-semibold text-gray-800 mb-2">{t('contact.info.address.title')}</h4>
+                      <p className="text-gray-600 leading-relaxed text-sm whitespace-pre-line">
+                        {t('contact.info.address.content')}
                       </p>
                     </div>
                   </div>
@@ -406,7 +406,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-base font-semibold text-gray-800 mb-2">이메일</h4>
+                      <h4 className="text-base font-semibold text-gray-800 mb-2">{t('contact.info.email.title')}</h4>
                       <a
                         href="mailto:contact@neoskorea.com"
                         className="text-gray-600 hover:text-primary transition-colors text-sm inline-flex items-center gap-1 group"
@@ -427,10 +427,9 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-base font-semibold text-gray-800 mb-2">운영 시간</h4>
-                      <p className="text-gray-600 leading-relaxed text-sm">
-                        평일: 오전 10시 - 오후 7시<br />
-                        토요일, 일요일 및 공휴일 휴무
+                      <h4 className="text-base font-semibold text-gray-800 mb-2">{t('contact.info.hours.title')}</h4>
+                      <p className="text-gray-600 leading-relaxed text-sm whitespace-pre-line">
+                        {t('contact.info.hours.content')}
                       </p>
                     </div>
                   </div>
@@ -443,7 +442,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-base font-semibold text-gray-800 mb-2">소셜 미디어</h4>
+                      <h4 className="text-base font-semibold text-gray-800 mb-2">{t('contact.info.social.title')}</h4>
                       <a
                         href="https://www.instagram.com/neos.inc_official/"
                         target="_blank"
@@ -480,10 +479,10 @@ export default function ContactPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                       </svg>
                     </div>
-                    <h4 className="text-base font-semibold text-primary">찾아오시는 길</h4>
+                    <h4 className="text-base font-semibold text-primary">{t('contact.info.map.title')}</h4>
                   </div>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    지하철 7호선 학동역 1번 출구에서 도보 5분<br />
+                    {t('contact.info.map.directions')}
                   </p>
                 </div>
               </div>

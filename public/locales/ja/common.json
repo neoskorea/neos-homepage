@@ -151,5 +151,158 @@
     "featuredCampaign": "Featured Campaign",
     "broadcasting": "Broadcasting",
     "webtoonPlanning": "Webtoon Planning"
+  },
+  "footer": {
+    "tagline": "Professional. Humanism. Global.\nCreative Management & Production",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "address": "ソウル特別市江南区論峴路128ギル20、JSビル6階",
+    "copyright": "neos inc. All rights reserved."
+  },
+  "about": {
+    "title": "About neos",
+    "subtitle": "韓国と日本を結ぶ広告・映像市場のリーダーとして\n新しい未来を創造します",
+    "ceoMessage": {
+      "title": "CEO Message",
+      "content": {
+        "paragraph1": "株式会社ネオスはめまくるしく変化する広告映像市場内で近隣国である⽇本広告市場を国内市場に⽬を向けさせた先駆者として、⽇本と韓国の架け橋としての役割を成功的に導いてまいりました。これに留まらず持続的なモニタリングとコミュニケーションを通して韓国と⽇本、相互間の緊密なネットワークを通して幅広いビジネス・ポジショニングで広告映像制作市場で影響⼒ある位置に⾄っています。",
+        "paragraph2": "株式会社ネオスは2010年度にはマネージメント事業部を新設し、2013年度にはネオスエンタテインメントを⼦会社で設⽴いたしました。影響⼒ある俳優軍団という良質のインフラを構築し新しいビジネスを繋ぎ合わせ、グローバル配信及び韓国地上波の多くの作品で活躍しております。また、⼒量ある俳優を育成できる環境を造成し、業界内での認知度を上げています。",
+        "paragraph3": "株式会社ネオスは2018年から「韓流」と「コンテンツ」という時代的流れを結び付かせ、⽇本及びアジア屈指のクリエーターとパートナーシップを結び新しいコンテンツビジネス事業部であるneostoryを新設。2021年には株式会社neostoryを設⽴いたしました。",
+        "paragraph4": "ウェブテューンと⾔われるネット漫画や⼩説などのコンテンツを⽣み出し、これを⼜映像化す事によってこれまでの⼈材プールを活⽤し世界に披露して参ります。",
+        "paragraph5": "ネオス・グループはこれからも、これまで経験できなかった新しい市場の先駆者として役割を果たして参ります。"
+      },
+      "ceoName": "南 賢智 （ナム ヒョンジ）",
+      "ceoTitle": "代表取締役 / CEO"
+    },
+    "groupCompanies": {
+      "title": "Group Companies",
+      "neosEntertainment": {
+        "founded": "Founded 2013",
+        "description": "ネオスの子会社として影響力のある俳優軍団を通じた良質なインフラを構築し、体系的な俳優育成およびマネジメントサービスを提供するエンターテインメント専門会社です。"
+      },
+      "neostory": {
+        "founded": "Founded 2021",
+        "description": "ウェブトゥーン、小説など多様なコンテンツを企画・制作し、韓日同時連載を通じたグローバルコンテンツ事業を展開するコンテンツ制作専門会社です。"
+      }
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "creativeProduction": {
+        "title": "Creative Production",
+        "description": "広告・映像制作分野の\n先導的役割"
+      },
+      "talentManagement": {
+        "title": "Talent Management",
+        "description": "専門的で体系的な\nアーティストマネジメント"
+      },
+      "contentCreation": {
+        "title": "Content Creation",
+        "description": "グローバル市場に向けた\n革新的コンテンツ制作"
+      },
+      "finalStatement": "3つの専門領域が有機的に連結され\n統合的で革新的なエンターテインメントソリューションを提供します"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "様々な業界と地域で展開した\n私たちの創造的な作品をご覧ください",
+    "filters": {
+      "title": "Project Filters",
+      "year": "年度",
+      "brand": "ブランド",
+      "region": "地域",
+      "category": "カテゴリー",
+      "all": "全て"
+    },
+    "featuredWorks": "Featured Works",
+    "noResults": {
+      "title": "選択したフィルターに該当するプロジェクトがありません",
+      "subtitle": "他のフィルター組み合わせをお試しください"
+    },
+    "projects": {
+      "misamoGoogle": {
+        "title": "MISAMO x Google 広告キャンペーン",
+        "description": "日本代表ガールグループMISAMOとGoogleの革新的なコラボレーションプロジェクト"
+      },
+      "sbc": {
+        "title": "SBC ブランドキャンペーン",
+        "description": "力強いメッセージと創造的ビジュアルが印象的なブランドキャンペーン"
+      }
+    },
+    "categories": {
+      "advertising": "広告",
+      "production": "制作",
+      "creative": "クリエイティブディレクション",
+      "ip": "IP"
+    },
+    "regions": {
+      "global": "グローバル",
+      "asia": "アジア",
+      "northAmerica": "北米",
+      "europe": "ヨーロッパ"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "あなたのビジョンを現実にする\nパートナーになります",
+    "getInTouch": "Get in Touch",
+    "form": {
+      "title": "プロジェクトお問い合わせ",
+      "name": "お名前",
+      "email": "メールアドレス",
+      "company": "会社名",
+      "service": "サービス分野",
+      "budget": "予算範囲",
+      "message": "プロジェクト詳細内容",
+      "submit": "お問い合わせを送信",
+      "submitting": "送信中...",
+      "success": "お問い合わせが正常に送信されました！",
+      "successSubtitle": "お早めに担当者よりご連絡いたします。",
+      "newInquiry": "新しいお問い合わせを作成する",
+      "error": "お問い合わせの送信に失敗しました",
+      "required": "*",
+      "placeholders": {
+        "name": "田中太郎",
+        "email": "your@email.com",
+        "company": "会社名をご入力ください",
+        "service": "サービスをお選びください",
+        "budget": "予算範囲をお選びください",
+        "message": "プロジェクトの具体的な内容、目標、スケジュールなどを詳しくお聞かせください..."
+      }
+    },
+    "info": {
+      "title": "連絡先情報",
+      "address": {
+        "title": "本社所在地",
+        "content": "ソウル特別市江南区論峴路128ギル20\nJSビル6階"
+      },
+      "email": {
+        "title": "メールアドレス"
+      },
+      "hours": {
+        "title": "営業時間",
+        "content": "平日：午前10時 - 午後7時\n土曜日、日曜日および祝日休業"
+      },
+      "social": {
+        "title": "ソーシャルメディア"
+      },
+      "map": {
+        "title": "アクセス",
+        "directions": "地下鉄7号線ハクドン駅1番出口より徒歩5分"
+      }
+    },
+    "services": {
+      "advertising": "広告制作",
+      "video": "映像制作",
+      "consulting": "クリエイティブコンサルティング",
+      "management": "マネジメント",
+      "content": "コンテンツ企画",
+      "other": "その他"
+    },
+    "budgetRanges": {
+      "under10m": "1千万ウォン未満",
+      "10to50m": "1千万ウォン - 5千万ウォン",
+      "50to100m": "5千万ウォン - 1億ウォン",
+      "over100m": "1億ウォン以上"
+    }
   }
 } 

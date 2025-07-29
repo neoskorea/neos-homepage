@@ -6,39 +6,43 @@ import { Section } from '@/components/Section';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/Button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-const filters = {
+const getFilterOptions = (t: (key: string) => string) => ({
   year: ['2024', '2023', '2022'],
   brand: ['Nike', 'UNIQLO', 'Google', 'Samsung'],
-  region: ['글로벌', '아시아', '북미', '유럽'],
-  category: ['광고', '제작', '크리에이티브 디렉션', 'IP'],
-};
+  region: [t('portfolio.regions.global'), t('portfolio.regions.asia'), t('portfolio.regions.northAmerica'), t('portfolio.regions.europe')],
+  category: [t('portfolio.categories.advertising'), t('portfolio.categories.production'), t('portfolio.categories.creative'), t('portfolio.categories.ip')],
+});
 
-const projects = [
+const getProjects = (t: (key: string) => string) => [
   {
     id: 1,
-    title: 'MISAMO x Google 광고 캠페인',
-    description: '일본 대표 걸그룹 MISAMO와 Google의 혁신적인 협업 프로젝트',
+    title: t('portfolio.projects.misamoGoogle.title'),
+    description: t('portfolio.projects.misamoGoogle.description'),
     image: '/images/works/misamo-google.jpeg',
     year: '2024',
     brand: 'Google',
-    region: '글로벌',
-    category: '광고',
+    region: t('portfolio.regions.global'),
+    category: t('portfolio.categories.advertising'),
   },
   {
     id: 2,
-    title: 'SBC 브랜드 캠페인',
-    description: '강력한 메시지와 창의적 비주얼이 돋보이는 브랜드 캠페인',
+    title: t('portfolio.projects.sbc.title'),
+    description: t('portfolio.projects.sbc.description'),
     image: '/images/works/sbc.jpg',
     year: '2024',
     brand: 'Samsung',
-    region: '아시아',
-    category: '제작',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.production'),
   },
-  // 더 많은 프로젝트를 여기에 추가할 수 있습니다
 ];
 
 export default function PortfolioPage() {
+  const { t } = useLanguage();
+  const filters = getFilterOptions(t);
+  const projects = getProjects(t);
+
   const [activeFilters, setActiveFilters] = useState({
     year: '',
     brand: '',
@@ -52,6 +56,16 @@ export default function PortfolioPage() {
     );
   });
 
+  const getFilterLabel = (category: string) => {
+    switch (category) {
+      case 'year': return t('portfolio.filters.year');
+      case 'brand': return t('portfolio.filters.brand');
+      case 'region': return t('portfolio.filters.region');
+      case 'category': return t('portfolio.filters.category');
+      default: return category;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -60,11 +74,10 @@ export default function PortfolioPage() {
       <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
         <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-primary mb-8 md:mb-12 tracking-tight">
-            Portfolio
+            {t('portfolio.title')}
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light">
-            다양한 산업과 지역에서 펼쳐낸<br className="hidden sm:block" />
-            우리의 창의적 작업들을 만나보세요
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light whitespace-pre-line">
+            {t('portfolio.subtitle')}
           </p>
         </div>
       </Section>
@@ -74,7 +87,7 @@ export default function PortfolioPage() {
         <div className="max-w-5xl mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Project Filters
+              {t('portfolio.filters.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto"></div>
           </div>
@@ -83,10 +96,7 @@ export default function PortfolioPage() {
             {Object.entries(filters).map(([category, options]) => (
               <div key={category}>
                 <label className="block text-sm font-medium text-gray-700 mb-3 capitalize">
-                  {category === 'year' ? '연도' :
-                    category === 'brand' ? '브랜드' :
-                      category === 'region' ? '지역' :
-                        category === 'category' ? '카테고리' : category}
+                  {getFilterLabel(category)}
                 </label>
                 <select
                   value={activeFilters[category as keyof typeof activeFilters]}
@@ -98,7 +108,7 @@ export default function PortfolioPage() {
                   }
                   className="block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring-primary transition-colors"
                 >
-                  <option value="">전체</option>
+                  <option value="">{t('portfolio.filters.all')}</option>
                   {options.map((option) => (
                     <option key={option} value={option}>
                       {option}
@@ -116,7 +126,7 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
-              Featured Works
+              {t('portfolio.featuredWorks')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto"></div>
           </div>
@@ -160,8 +170,8 @@ export default function PortfolioPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <p className="text-lg text-gray-600 mb-2">선택한 필터에 해당하는 프로젝트가 없습니다</p>
-              <p className="text-sm text-gray-500">다른 필터 조합을 시도해보세요</p>
+              <p className="text-lg text-gray-600 mb-2">{t('portfolio.noResults.title')}</p>
+              <p className="text-sm text-gray-500">{t('portfolio.noResults.subtitle')}</p>
             </div>
           )}
         </div>

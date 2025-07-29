@@ -151,5 +151,158 @@
     "featuredCampaign": "Featured Campaign",
     "broadcasting": "Broadcasting",
     "webtoonPlanning": "Webtoon Planning"
+  },
+  "footer": {
+    "tagline": "Professional. Humanism. Global.\nCreative Management & Production",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "address": "首尔特别市江南区论岘路128街20号JS大厦6层",
+    "copyright": "neos inc. All rights reserved."
+  },
+  "about": {
+    "title": "About neos",
+    "subtitle": "作为连接韩国和日本广告·影像市场的领导者\n创造全新的未来",
+    "ceoMessage": {
+      "title": "CEO Message",
+      "content": {
+        "paragraph1": "NEOS株式会社作为在快速变化的广告影像市场中，将最近邻国家日本的广告市场转向国内市场的首个先驱者，成功地发挥了连接韩国和日本桥梁的作用。不仅如此，通过持续的监控和沟通，通过韩国和日本相互间的紧密网络以及广泛的商业定位，在广告影像制作市场中达到了有影响力的位置。",
+        "paragraph2": "NEOS株式会社于2010年新设了管理事业部，2013年成立了NEOS娱乐作为子公司。通过有影响力的演员团队构建了优质的基础设施，并将新业务进行活用和融合，为广告商提供最优质的服务。同时，创造了能够培养有能力演员的环境，提高了业界内的知名度。",
+        "paragraph3": "NEOS株式会社从2018年开始，顺应\"韩流\"和\"内容\"的时代潮流，通过与日本及亚洲顶级创作者的合作伙伴关系，新设了新内容商业事业部neostory。2021年成立了NEOSTORY株式会社。",
+        "paragraph4": "制作被称为网络漫画的互联网漫画或小说等内容，通过将其影像化，与各种人们合作向世界展示。",
+        "paragraph5": "NEOS集团今后也将继续发挥迄今为止未曾经历的新市场先驱者的作用。"
+      },
+      "ceoName": "南贤智",
+      "ceoTitle": "代表理事 / CEO"
+    },
+    "groupCompanies": {
+      "title": "Group Companies",
+      "neosEntertainment": {
+        "founded": "Founded 2013",
+        "description": "作为NEOS的子公司，通过有影响力的演员团队构建优质基础设施，提供系统性的演员培养和经纪服务的娱乐专业公司。"
+      },
+      "neostory": {
+        "founded": "Founded 2021",
+        "description": "企划制作网络漫画、小说等多样内容，通过韩日同时连载展开全球内容事业的内容制作专业公司。"
+      }
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "creativeProduction": {
+        "title": "Creative Production",
+        "description": "广告·影像制作领域的\n领导作用"
+      },
+      "talentManagement": {
+        "title": "Talent Management",
+        "description": "专业且系统性的\n艺人经纪管理"
+      },
+      "contentCreation": {
+        "title": "Content Creation",
+        "description": "面向全球市场的\n创新内容制作"
+      },
+      "finalStatement": "三个专业领域有机连接\n提供整合性和创新性的娱乐解决方案"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "在各个行业和地区展开的\n我们的创意作品",
+    "filters": {
+      "title": "Project Filters",
+      "year": "年度",
+      "brand": "品牌",
+      "region": "地区",
+      "category": "类别",
+      "all": "全部"
+    },
+    "featuredWorks": "Featured Works",
+    "noResults": {
+      "title": "没有符合所选筛选条件的项目",
+      "subtitle": "请尝试其他筛选组合"
+    },
+    "projects": {
+      "misamoGoogle": {
+        "title": "MISAMO x Google 广告活动",
+        "description": "日本代表女团MISAMO与Google的创新合作项目"
+      },
+      "sbc": {
+        "title": "SBC 品牌活动",
+        "description": "强有力的信息和创意视觉突出的品牌活动"
+      }
+    },
+    "categories": {
+      "advertising": "广告",
+      "production": "制作",
+      "creative": "创意指导",
+      "ip": "IP"
+    },
+    "regions": {
+      "global": "全球",
+      "asia": "亚洲",
+      "northAmerica": "北美",
+      "europe": "欧洲"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "我们将成为将您的愿景\n变为现实的合作伙伴",
+    "getInTouch": "Get in Touch",
+    "form": {
+      "title": "项目咨询",
+      "name": "姓名",
+      "email": "邮箱",
+      "company": "公司名称",
+      "service": "服务领域",
+      "budget": "预算范围",
+      "message": "项目详细内容",
+      "submit": "发送咨询",
+      "submitting": "发送中...",
+      "success": "咨询已成功发送！",
+      "successSubtitle": "我们的团队将尽快与您联系。",
+      "newInquiry": "创建新咨询",
+      "error": "咨询发送失败",
+      "required": "*",
+      "placeholders": {
+        "name": "张三",
+        "email": "your@email.com",
+        "company": "请输入公司名称",
+        "service": "请选择服务",
+        "budget": "请选择预算范围",
+        "message": "请详细告诉我们您的项目内容、目标、时间安排等..."
+      }
+    },
+    "info": {
+      "title": "联系信息",
+      "address": {
+        "title": "办公地址",
+        "content": "首尔特别市江南区论岘路128街20号\nJS大厦6层"
+      },
+      "email": {
+        "title": "邮箱"
+      },
+      "hours": {
+        "title": "营业时间",
+        "content": "工作日：上午10点 - 下午7点\n周六、周日及节假日休息"
+      },
+      "social": {
+        "title": "社交媒体"
+      },
+      "map": {
+        "title": "交通指南",
+        "directions": "地铁7号线学洞站1号出口步行5分钟"
+      }
+    },
+    "services": {
+      "advertising": "广告制作",
+      "video": "影像制作",
+      "consulting": "创意咨询",
+      "management": "经纪管理",
+      "content": "内容策划",
+      "other": "其他"
+    },
+    "budgetRanges": {
+      "under10m": "1千万韩元以下",
+      "10to50m": "1千万韩元 - 5千万韩元",
+      "50to100m": "5千万韩元 - 1亿韩元",
+      "over100m": "1亿韩元以上"
+    }
   }
 } 

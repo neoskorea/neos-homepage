@@ -151,5 +151,158 @@
     "featuredCampaign": "Featured Campaign",
     "broadcasting": "Broadcasting",
     "webtoonPlanning": "Webtoon Planning"
+  },
+  "footer": {
+    "tagline": "Professional. Humanism. Global.\nCreative Management & Production",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "address": "6F JS Building, 20 Nonhyeon-ro 128-gil, Gangnam-gu, Seoul",
+    "copyright": "neos inc. All rights reserved."
+  },
+  "about": {
+    "title": "About neos",
+    "subtitle": "As a leader in the advertising and video market connecting Korea and Japan,\nwe are creating a new future",
+    "ceoMessage": {
+      "title": "CEO Message",
+      "content": {
+        "paragraph1": "NEOS Corporation has successfully led the role as a pioneer that directed Japan's advertising market, the nearest neighboring country, to the domestic market within the rapidly changing advertising video market, serving as a bridgehead connecting Korea and Japan. Beyond this, through continuous monitoring and communication, we have reached an influential position in the advertising video production market through close networks and extensive business positioning between Korea and Japan.",
+        "paragraph2": "NEOS Corporation established a management business division in 2010 and launched NEOS Entertainment as a subsidiary in 2013. We provide the best services to advertisers by building quality infrastructure with influential actors and utilizing and integrating new businesses. We are also creating an environment where capable actors can be nurtured, increasing recognition within the industry.",
+        "paragraph3": "In 2018, NEOS Corporation established neostory, a new content business division, through partnerships with leading creators in Japan and Asia in line with the trends of 'Korean Wave' and 'Content'. In 2021, we established NEOSTORY Corporation.",
+        "paragraph4": "We will create content such as internet comics and novels called webtoons and visualize them to collaborate with various people and present them to the world.",
+        "paragraph5": "The NEOS Group will continue to play a leading role in new markets that have never been experienced before."
+      },
+      "ceoName": "Nam Hyeonji",
+      "ceoTitle": "CEO / President"
+    },
+    "groupCompanies": {
+      "title": "Group Companies",
+      "neosEntertainment": {
+        "founded": "Founded 2013",
+        "description": "As a subsidiary of NEOS, it is an entertainment company specializing in building quality infrastructure through influential actor groups and providing systematic actor development and management services."
+      },
+      "neostory": {
+        "founded": "Founded 2021",
+        "description": "A content production company specializing in planning and producing various contents such as webtoons and novels, and developing global content business through simultaneous serialization in Korea and Japan."
+      }
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "creativeProduction": {
+        "title": "Creative Production",
+        "description": "Leading role in\nadvertising and video production"
+      },
+      "talentManagement": {
+        "title": "Talent Management",
+        "description": "Professional and systematic\nartist management"
+      },
+      "contentCreation": {
+        "title": "Content Creation",
+        "description": "Innovative content creation\nfor the global market"
+      },
+      "finalStatement": "Three specialized areas are organically connected\nto provide integrated and innovative entertainment solutions"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Discover our creative works\nspread across various industries and regions",
+    "filters": {
+      "title": "Project Filters",
+      "year": "Year",
+      "brand": "Brand",
+      "region": "Region",
+      "category": "Category",
+      "all": "All"
+    },
+    "featuredWorks": "Featured Works",
+    "noResults": {
+      "title": "No projects match the selected filters",
+      "subtitle": "Try different filter combinations"
+    },
+    "projects": {
+      "misamoGoogle": {
+        "title": "MISAMO x Google Advertising Campaign",
+        "description": "An innovative collaboration project between Japanese representative girl group MISAMO and Google"
+      },
+      "sbc": {
+        "title": "SBC Brand Campaign",
+        "description": "A brand campaign featuring powerful messages and creative visuals"
+      }
+    },
+    "categories": {
+      "advertising": "Advertising",
+      "production": "Production",
+      "creative": "Creative Direction",
+      "ip": "IP"
+    },
+    "regions": {
+      "global": "Global",
+      "asia": "Asia",
+      "northAmerica": "North America",
+      "europe": "Europe"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We will be your partner\nto make your vision a reality",
+    "getInTouch": "Get in Touch",
+    "form": {
+      "title": "Project Inquiry",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "service": "Service Area",
+      "budget": "Budget Range",
+      "message": "Project Details",
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "success": "Your inquiry has been sent successfully!",
+      "successSubtitle": "Our team will contact you shortly.",
+      "newInquiry": "Create New Inquiry",
+      "error": "Failed to send inquiry",
+      "required": "*",
+      "placeholders": {
+        "name": "John Doe",
+        "email": "your@email.com",
+        "company": "Please enter your company name",
+        "service": "Please select a service",
+        "budget": "Please select budget range",
+        "message": "Please tell us about your project details, goals, timeline, etc..."
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": {
+        "title": "Office Location",
+        "content": "6F JS Building, 20 Nonhyeon-ro 128-gil\nGangnam-gu, Seoul"
+      },
+      "email": {
+        "title": "Email"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "content": "Weekdays: 10:00 AM - 7:00 PM\nClosed on weekends and holidays"
+      },
+      "social": {
+        "title": "Social Media"
+      },
+      "map": {
+        "title": "Directions",
+        "directions": "5-minute walk from Hakdong Station Exit 1 (Subway Line 7)"
+      }
+    },
+    "services": {
+      "advertising": "Advertising Production",
+      "video": "Video Production",
+      "consulting": "Creative Consulting",
+      "management": "Management",
+      "content": "Content Planning",
+      "other": "Other"
+    },
+    "budgetRanges": {
+      "under10m": "Under 10M KRW",
+      "10to50m": "10M - 50M KRW",
+      "50to100m": "50M - 100M KRW",
+      "over100m": "Over 100M KRW"
+    }
   }
 } 
