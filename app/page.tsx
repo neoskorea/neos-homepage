@@ -103,7 +103,7 @@ export default function Home() {
                 alt="neos logo"
                 width={280}
                 height={90}
-                className="mx-auto px-4 sm:px-8 md:px-12 hero-logo max-w-full h-auto relative z-10"
+                className="mx-auto px-4 sm:px-8 md:px-12 hero-logo w-48 sm:w-56 md:w-64 lg:w-72 h-auto relative z-10"
               />
               {/* <Image
                 src="/images/neos-logo-text-white-nopd.png"
