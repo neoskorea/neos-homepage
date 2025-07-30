@@ -298,8 +298,7 @@ export default function PortfolioPage() {
 
                 {/* Text overlay that slides up on hover */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <h3 className="text-lg md:text-xl font-semibold mb-3 leading-tight drop-shadow-lg">{project.title}</h3>
-                  <p className="text-sm md:text-base text-gray-100 mb-4 leading-relaxed drop-shadow-md">{project.description}</p>
+                  <h3 className="text-lg md:text-xl font-semibold mb-4 leading-tight drop-shadow-lg">{project.title}</h3>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-xs bg-white/30 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/30 drop-shadow-sm font-medium">
                       {project.category}

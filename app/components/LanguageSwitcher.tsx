@@ -15,9 +15,10 @@ const languages: { code: Language; name: string; flag: string }[] = [
 interface LanguageSwitcherProps {
   isScrolled: boolean;
   isHomePage: boolean;
+  mobileMenuOpen?: boolean;
 }
 
-export default function LanguageSwitcher({ isScrolled, isHomePage }: LanguageSwitcherProps) {
+export default function LanguageSwitcher({ isScrolled, isHomePage, mobileMenuOpen = false }: LanguageSwitcherProps) {
   const { language, changeLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -44,7 +45,7 @@ export default function LanguageSwitcher({ isScrolled, isHomePage }: LanguageSwi
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors duration-300 ${isScrolled
+        className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors duration-300 ${isScrolled || mobileMenuOpen
           ? 'text-text-secondary hover:text-primary hover:bg-primary/5'
           : 'text-white/90 hover:text-white hover:bg-white/10'
           }`}
@@ -64,7 +65,7 @@ export default function LanguageSwitcher({ isScrolled, isHomePage }: LanguageSwi
 
       {isOpen && (
         <div
-          className={`absolute right-0 mt-2 w-32 md:w-40 rounded-lg shadow-lg z-50 ${isScrolled
+          className={`absolute right-0 mt-2 w-32 md:w-40 rounded-lg shadow-lg z-50 ${isScrolled || mobileMenuOpen
             ? 'bg-white border border-gray-200'
             : 'bg-black/80 backdrop-blur-sm border border-white/20'
             }`}
@@ -75,10 +76,10 @@ export default function LanguageSwitcher({ isScrolled, isHomePage }: LanguageSwi
                 key={lang.code}
                 onClick={() => handleLanguageChange(lang.code)}
                 className={`w-full flex items-center space-x-3 px-4 py-2 text-left transition-colors duration-200 ${language === lang.code
-                  ? isScrolled
+                  ? (isScrolled || mobileMenuOpen)
                     ? 'bg-primary/10 text-primary'
                     : 'bg-white/20 text-white'
-                  : isScrolled
+                  : (isScrolled || mobileMenuOpen)
                     ? 'text-gray-700 hover:bg-gray-50'
                     : 'text-white/80 hover:bg-white/10 hover:text-white'
                   }`}
