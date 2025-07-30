@@ -99,12 +99,19 @@ export default function Home() {
               {/* 글로우 효과 배경 */}
               <div className="logo-glow"></div>
               <Image
+                src="/images/neos-logo-white-trans.png"
+                alt="neos logo"
+                width={280}
+                height={90}
+                className="mx-auto px-4 sm:px-8 md:px-12 hero-logo max-w-full h-auto relative z-10"
+              />
+              {/* <Image
                 src="/images/neos-logo-text-white-nopd.png"
                 alt="neos logo"
                 width={600}
                 height={180}
                 className="mx-auto px-4 sm:px-8 md:px-12 hero-logo max-w-full h-auto relative z-10"
-              />
+              /> */}
             </div>
           </div>
         </div>
