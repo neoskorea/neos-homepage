@@ -233,7 +233,7 @@ export default function PortfolioPage() {
       </Section>
 
       {/* Project Filters */}
-      <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
+      {/* <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-20">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
@@ -269,10 +269,10 @@ export default function PortfolioPage() {
             ))}
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* Projects Grid */}
-      <Section className="py-20 md:py-32 lg:py-40">
+      <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
