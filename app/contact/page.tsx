@@ -120,7 +120,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
         <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-primary mb-8 md:mb-12 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-light text-primary mb-8 md:mb-12 tracking-tight">
             {t('contact.title')}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light whitespace-pre-line">

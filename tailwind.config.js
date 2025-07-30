@@ -35,6 +35,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-pretendard)', 'Noto Sans KR', 'sans-serif'],
+        heading: ['Cormorant Garamond', 'serif'],
       },
       fontSize: {
         '2xs': ['0.625rem', { lineHeight: '0.75rem' }],

@@ -128,7 +128,7 @@ export default function Home() {
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.professional.title')}</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.professional.title')}</h3>
                 </div>
               </div>
               <div className="md:pl-7">
@@ -145,7 +145,7 @@ export default function Home() {
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.humanism.title')}</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.humanism.title')}</h3>
                 </div>
               </div>
               <div className="md:pl-7">
@@ -162,7 +162,7 @@ export default function Home() {
               <div className="flex items-start mb-8 md:mb-10 justify-center md:justify-start">
                 <div className="w-3 h-8 bg-primary mr-4 flex-shrink-0 mt-1"></div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.global.title')}</h3>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading font-light text-primary mb-6 md:mb-8 tracking-tight">{t('vision.global.title')}</h3>
                 </div>
               </div>
               <div className="md:pl-7">
@@ -462,7 +462,7 @@ export default function Home() {
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full mr-1.5 sm:mr-2"></span>
                     {t('labels.featuredCampaign')}
                   </div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-white mb-2 sm:mb-3 md:mb-4">{t('works.misamoGoogle.title')}</h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-light text-white mb-2 sm:mb-3 md:mb-4">{t('works.misamoGoogle.title')}</h3>
                   <p className="text-sm sm:text-lg md:text-xl text-gray-200 leading-relaxed mb-3 sm:mb-4 md:mb-6">
                     {t('works.misamoGoogle.description')}
                   </p>
@@ -491,7 +491,7 @@ export default function Home() {
                   <div className="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 bg-primary/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-2 sm:mb-3 md:mb-4">
                     {t('labels.broadcasting')}
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white mb-2 sm:mb-3">{t('works.sbc.title')}</h3>
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-light text-white mb-2 sm:mb-3">{t('works.sbc.title')}</h3>
                   <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
                     {t('works.sbc.description')}
                   </p>
@@ -515,7 +515,7 @@ export default function Home() {
                   <div className="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 bg-primary/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-2 sm:mb-3 md:mb-4">
                     {t('labels.webtoonPlanning')}
                   </div>
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white mb-2 sm:mb-3">{t('works.delete.title')}</h3>
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-light text-white mb-2 sm:mb-3">{t('works.delete.title')}</h3>
                   <p className="text-sm sm:text-base text-gray-200 leading-relaxed whitespace-pre-line">
                     {t('works.delete.description')}
                   </p>

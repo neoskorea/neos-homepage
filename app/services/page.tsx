@@ -75,7 +75,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <Section className="pt-32">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-light text-primary mb-6">
+          <h1 className="text-4xl md:text-6xl font-heading font-light text-primary mb-6">
             Our Services
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">

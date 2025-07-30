@@ -45,12 +45,12 @@ export default function LanguageSwitcher({ isScrolled, isHomePage }: LanguageSwi
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors duration-300 ${isScrolled
-            ? 'text-text-secondary hover:text-primary hover:bg-primary/5'
-            : 'text-white/90 hover:text-white hover:bg-white/10'
+          ? 'text-text-secondary hover:text-primary hover:bg-primary/5'
+          : 'text-white/90 hover:text-white hover:bg-white/10'
           }`}
       >
         <span className="text-lg">{currentLanguage.flag}</span>
-        <span className="text-sm font-medium">{currentLanguage.name}</span>
+        <span className="hidden md:block text-sm font-medium">{currentLanguage.name}</span>
         <svg
           className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''
             }`}
@@ -64,9 +64,9 @@ export default function LanguageSwitcher({ isScrolled, isHomePage }: LanguageSwi
 
       {isOpen && (
         <div
-          className={`absolute right-0 mt-2 w-40 rounded-lg shadow-lg z-50 ${isScrolled
-              ? 'bg-white border border-gray-200'
-              : 'bg-black/80 backdrop-blur-sm border border-white/20'
+          className={`absolute right-0 mt-2 w-32 md:w-40 rounded-lg shadow-lg z-50 ${isScrolled
+            ? 'bg-white border border-gray-200'
+            : 'bg-black/80 backdrop-blur-sm border border-white/20'
             }`}
         >
           <div className="py-1">
@@ -75,12 +75,12 @@ export default function LanguageSwitcher({ isScrolled, isHomePage }: LanguageSwi
                 key={lang.code}
                 onClick={() => handleLanguageChange(lang.code)}
                 className={`w-full flex items-center space-x-3 px-4 py-2 text-left transition-colors duration-200 ${language === lang.code
-                    ? isScrolled
-                      ? 'bg-primary/10 text-primary'
-                      : 'bg-white/20 text-white'
-                    : isScrolled
-                      ? 'text-gray-700 hover:bg-gray-50'
-                      : 'text-white/80 hover:bg-white/10 hover:text-white'
+                  ? isScrolled
+                    ? 'bg-primary/10 text-primary'
+                    : 'bg-white/20 text-white'
+                  : isScrolled
+                    ? 'text-gray-700 hover:bg-gray-50'
+                    : 'text-white/80 hover:bg-white/10 hover:text-white'
                   }`}
               >
                 <span className="text-lg">{lang.flag}</span>
