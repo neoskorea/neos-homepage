@@ -6,26 +6,26 @@
   },
   "vision": {
     "title": "Vision",
-    "subtitle": "주식회사 네오스는 내일의 비전을 오늘의 현실로 바꿔나갑니다",
+    "subtitle": "미래 비전을 현실로 구현하는 크리에이티브 파트너",
     "professional": {
       "title": "Professional",
-      "heading": "주식회사 네오스는\n풍부한 노하우를 보유한 전문가 그룹입니다.",
-      "description": "각계 전문 인력의 영입으로\n업계 최고의 맨파워 조직을 구성했습니다.\n또한, 독립적인 파트 구성을 통하여\n전문성을 강화한\n프로페셔널한 비즈니스를 지향합니다."
+      "heading": "풍부한 노하우를 보유한\n전문가 그룹",
+      "description": "각계 전문 인력으로 구성된 업계 최고의 조직으로 전문성과 프로페셔널리즘을 추구합니다."
     },
     "humanism": {
       "title": "Humanism",
-      "heading": "주식회사 네오스의\n핵심 분야는 바로 사람입니다.",
-      "description": "비즈니스에만 치중하는 기업이 아닌\n사람과 사람 사이의 따뜻한 정이 흐르는\n휴머니즘을  바탕으로\n모두 함께 상생 할 수 있는\n기업 문화를 추구합니다."
+      "heading": "핵심은 바로\n사람입니다",
+      "description": "따뜻한 휴머니즘을 바탕으로 모두가 함께 상생할 수 있는 기업 문화를 추구합니다."
     },
     "global": {
       "title": "Global",
-      "heading": "주식회사 네오스의\n경쟁력은 글로벌 네트워크입니다.",
-      "description": "다년간의 글로벌 기업들과의 업무 제휴와\n미디어 제작을 통하여 이미 검증된 바\n있습니다. 압도적인 글로벌 네트워크를\n기반으로 한 치밀한 전략과 협업을 통하여\n해외 진출을 적극적으로 지원합니다."
+      "heading": "경쟁력은\n글로벌 네트워크",
+      "description": "압도적인 글로벌 네트워크와 치밀한 전략을 통해 해외 진출을 적극 지원합니다."
     }
   },
   "mission": {
     "title": "Mission",
-    "subtitle": "주식회사 네오스는 클라이언트의 성공 스토리를 위하여 항상 매진합니다",
+    "subtitle": "클라이언트의 성공이 우리의 성공입니다",
     "trend": {
       "title": "Trend",
       "description": "흐름을 앞선 새로움"
@@ -53,7 +53,7 @@
   },
   "history": {
     "title": "Our Journey",
-    "subtitle": "우리의 성장과 발전의 주요 이정표",
+    "subtitle": "25년간 쌓아온 혁신과 성장의 발자취",
     "events": {
       "1999": {
         "title": "광고·영상제작사 NEOS(네오스) 설립",
@@ -119,7 +119,7 @@
   },
   "works": {
     "title": "Featured Works",
-    "subtitle": "엔터테인먼트와 콘텐츠 제작 분야의 최신 성과를 확인하세요",
+    "subtitle": "창의와 혁신이 만나는 프로젝트 쇼케이스",
     "viewAll": "모든 프로젝트 보기",
     "misamoGoogle": {
       "title": "MISAMO x Google",
@@ -141,11 +141,11 @@
   },
   "clients": {
     "title": "Our Clients",
-    "subtitle": "글로벌 리딩 브랜드들과 함께 성공 스토리를 만들어갑니다"
+    "subtitle": "글로벌 리딩 브랜드와 함께하는 성공 파트너십"
   },
   "partners": {
     "title": "Our Partners",
-    "subtitle": "업계 리더들과 협력하여 탁월한 가치를 창출합니다"
+    "subtitle": "업계 리더들과 함께 만드는 탁월한 가치"
   },
   "labels": {
     "featuredCampaign": "Featured Campaign",
@@ -160,8 +160,8 @@
     "copyright": "neos inc. All rights reserved."
   },
   "about": {
-    "title": "About neos",
-    "subtitle": "한국과 일본을 잇는 광고·영상 시장의 선두주자로서\n새로운 미래를 만들어갑니다",
+    "title": "About",
+    "subtitle": "한일 광고·영상 시장을 선도하는 크리에이티브 혁신 기업",
     "ceoMessage": {
       "title": "CEO Message",
       "content": {
@@ -178,11 +178,11 @@
       "title": "Group Companies",
       "neosEntertainment": {
         "founded": "Founded 2013",
-        "description": "네오스의 자회사로서 영향력 있는 배우 군단을 통한 양질의 인프라를 구축하고, 체계적인 배우 육성 및 매니지먼트 서비스를 제공하는 엔터테인먼트 전문 회사입니다."
+        "description": "영향력 있는 배우 군단을 통한 체계적 매니지먼트 서비스 제공"
       },
       "neostory": {
         "founded": "Founded 2021",
-        "description": "웹툰, 소설 등 다양한 콘텐츠를 기획 및 제작하며, 한일 동시 연재를 통한 글로벌 콘텐츠 사업을 전개하는 콘텐츠 제작 전문 회사입니다."
+        "description": "글로벌 웹툰·콘텐츠 기획 제작 및 한일 동시 연재 전문"
       }
     },
     "expertise": {
@@ -204,7 +204,7 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "다양한 산업과 지역에서 펼쳐낸\n우리의 창의적 작업들을 만나보세요",
+    "subtitle": "혁신적 크리에이티브로 완성한 프로젝트 컬렉션",
     "filters": {
       "title": "Project Filters",
       "year": "연도",
@@ -303,7 +303,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "당신의 비전을 현실로 만들어줄\n파트너가 되어드리겠습니다",
+    "subtitle": "당신의 비전을 현실로 만드는 크리에이티브 파트너",
     "getInTouch": "Get in Touch",
     "form": {
       "title": "프로젝트 문의하기",

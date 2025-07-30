@@ -6,26 +6,26 @@
   },
   "vision": {
     "title": "Vision",
-    "subtitle": "NEOS株式会社将明天的愿景转化为今天的现实",
+    "subtitle": "将愿景转化为现实的创意合作伙伴",
     "professional": {
       "title": "Professional",
-      "heading": "NEOS株式会社是\n拥有丰富经验的专家团队。",
-      "description": "通过招募各界专业人才\n组建了业界最顶尖的人力组织。\n同时，通过独立的部门构成\n加强专业性，\n追求专业化的商业模式。"
+      "heading": "拥有丰富经验的\n专家团队",
+      "description": "由各界专业人才组成的业界顶尖组织，追求专业性和卓越性。"
     },
     "humanism": {
       "title": "Humanism",
-      "heading": "NEOS株式会社的\n核心领域正是人。",
-      "description": "我们不是仅专注于商业的企业，\n而是以人与人之间温暖情感流动的\n人文主义为基础，\n追求所有人都能\n共同共生的企业文化。"
+      "heading": "核心在于\n人",
+      "description": "以温暖的人文主义为基础，追求所有人都能共同共生的企业文化。"
     },
     "global": {
       "title": "Global",
-      "heading": "NEOS株式会社的\n竞争力是全球网络。",
-      "description": "通过多年与全球企业的业务合作\n和媒体制作已得到验证。\n基于压倒性的全球网络，\n通过精密的战略和协作\n积极支持海外拓展。"
+      "heading": "竞争力在于\n全球网络",
+      "description": "通过压倒性的全球网络和精密战略积极支持海外拓展。"
     }
   },
   "mission": {
     "title": "Mission",
-    "subtitle": "NEOS株式会社始终致力于客户的成功故事",
+    "subtitle": "客户的成功就是我们的成功",
     "trend": {
       "title": "Trend",
       "description": "引领潮流的创新"
@@ -53,7 +53,7 @@
   },
   "history": {
     "title": "Our Journey",
-    "subtitle": "我们成长与发展的重要里程碑",
+    "subtitle": "25年积淀的创新与成长足迹",
     "events": {
       "1999": {
         "title": "广告·影像制作公司NEOS（尼奥斯）成立",
@@ -119,7 +119,7 @@
   },
   "works": {
     "title": "Featured Works",
-    "subtitle": "请确认娱乐和内容制作领域的最新成果",
+    "subtitle": "创意与创新相遇的项目展示",
     "viewAll": "查看所有项目",
     "misamoGoogle": {
       "title": "MISAMO x Google",
@@ -141,11 +141,11 @@
   },
   "clients": {
     "title": "Our Clients",
-    "subtitle": "与全球领先品牌共同创造成功故事"
+    "subtitle": "与全球领先品牌的成功合作伙伴关系"
   },
   "partners": {
     "title": "Our Partners",
-    "subtitle": "通过与行业领导者的合作创造卓越价值"
+    "subtitle": "与行业领导者共同创造卓越价值"
   },
   "labels": {
     "featuredCampaign": "Featured Campaign",
@@ -160,8 +160,8 @@
     "copyright": "neos inc. All rights reserved."
   },
   "about": {
-    "title": "About neos",
-    "subtitle": "作为连接韩国和日本广告·影像市场的领导者\n创造全新的未来",
+    "title": "About",
+    "subtitle": "引领中韩广告·影像市场的创意创新企业",
     "ceoMessage": {
       "title": "CEO Message",
       "content": {
@@ -178,11 +178,11 @@
       "title": "Group Companies",
       "neosEntertainment": {
         "founded": "Founded 2013",
-        "description": "作为NEOS的子公司，通过有影响力的演员团队构建优质基础设施，提供系统性的演员培养和经纪服务的娱乐专业公司。"
+        "description": "通过有影响力的演员团队提供系统性经纪管理服务"
       },
       "neostory": {
         "founded": "Founded 2021",
-        "description": "企划制作网络漫画、小说等多样内容，通过韩日同时连载展开全球内容事业的内容制作专业公司。"
+        "description": "全球网络漫画·内容企划制作及中韩同时连载专业"
       }
     },
     "expertise": {
@@ -204,7 +204,7 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "在各个行业和地区展开的\n我们的创意作品",
+    "subtitle": "以创新创意完成的项目合集",
     "filters": {
       "title": "Project Filters",
       "year": "年度",
@@ -303,7 +303,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "我们将成为将您的愿景\n变为现实的合作伙伴",
+    "subtitle": "将您的愿景变为现实的创意合作伙伴",
     "getInTouch": "Get in Touch",
     "form": {
       "title": "项目咨询",

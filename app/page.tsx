@@ -121,11 +121,11 @@ export default function Home() {
       <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
-            <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
               {t('vision.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
               {t('vision.subtitle')}
             </p>
           </div>
@@ -142,7 +142,7 @@ export default function Home() {
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium whitespace-pre-line">
                   {t('vision.professional.heading')}
                 </p>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light whitespace-pre-line">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed font-light">
                   {t('vision.professional.description')}
                 </p>
               </div>
@@ -159,7 +159,7 @@ export default function Home() {
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium whitespace-pre-line">
                   {t('vision.humanism.heading')}
                 </p>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light whitespace-pre-line">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed font-light">
                   {t('vision.humanism.description')}
                 </p>
               </div>
@@ -176,7 +176,7 @@ export default function Home() {
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed mb-6 md:mb-8 font-medium whitespace-pre-line">
                   {t('vision.global.heading')}
                 </p>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light whitespace-pre-line">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed font-light">
                   {t('vision.global.description')}
                 </p>
               </div>
@@ -189,11 +189,11 @@ export default function Home() {
       <Section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
-            <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
               {t('mission.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
               {t('mission.subtitle')}
             </p>
           </div>
@@ -277,11 +277,11 @@ export default function Home() {
       <Section className="py-20 md:py-32 lg:py-40">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
-            <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
               {t('history.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
               {t('history.subtitle')}
             </p>
           </div>
@@ -444,11 +444,11 @@ export default function Home() {
       <Section className="py-20 md:py-32 lg:py-40 bg-gray-50 fade-in-on-scroll overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
               {t('works.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
               {t('works.subtitle')}
             </p>
           </div>
@@ -546,11 +546,11 @@ export default function Home() {
       <section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
               {t('clients.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
               {t('clients.subtitle')}
             </p>
           </div>
@@ -613,11 +613,11 @@ export default function Home() {
       <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll overflow-hidden bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
-            <h2 className="text-lg md:text-xl font-medium text-primary mb-6 tracking-wider uppercase">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
               {t('partners.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto mb-8 md:mb-12"></div>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light max-w-4xl mx-auto">
               {t('partners.subtitle')}
             </p>
           </div>

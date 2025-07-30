@@ -6,26 +6,26 @@
   },
   "vision": {
     "title": "Vision",
-    "subtitle": "NEOS Corporation transforms tomorrow's vision into today's reality",
+    "subtitle": "Creative partner transforming vision into reality",
     "professional": {
       "title": "Professional",
-      "heading": "NEOS Corporation is\na group of experts with abundant expertise.",
-      "description": "We have assembled the industry's top talent\nby recruiting professionals from various fields.\nThrough independent team structures,\nwe pursue professional business\nwith enhanced expertise."
+      "heading": "Expert group with\nabundant expertise",
+      "description": "We pursue professionalism and excellence through industry-leading talent from diverse fields."
     },
     "humanism": {
       "title": "Humanism",
-      "heading": "At the core of NEOS Corporation\nlies people.",
-      "description": "Rather than being a company focused solely on business,\nwe pursue a corporate culture based on humanism\nwhere warm relationships flow between people,\nallowing everyone to prosper together\nin mutual growth."
+      "heading": "At our core\nlies people",
+      "description": "We foster a corporate culture based on humanism where everyone can prosper together."
     },
     "global": {
       "title": "Global",
-      "heading": "NEOS Corporation's competitive advantage\nis our global network.",
-      "description": "We have already proven our capabilities\nthrough years of business partnerships\nwith global companies and media production.\nBased on our overwhelming global network,\nwe actively support overseas expansion\nthrough meticulous strategy and collaboration."
+      "heading": "Our strength is\nglobal network",
+      "description": "We actively support overseas expansion through our extensive global network and strategic partnerships."
     }
   },
   "mission": {
     "title": "Mission",
-    "subtitle": "NEOS Corporation is always dedicated to our clients' success stories",
+    "subtitle": "Client success is our success",
     "trend": {
       "title": "Trend",
       "description": "Innovation ahead of the curve"
@@ -53,7 +53,7 @@
   },
   "history": {
     "title": "Our Journey",
-    "subtitle": "Key milestones in our growth and development",
+    "subtitle": "25 years of innovation and growth milestones",
     "events": {
       "1999": {
         "title": "Establishment of NEOS advertising and video production company",
@@ -119,7 +119,7 @@
   },
   "works": {
     "title": "Featured Works",
-    "subtitle": "Discover our latest achievements in entertainment and content production",
+    "subtitle": "Project showcase where creativity meets innovation",
     "viewAll": "View All Projects",
     "misamoGoogle": {
       "title": "MISAMO x Google",
@@ -141,11 +141,11 @@
   },
   "clients": {
     "title": "Our Clients",
-    "subtitle": "Creating success stories together with global leading brands"
+    "subtitle": "Success partnerships with global leading brands"
   },
   "partners": {
     "title": "Our Partners",
-    "subtitle": "Creating exceptional value through collaboration with industry leaders"
+    "subtitle": "Creating exceptional value with industry leaders"
   },
   "labels": {
     "featuredCampaign": "Featured Campaign",
@@ -160,8 +160,8 @@
     "copyright": "neos inc. All rights reserved."
   },
   "about": {
-    "title": "About neos",
-    "subtitle": "As a leader in the advertising and video market connecting Korea and Japan,\nwe are creating a new future",
+    "title": "About",
+    "subtitle": "Creative innovation company leading Korea-Japan advertising market",
     "ceoMessage": {
       "title": "CEO Message",
       "content": {
@@ -178,11 +178,11 @@
       "title": "Group Companies",
       "neosEntertainment": {
         "founded": "Founded 2013",
-        "description": "As a subsidiary of NEOS, it is an entertainment company specializing in building quality infrastructure through influential actor groups and providing systematic actor development and management services."
+        "description": "Systematic talent management services through influential actor groups"
       },
       "neostory": {
         "founded": "Founded 2021",
-        "description": "A content production company specializing in planning and producing various contents such as webtoons and novels, and developing global content business through simultaneous serialization in Korea and Japan."
+        "description": "Global webtoon & content production with Korea-Japan simultaneous releases"
       }
     },
     "expertise": {
@@ -204,7 +204,7 @@
   },
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "Discover our creative works\nspread across various industries and regions",
+    "subtitle": "Project collection perfected with innovative creativity",
     "filters": {
       "title": "Project Filters",
       "year": "Year",
@@ -303,7 +303,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "We will be your partner\nto make your vision a reality",
+    "subtitle": "Creative partner bringing your vision to reality",
     "getInTouch": "Get in Touch",
     "form": {
       "title": "Project Inquiry",

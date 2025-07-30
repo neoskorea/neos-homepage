@@ -73,12 +73,12 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <Section className="pt-32">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-light text-primary mb-6">
+      <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
+        <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary mb-8 md:mb-12 tracking-tight">
             Our Services
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light">
             Comprehensive creative solutions for global entertainment and media
           </p>
         </div>
@@ -115,8 +115,8 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <Section>
         <div className="text-center">
-          <h2 className="text-3xl font-light text-primary mb-6">Ready to Work Together?</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8">Ready to Work Together?</h2>
+          <p className="text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help bring your vision to life
           </p>
           <Button href="/contact" size="lg">

@@ -66,12 +66,12 @@ export default function NewsPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <Section className="pt-32">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-light text-primary mb-6">
+      <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
+        <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary mb-8 md:mb-12 tracking-tight">
             Latest News
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light">
             Stay updated with neos's latest announcements, insights, and achievements
           </p>
         </div>
@@ -161,10 +161,10 @@ export default function NewsPage() {
       {/* Newsletter */}
       <Section background="gray">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-light text-primary mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-6 md:mb-8">
             Stay Updated
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-base md:text-lg text-gray-600 mb-8">
             Subscribe to our newsletter to receive the latest news and updates from neos
           </p>
           <form className="flex gap-4 max-w-md mx-auto">
