@@ -4,8 +4,8 @@
 
 /* Custom Fonts */
 @font-face {
-  font-family: 'Anton';
-  src: url('/fonts/anton.ttf') format('truetype');
+  font-family: 'Bebas Neue';
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -45,7 +45,7 @@
   }
 
   .font-heading {
-    font-family: 'Anton', var(--font-inter), 'Inter', system-ui, sans-serif;
+    font-family: 'Bebas Neue', var(--font-inter), 'Inter', system-ui, sans-serif;
   }
 }
 

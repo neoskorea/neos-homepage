@@ -16,7 +16,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
         <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-light text-primary mb-8 md:mb-12 tracking-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-normal text-primary mb-8 md:mb-12 tracking-wide">
             {t('about.title')}
           </h1>
           <p className="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed font-light">
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-20">
-            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-heading font-normal text-primary mb-6 md:mb-8 tracking-wide uppercase">
               {t('about.ceoMessage.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto"></div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
       <Section className="py-20 md:py-32 lg:py-40">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center mb-16 md:mb-24">
-            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-heading font-normal text-primary mb-6 md:mb-8 tracking-wide uppercase">
               {t('about.groupCompanies.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mx-auto"></div>
@@ -261,7 +261,7 @@ export default function AboutPage() {
       {/* Core Values */}
       <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center px-4 md:px-6">
-          <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-primary mb-6 md:mb-8 tracking-wider uppercase">
+          <h2 className="text-lg md:text-xl lg:text-2xl font-heading font-normal text-primary mb-6 md:mb-8 tracking-wide uppercase">
             {t('about.expertise.title')}
           </h2>
           <div className="w-16 h-0.5 bg-primary mx-auto mb-12 md:mb-20"></div>

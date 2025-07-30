@@ -35,7 +35,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-pretendard)', 'Noto Sans KR', 'sans-serif'],
-        heading: ['Anton', 'var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        heading: ['Bebas Neue', 'var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         '2xs': ['0.625rem', { lineHeight: '0.75rem' }],
