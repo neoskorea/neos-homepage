@@ -80,17 +80,20 @@ export default function ContactPage() {
     setErrorMessage('');
 
     try {
-      // 실제 API 호출 시뮬레이션 (2초 대기)
-      await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          // 90% 확률로 성공, 10% 확률로 실패 (테스트용)
-          if (Math.random() > 0.1) {
-            resolve('success');
-          } else {
-            reject(new Error('서버 오류가 발생했습니다.'));
-          }
-        }, 2000);
+      // 실제 API 호출
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || '메일 전송에 실패했습니다.');
+      }
 
       setFormStatus('success');
       // 성공 시 폼 리셋
@@ -104,7 +107,7 @@ export default function ContactPage() {
       });
     } catch (error) {
       setFormStatus('error');
-      setErrorMessage('문의 전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+      setErrorMessage(error instanceof Error ? error.message : '문의 전송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
     }
   };
 
