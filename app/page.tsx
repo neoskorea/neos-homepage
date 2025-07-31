@@ -501,14 +501,17 @@ export default function Home() {
                   <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
                     {t('works.sbc.description')}
                   </p>
+                  <div className="mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="w-8 sm:w-12 h-0.5 bg-primary"></div>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="group relative aspect-[4/3] overflow-hidden rounded-lg sm:rounded-xl shadow-lg sm:shadow-xl fade-in-on-scroll" style={{ transitionDelay: '0.6s' }}>
               <Image
-                src="/images/works/delete.jpg"
-                alt="DELETE Webtoon Project"
+                src="/images/works/neos-momo-MediQttO.jpg"
+                alt="Medi QttO TWICE MOMO Campaign"
                 fill
                 className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
               />
@@ -516,11 +519,11 @@ export default function Home() {
               <div className="absolute inset-0 flex items-end">
                 <div className="p-4 sm:p-6 md:p-8 w-full">
                   <div className="inline-flex items-center px-2 py-1 sm:px-3 sm:py-1 bg-primary/20 backdrop-blur-sm rounded-full text-white text-xs font-medium mb-2 sm:mb-3 md:mb-4">
-                    {t('labels.webtoonPlanning')}
+                    {t('labels.campaign')}
                   </div>
-                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-normal text-white mb-2 sm:mb-3 tracking-wide">{t('works.delete.title')}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-heading font-normal text-white mb-2 sm:mb-3 tracking-wide">{t('works.mediQtto.title')}</h3>
                   <p className="text-sm sm:text-base text-gray-200 leading-relaxed whitespace-pre-line">
-                    {t('works.delete.description')}
+                    {t('works.mediQtto.description')}
                   </p>
                   <div className="mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="w-8 sm:w-12 h-0.5 bg-primary"></div>

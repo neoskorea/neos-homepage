@@ -122,21 +122,24 @@
     "subtitle": "创意与创新相遇的项目展示",
     "viewAll": "查看所有项目",
     "misamoGoogle": {
-      "title": "MISAMO x Google",
-      "description": "TWICE小分队MISAMO与Google的全球活动制作及创意指导",
+      "title": "Google Japan × MISAMO 活动",
+      "description": "活动总制作",
       "tags": {
         "globalCampaign": "Global Campaign",
-        "kpop": "K-Pop",
-        "techPartnership": "Tech Partnership"
+        "kpop": "K-Pop"
       }
     },
     "sbc": {
-      "title": "SBC Media Production",
-      "description": "广播内容制作及媒体解决方案提供"
+      "title": "SBC 韩流肌肤 IPL 活动",
+      "description": "活动总制作",
+      "tags": {
+        "globalCampaign": "Global Campaign",
+        "japan": "Japan"
+      }
     },
-    "delete": {
-      "title": "DELETE 网络漫画",
-      "description": "NEOSTORY独家企划，编剧：宇宙 / 作画：石川清子\nKakao网络漫画·Piccoma韩日美同时连载"
+    "mediQtto": {
+      "title": "Medi QttO x TWICE MOMO",
+      "description": "活动总制作"
     }
   },
   "clients": {

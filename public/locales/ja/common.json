@@ -122,21 +122,24 @@
     "subtitle": "創造性と革新が出会うプロジェクトショーケース",
     "viewAll": "すべてのプロジェクトを見る",
     "misamoGoogle": {
-      "title": "MISAMO x Google",
-      "description": "TWICEユニットMISAMOとGoogleのグローバルキャンペーン制作及びクリエイティブディレクション",
+      "title": "Google Japan × MISAMO キャンペーン",
+      "description": "キャンペーン総括制作",
       "tags": {
         "globalCampaign": "Global Campaign",
-        "kpop": "K-Pop",
-        "techPartnership": "Tech Partnership"
+        "kpop": "K-Pop"
       }
     },
     "sbc": {
-      "title": "SBC Media Production",
-      "description": "放送コンテンツ制作及びメディアソリューション提供"
+      "title": "SBC ハンリュウ肌 IPL キャンペーン",
+      "description": "キャンペーン総括制作",
+      "tags": {
+        "globalCampaign": "Global Campaign",
+        "japan": "Japan"
+      }
     },
-    "delete": {
-      "title": "DELETE ウェブトゥーン",
-      "description": "ネオストーリー単独企画、作：宇宙 / 絵：石川セイコ\nカカオウェブトゥーン・ピッコマ韓日米同時連載"
+    "mediQtto": {
+      "title": "Medi QttO x TWICE MOMO",
+      "description": "キャンペーン総括制作"
     }
   },
   "clients": {

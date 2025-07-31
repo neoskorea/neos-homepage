@@ -122,21 +122,24 @@
     "subtitle": "Project showcase where creativity meets innovation",
     "viewAll": "View All Projects",
     "misamoGoogle": {
-      "title": "MISAMO x Google",
-      "description": "Global campaign production and creative direction for TWICE unit MISAMO and Google",
+      "title": "Google Japan × MISAMO Campaign",
+      "description": "Campaign executive production",
       "tags": {
         "globalCampaign": "Global Campaign",
-        "kpop": "K-Pop",
-        "techPartnership": "Tech Partnership"
+        "kpop": "K-Pop"
       }
     },
     "sbc": {
-      "title": "SBC Media Production",
-      "description": "Broadcasting content production and media solution provision"
+      "title": "SBC Hallyu Skin IPL Campaign",
+      "description": "Campaign executive production",
+      "tags": {
+        "globalCampaign": "Global Campaign",
+        "japan": "Japan"
+      }
     },
-    "delete": {
-      "title": "DELETE Webtoon",
-      "description": "Exclusively planned by NEOSTORY, Writer: Space / Artist: Seiko Ishikawa\nSimultaneous serialization on Kakao Webtoon · Piccoma in Korea, Japan, and US"
+    "mediQtto": {
+      "title": "Medi QttO x TWICE MOMO",
+      "description": "Campaign executive production"
     }
   },
   "clients": {

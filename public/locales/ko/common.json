@@ -123,7 +123,7 @@
     "viewAll": "모든 프로젝트 보기",
     "misamoGoogle": {
       "title": "Google Japan × MISAMO 캠페인",
-      "description": "neos 총괄 제작 캠페인",
+      "description": "캠페인 총괄 제작",
       "tags": {
         "globalCampaign": "Global Campaign",
         "kpop": "K-Pop"
@@ -131,15 +131,15 @@
     },
     "sbc": {
       "title": "SBC 한류 피부 IPL 캠페인",
-      "description": "neos 총괄 제작 캠페인",
+      "description": "캠페인 총괄 제작",
       "tags": {
         "globalCampaign": "Global Campaign",
         "japan": "Japan"
       }
     },
-    "delete": {
-      "title": "DELETE 웹툰",
-      "description": "네오스토리 단독 기획, 카카오웹툰 · 픽코마 한일미 동시연재"
+    "mediQtto": {
+      "title": "Medi QttO x TWICE MOMO",
+      "description": "캠페인 총괄 제작"
     }
   },
   "clients": {
