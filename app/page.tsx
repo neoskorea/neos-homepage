@@ -11,9 +11,52 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const heroObserverRef = useRef<IntersectionObserver | null>(null);
   const { t, language } = useLanguage();
 
   useEffect(() => {
+    // 메타 태그 생성 또는 업데이트 함수
+    const createOrUpdateMetaTag = (name: string, content: string, id: string) => {
+      let metaTag = document.getElementById(id) as HTMLMetaElement;
+      if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute('name', name);
+        metaTag.setAttribute('id', id);
+        document.head.appendChild(metaTag);
+      }
+      metaTag.content = content;
+    };
+
+    // 초기 메타 태그 설정
+    createOrUpdateMetaTag('theme-color', '#ffffff', 'theme-color');
+    createOrUpdateMetaTag('apple-mobile-web-app-capable', 'yes', 'apple-capable');
+    createOrUpdateMetaTag('apple-mobile-web-app-status-bar-style', 'default', 'apple-status-bar');
+
+    // Theme color 변경 함수
+    const updateThemeColor = (color: string, statusBarStyle: string = 'default') => {
+      createOrUpdateMetaTag('theme-color', color, 'theme-color');
+      createOrUpdateMetaTag('apple-mobile-web-app-status-bar-style', statusBarStyle, 'apple-status-bar');
+    };
+
+    // Hero 섹션 관찰을 위한 Intersection Observer
+    heroObserverRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Hero 섹션이 보일 때 민트색으로 변경
+            updateThemeColor('#93d1d3', 'light-content');
+          } else {
+            // Hero 섹션이 보이지 않을 때 흰색으로 변경
+            updateThemeColor('#ffffff', 'default');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px 0px 0px'
+      }
+    );
+
     // 기본 Intersection Observer 설정
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -58,12 +101,24 @@ export default function Home() {
       journeyObserver.observe(el);
     });
 
+    // Hero 섹션 관찰 시작
+    const heroSection = document.getElementById('hero-section');
+    if (heroSection && heroObserverRef.current) {
+      heroObserverRef.current.observe(heroSection);
+    }
+
     // cleanup
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
+      if (heroObserverRef.current) {
+        heroObserverRef.current.disconnect();
+      }
       journeyObserver.disconnect();
+
+      // 컴포넌트 언마운트 시 기본 테마 색상으로 복원
+      updateThemeColor('#ffffff', 'default');
     };
   }, []);
 
@@ -72,7 +127,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <Section className="h-screen flex items-center justify-center relative overflow-hidden bg-primary">
+      <Section id="hero-section" className="h-screen flex items-center justify-center relative overflow-hidden bg-primary">
         <div className="text-center relative z-10 px-4">
           <div className="hero-content">
             {/* 로딩 애니메이션 (처음에만 표시) */}
