@@ -278,7 +278,7 @@ function MobileMenu({
 
             {/* Subsidiary Companies */}
             <div className="flex flex-col items-center space-y-6">
-              {/* NEOS Entertainment */}
+              {/* neos Entertainment */}
               <a
                 href="http://www.neosentertainment.co.kr"
                 target="_blank"
@@ -294,14 +294,13 @@ function MobileMenu({
               >
                 <Image
                   src="/images/neos-ent-mint-text-logo.png"
-                  alt="NEOS Entertainment"
+                  alt="neos Entertainment"
                   width={150}
                   height={40}
                   className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
                 />
               </a>
-
-              {/* NEOSTORY */}
+              {/* neostory */}
               <a
                 href="https://neostory.kr"
                 target="_blank"
@@ -317,7 +316,7 @@ function MobileMenu({
               >
                 <Image
                   src="/images/neostory-mint-text-logo.png"
-                  alt="NEOSTORY"
+                  alt="neostory"
                   width={150}
                   height={40}
                   className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"

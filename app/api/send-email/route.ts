@@ -49,14 +49,14 @@ export async function POST(request: NextRequest) {
 ${message}
 
 ---
-이 메일은 NEOS 홈페이지 문의 폼을 통해 자동으로 발송되었습니다.
+이 메일은 neos 홈페이지 문의 폼을 통해 자동으로 발송되었습니다.
     `.trim();
 
     // 이메일 발송
     const info = await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: process.env.SMTP_TO || 'contact@neoskorea.com',
-      subject: `[NEOS 홈페이지] 새로운 문의 - ${name}님`,
+      subject: `[neos 홈페이지] 새로운 문의 - ${name}님`,
       text: emailContent,
       html: emailContent.replace(/\n/g, '<br>'),
       // 회신용 이메일 설정

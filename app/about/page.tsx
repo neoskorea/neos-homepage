@@ -101,7 +101,7 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-16 md:space-y-20 lg:space-y-32">
-            {/* NEOS Entertainment */}
+            {/* neos Entertainment */}
             <div className="text-center lg:text-left">
               {/* Mobile: Description first */}
               <div className="block lg:hidden mb-6">
@@ -178,7 +178,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* NEOS Story */}
+            {/* neostory */}
             <div className="text-center lg:text-left">
               {/* Mobile: Description first */}
               <div className="block lg:hidden mb-6">
