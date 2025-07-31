@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -27,12 +27,78 @@ interface NavbarProps {
 
 export default function Navbar({ isScrolled: propIsScrolled }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [internalIsScrolled, setInternalIsScrolled] = useState(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const { t } = useLanguage();
 
-  // 홈페이지가 아닌 경우 항상 스크롤된 상태, 홈페이지인 경우 prop으로 받은 상태 사용
-  const isScrolled = isHomePage ? (propIsScrolled || false) : true;
+  // 홈페이지가 아닌 경우 항상 스크롤된 상태, 홈페이지인 경우 자체 상태 사용
+  const isScrolled = isHomePage ? internalIsScrolled : true;
+
+  // 홈페이지에서만 IntersectionObserver를 사용한 스크롤 상태 관리
+  useEffect(() => {
+    if (!isHomePage) return;
+
+    // 메타 태그 생성 또는 업데이트 함수
+    const createOrUpdateMetaTag = (name: string, content: string, id: string) => {
+      let metaTag = document.getElementById(id) as HTMLMetaElement;
+      if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute('name', name);
+        metaTag.setAttribute('id', id);
+        document.head.appendChild(metaTag);
+      }
+      metaTag.content = content;
+    };
+
+    // Theme color 변경 함수
+    const updateThemeColor = (color: string, statusBarStyle: string = 'default') => {
+      createOrUpdateMetaTag('theme-color', color, 'theme-color');
+      createOrUpdateMetaTag('apple-mobile-web-app-status-bar-style', statusBarStyle, 'apple-status-bar');
+    };
+
+    // 네비게이션 바와 노치 색상을 완전히 동시에 변경
+    const updateNavbarAndNotch = (isScrolled: boolean) => {
+      if (isScrolled) {
+        updateThemeColor('#ffffff', 'default');
+        setInternalIsScrolled(true);
+      } else {
+        updateThemeColor('#93d1d3', 'light-content');
+        setInternalIsScrolled(false);
+      }
+    };
+
+    // IntersectionObserver를 사용한 Hero 섹션 감시
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const isScrolled = !entry.isIntersecting;
+          updateNavbarAndNotch(isScrolled);
+        });
+      },
+      {
+        rootMargin: '-80px 0px 0px 0px',
+        threshold: [0, 1]
+      }
+    );
+
+    // Hero 섹션 찾아서 관찰 시작
+    const heroSection = document.getElementById('hero-section');
+    if (heroSection && observerRef.current) {
+      observerRef.current.observe(heroSection);
+    }
+
+    // 초기 상태 설정
+    updateThemeColor('#93d1d3', 'light-content');
+    setInternalIsScrolled(false);
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [isHomePage]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {

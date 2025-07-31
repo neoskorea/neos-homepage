@@ -11,56 +11,9 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
-  const [isNavbarScrolled, setIsNavbarScrolled] = useState(false);
   const { t, language } = useLanguage();
 
   useEffect(() => {
-    // 메타 태그 생성 또는 업데이트 함수
-    const createOrUpdateMetaTag = (name: string, content: string, id: string) => {
-      let metaTag = document.getElementById(id) as HTMLMetaElement;
-      if (!metaTag) {
-        metaTag = document.createElement('meta');
-        metaTag.setAttribute('name', name);
-        metaTag.setAttribute('id', id);
-        document.head.appendChild(metaTag);
-      }
-      metaTag.content = content;
-    };
-
-    // 초기 메타 태그 설정
-    createOrUpdateMetaTag('theme-color', '#ffffff', 'theme-color');
-    createOrUpdateMetaTag('apple-mobile-web-app-capable', 'yes', 'apple-capable');
-    createOrUpdateMetaTag('apple-mobile-web-app-status-bar-style', 'default', 'apple-status-bar');
-
-    // Theme color 변경 함수
-    const updateThemeColor = (color: string, statusBarStyle: string = 'default') => {
-      createOrUpdateMetaTag('theme-color', color, 'theme-color');
-      createOrUpdateMetaTag('apple-mobile-web-app-status-bar-style', statusBarStyle, 'apple-status-bar');
-    };
-
-    // 스크롤 기반 노치 색상 및 네비게이션 바 상태 변경 (완전 동기화)
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const heroHeight = window.innerHeight; // Hero section height (100vh)
-      const navbarHeight = 80; // Navbar height (h-20 = 80px)
-
-      const shouldShowScrolledState = scrollY > heroHeight - navbarHeight;
-
-      // 노치 색상과 네비게이션 바 상태를 정확히 동시에 변경
-      if (shouldShowScrolledState) {
-        updateThemeColor('#ffffff', 'default');
-        setIsNavbarScrolled(true);
-      } else {
-        updateThemeColor('#93d1d3', 'light-content');
-        setIsNavbarScrolled(false);
-      }
-    };
-
-    // 초기 설정
-    handleScroll();
-
-    // 스크롤 이벤트 리스너 등록
-    window.addEventListener('scroll', handleScroll, { passive: true });
 
     // 기본 Intersection Observer 설정
     observerRef.current = new IntersectionObserver(
@@ -112,21 +65,18 @@ export default function Home() {
         observerRef.current.disconnect();
       }
       journeyObserver.disconnect();
-
-      // 스크롤 이벤트 리스너 제거
-      window.removeEventListener('scroll', handleScroll);
-
-      // 컴포넌트 언마운트 시 기본 테마 색상으로 복원
-      updateThemeColor('#ffffff', 'default');
     };
   }, []);
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <Navbar isScrolled={isNavbarScrolled} />
+      <Navbar />
 
       {/* Hero Section */}
-      <Section id="hero-section" className="h-screen flex items-center justify-center relative overflow-hidden bg-primary">
+      <section
+        id="hero-section"
+        className="h-screen flex items-center justify-center relative overflow-hidden bg-primary"
+      >
         <div className="text-center relative z-10 px-4">
           <div className="hero-content">
             {/* 로딩 애니메이션 (처음에만 표시) */}
@@ -169,7 +119,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* Vision Section */}
       <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll">
