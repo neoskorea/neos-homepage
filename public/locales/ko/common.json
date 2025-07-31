@@ -122,21 +122,24 @@
     "subtitle": "창의와 혁신이 만나는 프로젝트 쇼케이스",
     "viewAll": "모든 프로젝트 보기",
     "misamoGoogle": {
-      "title": "MISAMO x Google",
-      "description": "TWICE 유닛 MISAMO와 Google의 글로벌 캠페인 제작 및 크리에이티브 디렉션",
+      "title": "Google Japan × MISAMO 캠페인",
+      "description": "neos 총괄 제작 캠페인",
       "tags": {
         "globalCampaign": "Global Campaign",
-        "kpop": "K-Pop",
-        "techPartnership": "Tech Partnership"
+        "kpop": "K-Pop"
       }
     },
     "sbc": {
-      "title": "SBC Media Production",
-      "description": "방송 콘텐츠 제작 및 미디어 솔루션 제공"
+      "title": "SBC 한류 피부 IPL 캠페인",
+      "description": "neos 총괄 제작 캠페인",
+      "tags": {
+        "globalCampaign": "Global Campaign",
+        "japan": "Japan"
+      }
     },
     "delete": {
       "title": "DELETE 웹툰",
-      "description": "네오스토리 단독 기획, 글: 우주 / 그림: 이시카와 세이코\n카카오웹툰 · 픽코마 한일미 동시연재"
+      "description": "네오스토리 단독 기획, 카카오웹툰 · 픽코마 한일미 동시연재"
     }
   },
   "clients": {
@@ -149,7 +152,7 @@
   },
   "labels": {
     "featuredCampaign": "Featured Campaign",
-    "broadcasting": "Broadcasting",
+    "campaign": "Campaign",
     "webtoonPlanning": "Webtoon Planning"
   },
   "footer": {
