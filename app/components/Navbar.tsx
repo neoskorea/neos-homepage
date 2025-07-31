@@ -177,42 +177,105 @@ function MobileMenu({
 }) {
   return (
     <div
-      className={`fixed top-20 left-0 right-0 bottom-0 z-[60] md:hidden transition-all duration-500 ${isOpen
+      className={`fixed top-0 left-0 right-0 bottom-0 z-[60] md:hidden transition-all duration-500 ${isOpen
         ? 'opacity-100 visible'
         : 'opacity-0 invisible'
         }`}
     >
-      {/* Background overlay - starts below navbar */}
+      {/* Background overlay - full screen */}
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Menu content */}
-      <div className={`absolute inset-0 bg-white flex flex-col justify-center items-center transform transition-all duration-500 ${isOpen
+      <div className={`absolute inset-0 bg-white flex flex-col justify-center items-center transition-all duration-500 ${isOpen
         ? 'translate-x-0'
         : 'translate-x-full'
-        }`}>
+        }`}
+      >
+        {/* Content wrapper with visual centering offset */}
+        <div className="transform translate-y-2">
 
-        {/* Navigation Links */}
-        <nav className="flex flex-col items-center space-y-8 pb-16">
-          {navigation.map((item, index) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`text-2xl md:text-3xl font-heading font-light text-text-secondary hover:text-primary transition-all duration-300 transform ${isOpen
-                ? 'translate-y-0 opacity-100'
-                : 'translate-y-4 opacity-0'
-                }`}
+          {/* Navigation Links */}
+          <nav className="flex flex-col items-center space-y-8">
+            {navigation.map((item, index) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-3xl md:text-4xl font-heading text-text-secondary hover:text-primary transition-all duration-300 transform ${isOpen
+                  ? 'translate-y-0 opacity-100'
+                  : 'translate-y-4 opacity-0'
+                  }`}
+                style={{
+                  transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
+                }}
+                onClick={onClose}
+              >
+                {t(item.name)}
+              </Link>
+            ))}
+
+            {/* Divider */}
+            <div className={`w-20 h-px bg-gray-300 transform transition-all duration-300 ${isOpen
+              ? 'translate-y-0 opacity-100'
+              : 'translate-y-4 opacity-0'
+              }`}
               style={{
-                transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
+                transitionDelay: isOpen ? `${navigation.length * 100 + 50}ms` : '0ms'
               }}
-              onClick={onClose}
-            >
-              {t(item.name)}
-            </Link>
-          ))}
-        </nav>
+            />
+
+            {/* Subsidiary Companies */}
+            <div className="flex flex-col items-center space-y-6">
+              {/* NEOS Entertainment */}
+              <a
+                href="http://www.neosentertainment.co.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`transition-all duration-300 transform hover:scale-105 ${isOpen
+                  ? 'translate-y-0 opacity-100'
+                  : 'translate-y-4 opacity-0'
+                  }`}
+                style={{
+                  transitionDelay: isOpen ? `${navigation.length * 100 + 150}ms` : '0ms'
+                }}
+                onClick={onClose}
+              >
+                <Image
+                  src="/images/neos-ent-mint-text-logo.png"
+                  alt="NEOS Entertainment"
+                  width={150}
+                  height={40}
+                  className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </a>
+
+              {/* NEOSTORY */}
+              <a
+                href="https://neostory.kr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`transition-all duration-300 transform hover:scale-105 ${isOpen
+                  ? 'translate-y-0 opacity-100'
+                  : 'translate-y-4 opacity-0'
+                  }`}
+                style={{
+                  transitionDelay: isOpen ? `${navigation.length * 100 + 250}ms` : '0ms'
+                }}
+                onClick={onClose}
+              >
+                <Image
+                  src="/images/neostory-mint-text-logo.png"
+                  alt="NEOSTORY"
+                  width={150}
+                  height={40}
+                  className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </a>
+            </div>
+          </nav>
+        </div> {/* Close content wrapper */}
       </div>
     </div>
   );
