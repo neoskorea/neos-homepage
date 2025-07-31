@@ -7,7 +7,12 @@ import { usePathname } from 'next/navigation';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const navigation = [
+type NavigationItem = {
+  name: string;
+  href: string;
+};
+
+const navigation: NavigationItem[] = [
   { name: 'nav.about', href: '/about' },
   // { name: 'Services', href: '/services' },
   { name: 'nav.portfolio', href: '/portfolio' },
@@ -158,7 +163,7 @@ function MobileMenu({
 }: {
   isOpen: boolean;
   onClose: () => void;
-  navigation: typeof navigation;
+  navigation: NavigationItem[];
   t: (key: string) => string;
 }) {
   return (
