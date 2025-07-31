@@ -21,34 +21,18 @@ const navigation: NavigationItem[] = [
   { name: 'nav.contact', href: '/contact' },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  isScrolled?: boolean;
+}
+
+export default function Navbar({ isScrolled: propIsScrolled }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const { t } = useLanguage();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const heroHeight = window.innerHeight; // Hero section height (100vh)
-
-      // If not on homepage, always show scrolled state
-      if (!isHomePage) {
-        setIsScrolled(true);
-        return;
-      }
-
-      // On homepage, check if scrolled past hero section
-      setIsScrolled(scrollY > heroHeight * 0.8); // Start transition at 80% of hero height
-    };
-
-    // Set initial state
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHomePage]);
+  // 홈페이지가 아닌 경우 항상 스크롤된 상태, 홈페이지인 경우 prop으로 받은 상태 사용
+  const isScrolled = isHomePage ? (propIsScrolled || false) : true;
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -76,7 +60,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed w-full z-[70] transition-all duration-500 ${isScrolled || mobileMenuOpen
+        className={`fixed w-full z-[70] transition-all duration-200 ${isScrolled || mobileMenuOpen
           ? 'bg-white backdrop-blur-sm shadow-sm'
           : 'bg-transparent'
           }`}
@@ -90,7 +74,7 @@ export default function Navbar() {
                   alt="neos-logo"
                   width={2362}
                   height={429}
-                  className={`-mb-2 h-10 w-auto transition-all duration-500 ${!isScrolled && isHomePage ? 'opacity-0' : 'opacity-100'}`}
+                  className={`-mb-2 h-10 w-auto transition-all duration-200 ${!isScrolled && isHomePage ? 'opacity-0' : 'opacity-100'}`}
                   priority
                 />
               </Link>
@@ -102,7 +86,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-sm font-medium transition-colors duration-300 ${isScrolled
+                  className={`text-sm font-medium transition-colors duration-200 ${isScrolled
                     ? 'text-text-secondary hover:text-primary'
                     : 'text-white/90 hover:text-white'
                     }`}
@@ -124,7 +108,7 @@ export default function Navbar() {
 
               <button
                 type="button"
-                className={`relative z-[70] transition-colors duration-300 ${isScrolled || mobileMenuOpen
+                className={`relative z-[70] transition-colors duration-200 ${isScrolled || mobileMenuOpen
                   ? 'text-text-secondary'
                   : 'text-white/90'
                   }`}
