@@ -19,10 +19,24 @@ const inter = Inter({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
+// 테스트 단계 - 모든 환경에서 크롤링 차단
 export const metadata: Metadata = {
   title: 'neos - Creative Management & Production',
   description: 'neos is a global creative agency specializing in professional management, creative direction, and global production coordination.',
   keywords: ['creative agency', 'management', 'production', 'global', 'korea', 'entertainment'],
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
