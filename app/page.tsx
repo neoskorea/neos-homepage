@@ -98,6 +98,13 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 디자인적 배경 요소로 크게 들어가는 텍스트 */}
+            <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+              <h1 className="text-white font-heading text-9xl sm:text-9xl font-bold opacity-5 select-none tracking-widest">
+                CREATIVE MANAGEMENT &PRODUCTION
+              </h1>
+            </div>
+
             {/* 실제 로고 (나중에 나타남) */}
             <div className="logo-container" style={{ visibility: 'hidden', opacity: 0 }}>
               {/* 글로우 효과 배경 */}
@@ -118,6 +125,13 @@ export default function Home() {
               /> */}
             </div>
           </div>
+        </div>
+        {/* 스크롤 유도 버튼 */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+          <span className="text-white text-sm tracking-wide opacity-80">Scroll</span>
+          <svg className="mx-auto mt-1 w-5 h-5 text-white opacity-80" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </div>
       </section>
 
@@ -783,7 +797,7 @@ export default function Home() {
           height: 120%;
           background: radial-gradient(ellipse, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 30%, transparent 70%);
           border-radius: 50%;
-          opacity: 0;
+          opacity: 0.5;
           z-index: 1;
           animation: breathingGlow 3s ease-in-out 7.2s infinite;
         }
@@ -813,8 +827,6 @@ export default function Home() {
             transform: scale(1.2);
           }
         }
-
-
 
         @keyframes fadeInTyping {
           0% { opacity: 0; }
@@ -870,12 +882,12 @@ export default function Home() {
 
         @keyframes breathingGlow {
           0%, 100% { 
-            opacity: 0.4;
+            opacity: 0.6;
             transform: translate(-50%, -50%) scale(1);
           }
           50% { 
-            opacity: 0.7;
-            transform: translate(-50%, -50%) scale(1.1);
+            opacity: 0.9;
+            transform: translate(-50%, -50%) scale(1.15);
           }
         }
 
@@ -930,7 +942,7 @@ export default function Home() {
             min-height: 80px;
           }
 
-                    .loading-dots {
+          .loading-dots {
             gap: 0.3rem;
           }
 
