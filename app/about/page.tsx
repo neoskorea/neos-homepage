@@ -15,7 +15,7 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
-        <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
+        <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-normal text-primary mb-8 md:mb-12 tracking-wide">
             {t('about.title')}
           </h1>
@@ -27,7 +27,7 @@ export default function AboutPage() {
 
       {/* CEO Message */}
       <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
+        <div className="max-w-5xl mx-auto px-2 md:px-2">
           <div className="text-center mb-12 md:mb-20">
             <h2 className="text-lg md:text-xl lg:text-2xl font-heading font-normal text-primary mb-6 md:mb-8 tracking-wide uppercase">
               {t('about.ceoMessage.title')}
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
       {/* Group Companies */}
       <Section className="py-20 md:py-32 lg:py-40">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-7xl mx-auto ">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl lg:text-2xl font-heading font-normal text-primary mb-6 md:mb-8 tracking-wide uppercase">
               {t('about.groupCompanies.title')}
@@ -108,7 +108,7 @@ export default function AboutPage() {
                 <div className="text-xs md:text-sm font-medium text-primary uppercase tracking-wider mb-3">
                   {t('about.groupCompanies.neosEntertainment.founded')}
                 </div>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed max-w-sm mx-auto px-2">
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed max-w-sm mx-auto">
                   {t('about.groupCompanies.neosEntertainment.description')}
                 </p>
               </div>
@@ -260,7 +260,7 @@ export default function AboutPage() {
 
       {/* Core Values */}
       <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center px-4 md:px-6">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-lg md:text-xl lg:text-2xl font-heading font-normal text-primary mb-6 md:mb-8 tracking-wide uppercase">
             {t('about.expertise.title')}
           </h2>
@@ -317,7 +317,7 @@ export default function AboutPage() {
               <div className="max-w-4xl mx-auto text-center">
                 {/* Enhanced text with better contrast */}
                 <div className="relative">
-                  <p className="text-xl md:text-2xl lg:text-3xl font-bold text-primary leading-relaxed whitespace-pre-line">
+                  <p className="text-lg md:text-2xl lg:text-3xl font-bold text-primary leading-relaxed whitespace-pre-line">
                     {t('about.expertise.finalStatement')}
                   </p>
                 </div>

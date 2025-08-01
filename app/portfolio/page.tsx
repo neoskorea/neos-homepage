@@ -222,7 +222,7 @@ export default function PortfolioPage() {
 
       {/* Hero Section */}
       <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
-        <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
+        <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-normal text-primary mb-8 md:mb-12 tracking-wide">
             {t('portfolio.title')}
           </h1>
@@ -234,7 +234,7 @@ export default function PortfolioPage() {
 
       {/* Project Filters */}
       {/* <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 md:px-6">
+        <div className="max-w-6xl mx-auto px-2 md:px-2">
           <div className="text-center mb-12 md:mb-20">
             <h2 className="text-lg md:text-xl font-heading font-normal text-primary mb-6 tracking-wide uppercase">
               {t('portfolio.filters.title')}
@@ -273,7 +273,7 @@ export default function PortfolioPage() {
 
       {/* Projects Grid */}
       <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-6xl mx-auto px-2 md:px-2">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl font-heading font-normal text-primary mb-6 tracking-wide uppercase">
               {t('portfolio.featuredWorks')}

@@ -122,7 +122,7 @@ export default function ContactPage() {
 
       {/* Hero Section */}
       <Section className="pt-32 md:pt-44 pb-16 md:pb-24">
-        <div className="text-center max-w-5xl mx-auto px-4 md:px-6">
+        <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-normal text-primary mb-8 md:mb-12 tracking-wide">
             {t('contact.title')}
           </h1>
@@ -134,7 +134,7 @@ export default function ContactPage() {
 
       {/* Contact Form & Information */}
       <Section className="py-20 md:py-32 lg:py-40 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-6xl mx-auto px-2 md:px-2">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="text-lg md:text-xl lg:text-2xl font-heading font-normal text-primary mb-6 md:mb-8 tracking-wide uppercase">
               {t('contact.getInTouch')}
@@ -145,7 +145,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Contact Form */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
+              <div className="bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-gray-100">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                     <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -374,7 +374,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="lg:col-span-2 space-y-8">
               {/* Contact Details */}
-              <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-gray-100">
+              <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8 border border-gray-100">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                     <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -475,7 +475,7 @@ export default function ContactPage() {
                     referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-4 md:p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
                       <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
