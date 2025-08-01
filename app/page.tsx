@@ -14,6 +14,45 @@ export default function Home() {
   const { t, language } = useLanguage();
 
   useEffect(() => {
+    // 뷰포트 높이 동적 조정 함수
+    const setViewportHeight = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    // 초기 설정
+    setViewportHeight();
+
+    // 리사이즈/회전 시 재계산
+    const handleResize = () => {
+      setViewportHeight();
+    };
+
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+
+    // iOS Safari 주소창 변화 감지를 위한 추가 이벤트
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setViewportHeight();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
 
     // 기본 Intersection Observer 설정
     observerRef.current = new IntersectionObserver(
@@ -75,7 +114,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero-section"
-        className="h-screen flex items-center justify-center relative overflow-hidden bg-primary"
+        className="flex items-center justify-center relative overflow-hidden bg-primary hero-section"
       >
         <div className="text-center relative z-10 px-4">
           <div className="hero-content">
@@ -127,7 +166,7 @@ export default function Home() {
           </div>
         </div>
         {/* 스크롤 유도 버튼 */}
-        <div className="absolute bottom-8 inset-x-0 z-20 animate-bounce flex flex-col items-center justify-center">
+        <div className="absolute inset-x-0 z-20 animate-bounce flex flex-col items-center justify-center scroll-indicator">
           <span className="text-white text-sm tracking-wide opacity-80 text-center">Scroll</span>
           <svg className="mt-1 w-5 h-5 text-white opacity-80" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -968,8 +1007,38 @@ export default function Home() {
           .line1 {
             margin-bottom: 0.3rem;
           }
-          
+        }
 
+        /* 동적 뷰포트 높이 설정 */
+        .hero-section {
+          height: 100vh; /* 폴백 */
+          height: calc(var(--vh, 1vh) * 100);
+        }
+
+        /* 스크롤 버튼 위치 - 실제 보이는 영역 기준 */
+        .scroll-indicator {
+          /* 실제 뷰포트 하단에서 2rem 위 */
+          bottom: 2rem;
+          /* 동적 높이 기준으로 위치 조정 */
+          bottom: max(2rem, calc(env(safe-area-inset-bottom, 0px) + 1rem));
+        }
+
+        /* 모든 모바일 기기 통일 대응 */
+        @media (max-width: 768px) {
+          .scroll-indicator {
+            /* 모바일에서는 Safe Area + 1.5rem */
+            bottom: calc(env(safe-area-inset-bottom, 0px) + 1.5rem);
+            /* 최소 1.5rem은 확보 */
+            bottom: max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem));
+          }
+        }
+
+        /* 태블릿 대응 */
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .scroll-indicator {
+            bottom: calc(env(safe-area-inset-bottom, 0px) + 2rem);
+            bottom: max(2rem, calc(env(safe-area-inset-bottom, 0px) + 2rem));
+          }
         }
       `}</style>
     </div>
