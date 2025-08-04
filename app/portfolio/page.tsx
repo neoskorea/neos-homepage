@@ -10,7 +10,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const getFilterOptions = (t: (key: string) => string) => ({
   year: ['2024', '2023', '2022', '2021', '2020', '2019'],
-  brand: ['Nike', 'UNIQLO', 'Google', 'SBC', 'MediQttO', 'SENKA', 'KARA', 'Paradise City', 'Bibigo', 'ENHYPEN', 'GLIDiC', 'TXT', 'T1419', 'Edel House', 'LOONA', 'NU\'EST', 'IZ*ONE', 'Jeju Air', 'TVXQ'],
+  brand: ['Nike', 'UNIQLO', 'Google', 'SBC', 'MediQttO', 'SENKA', 'KARA', 'Paradise City', 'Bibigo', 'ENHYPEN', 'GLIDiC', 'TXT', 'T1419', 'Edel House', 'LOONA', 'NU\'EST', 'IZ*ONE', 'Jeju Air', 'TVXQ', 'CCJC', 'Qoo'],
   region: [t('portfolio.regions.global'), t('portfolio.regions.asia'), t('portfolio.regions.northAmerica'), t('portfolio.regions.europe')],
   category: [t('portfolio.categories.advertising'), t('portfolio.categories.production'), t('portfolio.categories.creative'), t('portfolio.categories.ip')],
 });
@@ -183,6 +183,16 @@ const getProjects = (t: (key: string) => string) => [
     image: '/images/works/17-2019-abcmart-nike-ab6.png',
     year: '2019',
     brand: 'Nike',
+    region: t('portfolio.regions.asia'),
+    category: t('portfolio.categories.advertising'),
+  },
+  {
+    id: 18,
+    title: t('portfolio.projects.ccjcQooTwice.title'),
+    description: t('portfolio.projects.ccjcQooTwice.description'),
+    image: '/images/works/ccjc-qoo-twice.png',
+    year: '2024',
+    brand: 'CCJC',
     region: t('portfolio.regions.asia'),
     category: t('portfolio.categories.advertising'),
   },
