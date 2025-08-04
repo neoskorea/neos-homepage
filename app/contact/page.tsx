@@ -12,13 +12,6 @@ type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 export default function ContactPage() {
   const { t } = useLanguage();
 
-  const budgetRanges = [
-    t('contact.budgetRanges.under10m'),
-    t('contact.budgetRanges.10to50m'),
-    t('contact.budgetRanges.50to100m'),
-    t('contact.budgetRanges.over100m'),
-  ];
-
   const serviceTypes = [
     t('contact.services.advertising'),
     t('contact.services.video'),
@@ -31,7 +24,6 @@ export default function ContactPage() {
     name: '',
     email: '',
     company: '',
-    budget: '',
     service: '',
     message: '',
   });
@@ -101,7 +93,6 @@ export default function ContactPage() {
         name: '',
         email: '',
         company: '',
-        budget: '',
         service: '',
         message: '',
       });
@@ -265,55 +256,29 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="service" className="block text-sm font-semibold text-gray-800 mb-3">
-                          {t('contact.form.service')} <span className="text-primary">{t('contact.form.required')}</span>
-                        </label>
-                        <select
-                          id="service"
-                          name="service"
-                          value={formData.service}
-                          onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          disabled={formStatus === 'submitting'}
-                          className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 ${formStatus === 'submitting'
-                            ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
-                            : 'border-gray-200 focus:border-primary hover:border-gray-300'
-                            }`}
-                          required
-                        >
-                          <option value="">{t('contact.form.placeholders.service')}</option>
-                          {serviceTypes.map((service) => (
-                            <option key={service} value={service}>
-                              {service}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <div>
-                        <label htmlFor="budget" className="block text-sm font-semibold text-gray-800 mb-3">
-                          {t('contact.form.budget')}
-                        </label>
-                        <select
-                          id="budget"
-                          name="budget"
-                          value={formData.budget}
-                          onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                          disabled={formStatus === 'submitting'}
-                          className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 ${formStatus === 'submitting'
-                            ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
-                            : 'border-gray-200 focus:border-primary hover:border-gray-300'
-                            }`}
-                        >
-                          <option value="">{t('contact.form.placeholders.budget')}</option>
-                          {budgetRanges.map((range) => (
-                            <option key={range} value={range}>
-                              {range}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
+                    <div>
+                      <label htmlFor="service" className="block text-sm font-semibold text-gray-800 mb-3">
+                        {t('contact.form.service')} <span className="text-primary">{t('contact.form.required')}</span>
+                      </label>
+                      <select
+                        id="service"
+                        name="service"
+                        value={formData.service}
+                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                        disabled={formStatus === 'submitting'}
+                        className={`block w-full rounded-xl border-2 px-4 py-3 focus:ring-0 transition-colors text-gray-800 ${formStatus === 'submitting'
+                          ? 'border-gray-200 bg-gray-50 cursor-not-allowed'
+                          : 'border-gray-200 focus:border-primary hover:border-gray-300'
+                          }`}
+                        required
+                      >
+                        <option value="">{t('contact.form.placeholders.service')}</option>
+                        {serviceTypes.map((service) => (
+                          <option key={service} value={service}>
+                            {service}
+                          </option>
+                        ))}
+                      </select>
                     </div>
 
                     <div>
