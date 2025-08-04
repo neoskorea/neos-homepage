@@ -754,7 +754,7 @@ export default function Home() {
           left: 50%;
           transform: translate(-50%, -50%);
           opacity: 1;
-          animation: fadeOutLoading 0.3s ease-in-out 0.5s forwards;
+          animation: fadeOutLoading 0.2s ease-in-out 0.3s forwards;
         }
 
         .loading-dots {
@@ -769,15 +769,15 @@ export default function Home() {
           height: 8px;
           border-radius: 50%;
           background-color: rgba(255, 255, 255, 0.9);
-          animation: dotPulse 1.2s ease-in-out infinite;
+          animation: dotPulse 0.8s ease-in-out infinite;
         }
 
         .loading-dot.dot2 {
-          animation-delay: 0.2s;
+          animation-delay: 0.1s;
         }
 
         .loading-dot.dot3 {
-          animation-delay: 0.4s;
+          animation-delay: 0.2s;
         }
 
         .typing-container {
@@ -786,7 +786,7 @@ export default function Home() {
           left: 50%;
           transform: translate(-50%, -50%);
           opacity: 0;
-          animation: fadeInTyping 0.5s ease-out 0.8s forwards, fadeOutTyping 0.6s ease-in-out 5.8s forwards;
+          animation: fadeInTyping 0.3s ease-out 0.5s forwards, fadeOutTyping 0.4s ease-in-out 3.5s forwards;
         }
 
         .typing-line {
@@ -811,18 +811,18 @@ export default function Home() {
         }
 
         .text1 {
-          animation: showText1 0.1s ease-out 1.2s forwards, typing1 1.5s steps(18, end) 1.2s forwards;
+          animation: showText1 0.1s ease-out 0.8s forwards, typing1 1.2s steps(18, end) 0.8s forwards;
         }
 
         .text2 {
-          animation: showText2 0.1s ease-out 3.5s forwards, typing2 1.3s steps(12, end) 3.5s forwards;
+          animation: showText2 0.1s ease-out 2.2s forwards, typing2 1.0s steps(12, end) 2.2s forwards;
         }
 
         .logo-container {
           visibility: hidden;
           opacity: 0;
           transform: scale(0.95);
-          animation: fadeInLogo 0.8s ease-out 6.2s forwards;
+          animation: fadeInLogo 0.6s ease-out 3.9s forwards;
           z-index: 10;
           position: relative;
         }
@@ -838,7 +838,7 @@ export default function Home() {
           border-radius: 50%;
           opacity: 0.5;
           z-index: 1;
-          animation: breathingGlow 3s ease-in-out 7.2s infinite;
+          animation: breathingGlow 3s ease-in-out 4.5s infinite;
         }
 
         .hero-logo {
