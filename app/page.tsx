@@ -1,56 +1,41 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { Button } from '@/components/Button';
-import { Section } from '@/components/Section';
-import { Container } from '@/components/Container';
+import { useEffect, useRef, useState, Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Section } from '@/components/Section';
+import { Button } from '@/components/Button';
+
+// 동적 임포트로 무거운 컴포넌트들 분리
+const Navbar = dynamic(() => import('@/components/Navbar'), {
+  ssr: true,
+  loading: () => <div className="h-16 bg-white" /> // 로딩 플레이스홀더
+});
+
+const Footer = dynamic(() => import('@/components/Footer'), {
+  ssr: false,
+  loading: () => <div className="h-32 bg-gray-50" />
+});
+
+const HeroSection = dynamic(() => import('@/components/HeroSection'), {
+  ssr: true,
+  loading: () => (
+    <section className="flex items-center justify-center relative overflow-hidden bg-primary" style={{ height: '100vh', minHeight: '100dvh' }}>
+      <div className="text-center">
+        <div className="loading-dots">
+          <div className="loading-dot dot1"></div>
+          <div className="loading-dot dot2"></div>
+          <div className="loading-dot dot3"></div>
+        </div>
+      </div>
+    </section>
+  )
+});
 
 export default function Home() {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const { t, language } = useLanguage();
-
-  useEffect(() => {
-    // 뷰포트 높이 동적 조정 함수
-    const setViewportHeight = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-
-    // 초기 설정
-    setViewportHeight();
-
-    // 리사이즈/회전 시 재계산
-    const handleResize = () => {
-      setViewportHeight();
-    };
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('orientationchange', handleResize);
-
-    // iOS Safari 주소창 변화 감지를 위한 추가 이벤트
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setViewportHeight();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('orientationchange', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
 
@@ -112,67 +97,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section
-        id="hero-section"
-        className="flex items-center justify-center relative overflow-hidden bg-primary hero-section"
-      >
-        <div className="text-center relative z-10 px-4">
-          <div className="hero-content">
-            {/* 로딩 애니메이션 (처음에만 표시) */}
-            <div className="loading-container">
-              <div className="loading-dots">
-                <div className="loading-dot dot1"></div>
-                <div className="loading-dot dot2"></div>
-                <div className="loading-dot dot3"></div>
-              </div>
-            </div>
-
-            {/* 타이핑 텍스트 */}
-            <div className="typing-container">
-              <div className="typing-line line1">
-                <span className="typing-text text1" style={{ color: 'transparent' }}>CREATIVE MANAGEMENT</span>
-              </div>
-              <div className="typing-line line2">
-                <span className="typing-text text2" style={{ color: 'transparent' }}>&amp; PRODUCTION</span>
-              </div>
-            </div>
-
-            {/* 디자인적 배경 요소로 크게 들어가는 텍스트 */}
-            <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
-              <h1 className="text-white font-heading text-9xl sm:text-9xl font-bold opacity-5 select-none tracking-widest">
-                CREATIVE MANAGEMENT &PRODUCTION
-              </h1>
-            </div>
-
-            {/* 실제 로고 (나중에 나타남) */}
-            <div className="logo-container" style={{ visibility: 'hidden', opacity: 0 }}>
-              {/* 글로우 효과 배경 */}
-              <div className="logo-glow"></div>
-              <Image
-                src="/images/neos-logo-white-trans.png"
-                alt="neos logo"
-                width={280}
-                height={90}
-                className="mx-auto px-4 sm:px-8 md:px-12 hero-logo w-48 sm:w-56 md:w-64 lg:w-72 h-auto relative z-10"
-              />
-              {/* <Image
-                src="/images/neos-logo-text-white-nopd.png"
-                alt="neos logo"
-                width={600}
-                height={180}
-                className="mx-auto px-4 sm:px-8 md:px-12 hero-logo max-w-full h-auto relative z-10"
-              /> */}
-            </div>
-          </div>
-        </div>
-        {/* 스크롤 유도 버튼 */}
-        <div className="absolute inset-x-0 z-20 animate-bounce flex flex-col items-center justify-center scroll-indicator">
-          <span className="text-white text-sm tracking-wide opacity-80 text-center">Scroll</span>
-          <svg className="mt-1 w-5 h-5 text-white opacity-80" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Vision Section */}
       <Section className="py-20 md:py-32 lg:py-40 fade-in-on-scroll">
@@ -746,6 +671,7 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
+          will-change: transform, opacity;
         }
 
         .loading-container {
@@ -754,7 +680,8 @@ export default function Home() {
           left: 50%;
           transform: translate(-50%, -50%);
           opacity: 1;
-          animation: fadeOutLoading 0.2s ease-in-out 0.3s forwards;
+          will-change: transform, opacity;
+          animation: fadeOutLoading 0.3s ease-in-out 0.8s forwards;
         }
 
         .loading-dots {
@@ -786,7 +713,7 @@ export default function Home() {
           left: 50%;
           transform: translate(-50%, -50%);
           opacity: 0;
-          animation: fadeInTyping 0.3s ease-out 0.5s forwards, fadeOutTyping 0.4s ease-in-out 3.5s forwards;
+          animation: fadeInTyping 0.3s ease-out 1.1s forwards, fadeOutTyping 0.4s ease-in-out 4.1s forwards;
         }
 
         .typing-line {
@@ -811,18 +738,18 @@ export default function Home() {
         }
 
         .text1 {
-          animation: showText1 0.1s ease-out 0.8s forwards, typing1 1.2s steps(18, end) 0.8s forwards;
+          animation: showText1 0.1s ease-out 1.4s forwards, typing1 1.2s steps(18, end) 1.4s forwards;
         }
 
         .text2 {
-          animation: showText2 0.1s ease-out 2.2s forwards, typing2 1.0s steps(12, end) 2.2s forwards;
+          animation: showText2 0.1s ease-out 2.8s forwards, typing2 1.0s steps(12, end) 2.8s forwards;
         }
 
         .logo-container {
           visibility: hidden;
           opacity: 0;
           transform: scale(0.95);
-          animation: fadeInLogo 0.6s ease-out 3.9s forwards;
+          animation: fadeInLogo 0.6s ease-out 4.5s forwards;
           z-index: 10;
           position: relative;
         }
@@ -838,7 +765,7 @@ export default function Home() {
           border-radius: 50%;
           opacity: 0.5;
           z-index: 1;
-          animation: breathingGlow 3s ease-in-out 4.5s infinite;
+          animation: breathingGlow 3s ease-in-out 5.1s infinite;
         }
 
         .hero-logo {
@@ -930,6 +857,53 @@ export default function Home() {
           }
         }
 
+        @keyframes fadeInBackgroundText {
+          0% { 
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0.95);
+          }
+          1% {
+            visibility: visible;
+          }
+          100% { 
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        @keyframes showScrollIndicator {
+          0% { 
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          1% {
+            visibility: visible;
+          }
+          100% { 
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes bounce {
+          0%, 20%, 53%, 80%, 100% {
+            transform: translate3d(0, 0, 0);
+          }
+          40%, 43% {
+            transform: translate3d(0, -8px, 0);
+          }
+          70% {
+            transform: translate3d(0, -4px, 0);
+          }
+          90% {
+            transform: translate3d(0, -2px, 0);
+          }
+        }
+
         /* Scroll-triggered fade-in animations */
         .fade-in-on-scroll {
           opacity: 0;
@@ -944,100 +918,38 @@ export default function Home() {
 
         /* Mission Flow Animations - 기존에 스크롤 애니메이션으로 대체됨 */
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-          .hero-content {
-            min-height: 100px;
-          }
-
-          .loading-dots {
-            gap: 0.4rem;
-          }
-
-          .loading-dot {
-            width: 6px;
-            height: 6px;
-          }
-
-          .logo-glow {
-            width: 130%;
-            height: 130%;
-          }
-          
-          .typing-text {
-            font-size: 1.1rem;
-            letter-spacing: 0.06em;
-          }
-          
-          .line1 {
-            margin-bottom: 0.4rem;
-          }
-          
-
+        /* 로딩 애니메이션 스타일 */
+        .loading-dots {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          justify-content: center;
         }
 
-        @media (max-width: 480px) {
-          .hero-content {
-            min-height: 80px;
-          }
-
-          .loading-dots {
-            gap: 0.3rem;
-          }
-
-          .loading-dot {
-            width: 5px;
-            height: 5px;
-          }
-
-          .logo-glow {
-            width: 140%;
-            height: 140%;
-          }
-            
-          .typing-text {
-            font-size: 0.9rem;
-            letter-spacing: 0.04em;
-          }
-          
-          .typing-line {
-            margin: 0.2rem 0;
-          }
-          
-          .line1 {
-            margin-bottom: 0.3rem;
-          }
+        .loading-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.9);
+          animation: dotPulse 0.8s ease-in-out infinite;
         }
 
-        /* 동적 뷰포트 높이 설정 */
-        .hero-section {
-          height: 100vh; /* 폴백 */
-          height: calc(var(--vh, 1vh) * 100);
+        .loading-dot.dot2 {
+          animation-delay: 0.1s;
         }
 
-        /* 스크롤 버튼 위치 - 실제 보이는 영역 기준 */
-        .scroll-indicator {
-          /* 실제 뷰포트 하단에서 2rem 위 */
-          bottom: 2rem;
-          /* 동적 높이 기준으로 위치 조정 */
-          bottom: max(2rem, calc(env(safe-area-inset-bottom, 0px) + 1rem));
+        .loading-dot.dot3 {
+          animation-delay: 0.2s;
         }
 
-        /* 모든 모바일 기기 통일 대응 */
-        @media (max-width: 768px) {
-          .scroll-indicator {
-            /* 모바일에서는 Safe Area + 1.5rem */
-            bottom: calc(env(safe-area-inset-bottom, 0px) + 1.5rem);
-            /* 최소 1.5rem은 확보 */
-            bottom: max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem));
+        @keyframes dotPulse {
+          0%, 100% { 
+            opacity: 0.3;
+            transform: scale(0.8);
           }
-        }
-
-        /* 태블릿 대응 */
-        @media (min-width: 768px) and (max-width: 1024px) {
-          .scroll-indicator {
-            bottom: calc(env(safe-area-inset-bottom, 0px) + 2rem);
-            bottom: max(2rem, calc(env(safe-area-inset-bottom, 0px) + 2rem));
+          50% { 
+            opacity: 1;
+            transform: scale(1.2);
           }
         }
       `}</style>
